@@ -10,11 +10,11 @@ e copie o conteúdo de `photo2craft` para a pasta atual, preservando `.env`, dad
 O pacote não inclui `.env`, banco, dependências nem pesos de modelos. Guarde uma cópia da versão anterior.
 Não crie outro projeto Docker por engano: execute o atualizador na pasta usada pela instalação existente.
 
-A branch de revisão é `feat/visual-refinement-0.5`. Se preferir instalar pelo Git:
+A branch de revisão é `fix/reference-fidelity-ollama`. Se preferir instalar pelo Git:
 
 ```bash
 git fetch origin
-git switch feat/visual-refinement-0.5
+git switch fix/reference-fidelity-ollama
 ```
 
 ## Atualizar API e site
@@ -65,3 +65,5 @@ Preserve mundos e `config/photo2craft.json`. A nova paleta exige esse mod; os pr
 
 Ultra não exige outro modelo. O depth model local é opcional, com instalação separada:
 [dependências, pesos, Docker e fallback](docs/visual-refinement.md#profundidade-local-opcional).
+
+Revisão de fidelidade/Ollama: [mudanças e testes](docs/ollama-fidelity-review.md).

@@ -38,7 +38,16 @@ def evaluate(evidence,render,mask,assessment):
         render_error=sum(float(counts[i])*nearest(unique[i],reference_colors) for i in order)/max(1,sum(counts[i] for i in order))
         scores['color']=100*math.exp(-(ref_error+render_error)/60)
         source='foreground_heuristics_and_vision_model'
-    weights={'silhouette':.35,'proportion':.25,'color':.15,'structure':.15,'detail':.1}
+    weights={'silhouette':.35,'proportion':.30,'structure':.20,'color':.10,'detail':.05}
     return {'total':round(sum(weights[k]*scores[k] for k in weights),2),
             'components':{k:round(v,2) for k,v in scores.items()},'source':source,
             'label':'Estimativa heurística, não porcentagem científica de semelhança'}
+
+
+def improves_geometry(previous, candidate):
+    """Color/detail gains must not hide a loss of silhouette, proportions or parts."""
+    before, after = previous['components'], candidate['components']
+    if any(after[key] < before[key] - 2 for key in ('silhouette', 'proportion', 'structure')):
+        return False
+    geometry = lambda scores: .4*scores['silhouette'] + .35*scores['proportion'] + .25*scores['structure']
+    return geometry(after) >= geometry(before) - .25 and candidate['total'] > previous['total'] + .25

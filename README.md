@@ -1,5 +1,7 @@
 # Photo2Craft 0.5.0 — Visual Refinement
 
+Revisão de fidelidade/Ollama: [mudanças, limites por etapa, benchmarks e validação](docs/ollama-fidelity-review.md).
+
 Transforme imagem ou descrição em uma estrutura de blocos para Minecraft Java 1.21.1.
 React/Vite/Three.js, FastAPI/SQLite, IA local via Ollama e mod Fabric (Java 21).
 
@@ -16,7 +18,7 @@ vistas da câmera, tempo, etapas concluídas e nota estimada. A paleta passou a 
 
 **O código foi testado com Ollama simulado; melhoria perceptual em fotos reais ainda precisa ser validada no seu PC.**
 A nota é uma heurística, não porcentagem científica. Uma única foto não mostra lados ocultos.
-Não há modelo adicional obrigatório: o depth model é opcional. O contexto detalhado permanece em 16k.
+Não há modelo adicional obrigatório: o depth model é opcional. Todos os modos respeitam o contexto configurado; o exemplo para Qwen usa 32k.
 
 **Atualização:** veja [ATUALIZAR-IA.md](ATUALIZAR-IA.md). Recompile e instale o mod **0.3.0** para a nova paleta.
 Contrato JSON 1.0 e projetos antigos preservados. Não é necessário apagar banco, projetos nem `.env`.
@@ -175,10 +177,10 @@ Abra http://localhost:5173. O Vite encaminha `/api`, `/docs` e `/openapi.json` �
 | `MAX_PROJECTS` | 200 | Quota de projetos locais |
 | `AI_PROVIDER` | ollama | Provedor local de IA |
 | `OLLAMA_URL` | localhost fora do Docker | Compose usa `http://host.docker.internal:11434` |
-| `OLLAMA_MODEL` | gemma4:e2b | Modelo local com visão e saída estruturada |
+| `OLLAMA_MODEL` | qwen3-vl:8b | Modelo local com visão e saída estruturada |
 | `AI_TIMEOUT_SECONDS` | 600 | Tempo limite da geração local |
-| `AI_MAX_OUTPUT_TOKENS` | 16000 | Limite de saída do modelo; o raciocínio interno é desativado |
-| `AI_CONTEXT_TOKENS` | 16384 | Contexto do modo detalhado; consome mais RAM/VRAM. O rápido usa o padrão do Ollama |
+| `AI_MAX_OUTPUT_TOKENS` | 16000 | Teto de saída; cada etapa usa orçamento próprio e solicita think=false |
+| `AI_CONTEXT_TOKENS` | 16384 | Contexto de todos os modos; exemplo .env usa 32768. Mais contexto consome RAM/VRAM |
 
 Na demo, o volume inteiro da caixa conta em `MAX_BLOCKS`. No modo IA, apenas posições emitidas contam (incluindo ar explícito), permitindo estruturas esparsas. IA pequena/média/grande usa caixas máximas de 32³/48³/64³; a IA escolhe proporções dentro delas. Personalizado aceita 9–64 por eixo. A API e o mod têm limites independentes: se aumentar um, revise o outro.
 
@@ -209,7 +211,7 @@ A área precisa estar carregada, dentro da borda e da altura do mundo. Por padr�
 | GET | `/api/builds?offset=0&limit=30` | Lista metadados, até 100 por página |
 | GET | `/api/builds/{id}` | Metadados |
 | GET | `/api/builds/{id}/structure` | Contrato para mod/visualizador |
-| GET | `/api/builds/{id}/image` | Referência normalizada em JPEG |
+| GET | `/api/builds/{id}/image` | Referência PNG sem perda; JPEG em projetos antigos |
 | GET | `/api/builds/{id}/render` | Render final na câmera estimada, quando disponível |
 | GET | `/api/builds/{id}/thumbnail` | Miniatura da referência |
 | DELETE | `/api/builds/{id}` | Exclui banco e imagens; não altera o mundo Minecraft |
@@ -224,7 +226,7 @@ curl -F 'image=@casa.png' \
 
 O MVP gera de forma síncrona e permite uma geração local por vez para não sobrecarregar GPU/RAM; resposta de sucesso é `201` com status `ready`. Não há fila persistente ou status fictício. Erros são `4xx` com `detail`, incluindo `413` para tamanho, `422` para validação, `409` para quota e `429` para gerador ocupado.
 
-Clientes antigos que omitem `mode` continuam em `procedural`. Para IA, envie `"mode":"ai"` e uma imagem ou `description` não vazia. `quality` aceita `quick` (padrão da API), `detailed` ou `ultra`. `type` aceita texto livre de até 120 caracteres; `fidelity` vai de 0 a 100. Ollama indisponível retorna 503; plano inválido 502; timeout 504. Falhas na análise/base não criam projetos e não são convertidas em casas. Falha de comparação/refinamento preserva a melhor estrutura válida com aviso. O Nginx aguarda até 900 segundos.
+Clientes antigos que omitem `mode` continuam em `procedural`. Para IA, envie `"mode":"ai"` e uma imagem ou `description` não vazia. `quality` aceita `quick` (padrão da API), `detailed` ou `ultra`. `type` aceita texto livre de até 120 caracteres; `fidelity` vai de 0 a 100. Ollama indisponível retorna 503; plano inválido 502; timeout 504. Falhas na análise/base não criam projetos e não são convertidas em casas. Falha de comparação/refinamento preserva a melhor estrutura válida com aviso. O Nginx aguarda até 960 segundos; a IA tem prazo total de até 900 segundos.
 
 ## Testes
 

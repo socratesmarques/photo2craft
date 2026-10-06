@@ -58,11 +58,20 @@ export default function Preview({structure,referenceCamera}:{structure:Structure
       cells.forEach((b,i)=>{matrix.makeTranslation(b.x-(w-1)/2,b.y,b.z-(d-1)/2);mesh.setMatrixAt(i,matrix);});
       scene.add(mesh);
     }
-    const resize=()=>{const width=element.clientWidth,height=element.clientHeight;renderer.setSize(width,height);camera.aspect=width/height;camera.updateProjectionMatrix();};
-    const observer=new ResizeObserver(resize);observer.observe(element);resize();
     let frame=0;
-    const render=()=>{frame=requestAnimationFrame(render);controls.update();renderer.render(scene,camera);};render();
-    return()=>{cancelAnimationFrame(frame);observer.disconnect();controls.dispose();geometry.dispose();materials.forEach(m=>m.dispose());grid.geometry.dispose();(grid.material as THREE.Material).dispose();renderer.dispose();renderer.domElement.remove();reset.current=()=>{};view.current=()=>{};};
+    let disposed=false;
+    const render=()=>{
+      frame=0;
+      const moving=controls.update();
+      renderer.render(scene,camera);
+      if(moving)invalidate();
+    };
+    const invalidate=()=>{if(!disposed&&!frame)frame=requestAnimationFrame(render);};
+    controls.addEventListener('change',invalidate);
+    const resize=()=>{const width=element.clientWidth,height=element.clientHeight;renderer.setSize(width,height);camera.aspect=width/height;camera.updateProjectionMatrix();invalidate();};
+    const observer=new ResizeObserver(resize);observer.observe(element);resize();
+    invalidate();
+    return()=>{disposed=true;cancelAnimationFrame(frame);controls.removeEventListener('change',invalidate);observer.disconnect();controls.dispose();geometry.dispose();materials.forEach(m=>m.dispose());grid.geometry.dispose();(grid.material as THREE.Material).dispose();renderer.dispose();renderer.domElement.remove();reset.current=()=>{};view.current=()=>{};};
   },[structure,referenceCamera]);
   return <div className="preview-wrap">
     <div ref={host} className="scene" aria-label={structure?'Prévia interativa da construção em blocos':'Área de prévia da construção'}/>

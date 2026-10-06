@@ -33,16 +33,24 @@ def render_structure(structure,camera,resolution=384):
         for u,v in [(-.5,-.5),(.5,-.5),(.5,.5),(-.5,.5)]:
             vertex=normal*.5;vertex[other[0]]=u;vertex[other[1]]=v;template.append(vertex)
         template=np.array(template)
+        visible=[]
+        blocks=[]
         for position,block in cells.items():
             neighbor=list(position);neighbor[axis]+=sign
-            if tuple(neighbor) in cells: continue
-            vertices=(template+position-center)@projection.T
-            xy=np.rint(vertices[:,:2]*scale+offset).astype(np.int32)
-            rgb=np.array(VISUALS[block]['rgb'],dtype=float)
-            # Modest fixed face shading preserves color better than photorealistic lighting.
-            factor=1 if axis==1 else .93 if axis==2 else .86
-            color=tuple(int(c) for c in np.clip(rgb*factor,0,255))
-            faces.append((float(vertices[:,2].mean()),xy,color))
+            if tuple(neighbor) not in cells:
+                visible.append(position)
+                blocks.append(block)
+        if not visible:
+            continue
+        # Batch projection/color work once per axis instead of small NumPy allocations
+        # per face. Only exposed faces are retained; no voxel volume is allocated.
+        vertices=(template[None,:,:]+np.asarray(visible)[:,None,:]-center)@projection.T
+        coordinates=np.rint(vertices[:,:,:2]*scale+offset).astype(np.int32)
+        depths=vertices[:,:,2].mean(axis=1)
+        factor=1 if axis==1 else .93 if axis==2 else .86
+        colors={block:tuple(int(c) for c in np.clip(np.asarray(VISUALS[block]['rgb'])*factor,0,255))
+                for block in set(blocks)}
+        faces.extend((float(depth),xy,colors[block]) for depth,xy,block in zip(depths,coordinates,blocks))
     canvas=np.full((resolution,resolution,3),245,np.uint8)
     mask=np.zeros((resolution,resolution),np.uint8)
     for _,xy,color in sorted(faces,key=lambda face:face[0]):

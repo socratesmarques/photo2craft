@@ -1,3 +1,4 @@
+import base64
 from io import BytesIO
 from pathlib import Path
 import warnings
@@ -21,7 +22,9 @@ def decode_image(raw: bytes, max_pixels: int) -> Image.Image:
                     rgba = normalized.convert("RGBA")
                     background = Image.new("RGBA", rgba.size, (255,255,255,255))
                     normalized = Image.alpha_composite(background, rgba)
-                return normalized.convert("RGB")
+                result = normalized.convert("RGB")
+                result.info.clear()
+                return result
     except HTTPException: raise
     except (UnidentifiedImageError, OSError, ValueError, Image.DecompressionBombError, Image.DecompressionBombWarning):
         raise HTTPException(422, "O arquivo não contém uma imagem válida.")
@@ -29,6 +32,17 @@ def decode_image(raw: bytes, max_pixels: int) -> Image.Image:
 def save_images(image: Image.Image, directory: Path):
     directory.mkdir(parents=True, exist_ok=False)
     # Re-encoding removes EXIF and avoids publishing user-supplied byte streams.
-    image.save(directory / "source.jpg", "JPEG", quality=90)
+    image.save(directory / "source.png", "PNG", compress_level=3)
     thumbnail=image.copy(); thumbnail.thumbnail((640,480))
     thumbnail.save(directory / "thumbnail.jpg", "JPEG", quality=85)
+
+
+def encode_reference(image: Image.Image, max_edge: int = 1280) -> str:
+    """One lossless, bounded copy for vision; no upscaling or JPEG color bleeding."""
+    small = image.copy()
+    small.thumbnail((max_edge, max_edge), Image.Resampling.LANCZOS)
+    output = BytesIO()
+    small = small.convert("RGB")
+    small.info.clear()
+    small.save(output, "PNG", compress_level=3)
+    return base64.b64encode(output.getvalue()).decode("ascii")

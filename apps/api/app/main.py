@@ -23,6 +23,11 @@ from .ai_generator import AIGenerator, GenerationError
 from .release import VERSION, RELEASE
 
 logger=logging.getLogger("photo2craft")
+if not logger.handlers:
+    handler = logging.StreamHandler()
+    handler.setFormatter(logging.Formatter("%(levelname)s %(name)s %(message)s"))
+    logger.addHandler(handler)
+logger.setLevel(logging.INFO)
 
 def create_app(settings: Settings | None = None) -> FastAPI:
     settings=settings or Settings()
@@ -117,7 +122,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return FileResponse(path,media_type="image/png" if filename.endswith(".png") else "image/jpeg",headers={"X-Content-Type-Options":"nosniff"})
 
     @app.get("/api/builds/{build_id}/image")
-    def source_image(build_id: str): return image_response(build_id,"source.jpg")
+    def source_image(build_id: str):
+        record = get_record(build_id)
+        filename = "source.png" if (settings.data_dir/"images"/record.id/"source.png").is_file() else "source.jpg"
+        return image_response(build_id, filename)
 
     @app.get("/api/builds/{build_id}/thumbnail")
     def thumbnail(build_id: str): return image_response(build_id,"thumbnail.jpg")

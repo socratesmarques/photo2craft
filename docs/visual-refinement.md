@@ -31,12 +31,13 @@ O modelo nunca escreve código nem milhares de células individuais. Partes não
 | Detalhado | Estudo, plano, render, avaliação, correção e nova avaliação | 2 | 7 |
 | Ultra | Mesmo fluxo + profundidade opcional | 3 | 9 |
 
-\* Pode ocorrer **uma** consulta extra para reparar o plano inicial. O ciclo termina antes se não houver
+\* Pode ocorrer uma consulta extra para reparar o plano inicial. Cada chamada lógica admite também
+uma repetição compacta em caso de truncamento, dentro do mesmo prazo total. O ciclo termina antes se não houver
 problemas, atingir nota 93, receber correção vazia, regredir ou esgotar o tempo. Número máximo configurado
-pelo usuário só reduz o limite do modo. Sem imagem, Detalhado/Ultra preservam o planejador textual em etapas
-anterior, sem inventar nota de fidelidade visual. O rápido não usa o novo ScenePlan de materiais por componente.
+pelo usuário só reduz o limite do modo. Sem imagem, Detalhado/Ultra usam o planejador textual em três etapas com orçamentos distintos,
+sem inventar nota de fidelidade visual. O rápido não usa o novo ScenePlan de materiais por componente.
 
-O contexto permanece em 16.384 tokens para o pipeline detalhado. Não foi aumentado.
+Todos os modos usam AI_CONTEXT_TOKENS (padrão 16384; exemplo Qwen 32768).
 Todas as chamadas compartilham `AI_TIMEOUT_SECONDS` (600 por padrão). Uma rodada usa
 uma chamada para corrigir e outra para avaliar: não é repetir o mesmo prompt.
 A referência é redimensionada e codificada uma vez por geração; a melhor avaliação e render são reutilizados.
@@ -47,8 +48,8 @@ Não existe cache persistente de inferências entre projetos nesta versão.
 Com máscara de primeiro plano confiável, usa IoU da silhueta centralizada, proporção projetada e
 comparação de distribuições de cores em Lab. Com máscara incerta, usa estimativas do modelo também
 nesses três itens. Presença/posição dos componentes e detalhes são sempre avaliações do modelo.
-Pesos: silhueta 35%, proporção 25%, cor 15%, estrutura 15%, detalhes 10%.
-A câmera permanece fixa entre candidatos. Aceita melhoria maior que 0,25 ponto; caso contrário mantém
+Pesos: silhueta 35%, proporção 30%, estrutura 20%, cor 10%, detalhes 5%.
+A câmera permanece fixa entre candidatos. Aceita melhoria maior que 0,25 ponto apenas sem regressão geométrica relevante; caso contrário mantém
 `best_structure`/`best_score` e encerra para evitar gasto repetitivo. Sem avaliação válida, score é `null`.
 Não há porcentagem científica, garantia de melhoria humana nem reconstrução perfeita.
 
@@ -132,3 +133,5 @@ Status são etapas realmente concluídas no resultado; durante a geração sínc
 Próxima etapa prioritária: benchmark humano com casa/igreja/carro/castelo/personagem/objeto reais,
 calibração do score, recorte manual/segmentação semântica e render com texturas/estados reais do Minecraft.
 Só depois reavaliar 96/128, múltiplas vistas completas e reconstrução mais precisa.
+
+Limites exatos, logs e testes desta revisão: [fidelidade/Ollama](ollama-fidelity-review.md).

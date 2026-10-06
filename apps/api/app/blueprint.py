@@ -128,6 +128,12 @@ def compile_blueprint(plan: Blueprint, build_id: str, options: GenerateOptions,
     for part in plan.parts:
         if part.shape == "line":
             cells = _line(part, size)
+        elif part.shape == "box" and not part.hollow:
+            lo, hi = part.start.xyz(), part.end.xyz()
+            cells = (((x, y, z), part.block)
+                     for y in range(lo[1], hi[1] + 1)
+                     for z in range(lo[2], hi[2] + 1)
+                     for x in range(lo[0], hi[0] + 1))
         else:
             lo, hi = part.start.xyz(), part.end.xyz()
             axis = "xyz".index(part.axis)

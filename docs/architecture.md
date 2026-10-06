@@ -2,7 +2,7 @@
 
 ## Limites de responsabilidade
 
-A interface envia `multipart/form-data` com opções e imagem opcional no modo IA. `RequestSizeLimit` limita inclusive uploads sem Content-Length. Pillow verifica formato, pixels e animação, orienta pelo EXIF e reencoda em JPEG sem metadados. O nome original do arquivo nunca compõe um caminho.
+A interface envia `multipart/form-data` com opções e imagem opcional no modo IA. `RequestSizeLimit` limita inclusive uploads sem Content-Length. Pillow verifica formato, pixels e animação, orienta pelo EXIF e salva referência PNG sem perda adicional, sem metadados do upload (miniatura JPEG). O nome original do arquivo nunca compõe um caminho.
 
 `ProceduralGenerator` implementa `StructureGenerator`. A assinatura recebe uma lista de imagens para permitir múltiplas vistas no futuro; o endpoint atual aceita somente uma. O modelo da API já devolve `sourceImages` com o papel `reference`.
 
@@ -40,3 +40,6 @@ O render final fica junto à referência e tem endpoint próprio. Planos interme
 O frontend continua lendo o mesmo JSON de blocos que o Fabric importa.
 
 Mapeamento dos arquivos, pesos da avaliação, limites e casos de fallback: [Visual Refinement](visual-refinement.md).
+
+Os orçamentos, compactação, logging e recuperação compartilhados estão em `ollama_session.py`.
+Detalhes da revisão: [fidelidade/Ollama](ollama-fidelity-review.md).
