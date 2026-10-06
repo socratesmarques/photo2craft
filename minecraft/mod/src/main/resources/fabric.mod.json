@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "photo2craft",
+  "version": "${version}",
+  "name": "Photo2Craft",
+  "description": "Importe construções validadas, em lotes, pela API Photo2Craft.",
+  "authors": ["Photo2Craft"],
+  "environment": "*",
+  "entrypoints": { "main": ["dev.photo2craft.Photo2Craft"] },
+  "depends": { "fabricloader": ">=0.16.14", "minecraft": "1.21.1", "java": ">=21", "fabric-api": "*" }
+}

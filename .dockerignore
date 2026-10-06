@@ -1,0 +1,15 @@
+.git
+.env
+**/node_modules
+**/dist
+**/.gradle
+**/build
+**/__pycache__
+**/.pytest_cache
+**/.venv
+data
+minecraft
+**/.e2e-data
+**/test-results
+**/playwright-report
+**/*.tsbuildinfo

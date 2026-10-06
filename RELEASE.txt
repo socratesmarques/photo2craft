@@ -1,0 +1,5 @@
+Photo2Craft 0.4.0
+ollama-local-0.4.0
+Provider: Ollama
+Default model: gemma4:e2b
+Minecraft mod required: 0.2.0 / Minecraft Java 1.21.1 (expanded concrete palette)

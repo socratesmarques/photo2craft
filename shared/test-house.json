@@ -1,0 +1,11029 @@
+{
+  "formatVersion": "1.0",
+  "minecraftVersion": "1.21.1",
+  "id": "test-house",
+  "name": "Casa de teste",
+  "description": "",
+  "author": "local",
+  "createdAt": "2026-10-05T01:05:47.839461Z",
+  "thumbnail": null,
+  "orientation": "north",
+  "size": {
+    "width": 11,
+    "height": 11,
+    "depth": 13
+  },
+  "blocks": [
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 0,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 1,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 2,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 3,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 4,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 5,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 6,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 7,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 8,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 9,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 10,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 11,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "z": 12,
+      "block": "minecraft:cobblestone",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 1,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 2,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 5,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 6,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 9,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 10,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 1,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 2,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 5,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 6,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 9,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 10,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 1,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 2,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 5,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 6,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 9,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 10,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 1,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 2,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 5,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 6,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 9,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 10,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 1,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 2,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 5,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 6,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 9,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 10,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 1,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 2,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 5,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 6,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 9,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 10,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 0,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 1,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 2,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 3,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 4,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 5,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 6,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 7,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 8,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 9,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 10,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 11,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:glass",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 12,
+      "block": "minecraft:stone_bricks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 0,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 1,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 2,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 3,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 4,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 5,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 6,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 7,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 8,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 9,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 10,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 11,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:spruce_planks",
+      "states": {}
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 12,
+      "block": "minecraft:air",
+      "states": {}
+    }
+  ]
+}

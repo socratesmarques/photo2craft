@@ -1,0 +1,162 @@
+{
+  "$defs": {
+    "Cell": {
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "maximum": 127,
+          "minimum": 0,
+          "title": "X",
+          "type": "integer"
+        },
+        "y": {
+          "maximum": 127,
+          "minimum": 0,
+          "title": "Y",
+          "type": "integer"
+        },
+        "z": {
+          "maximum": 127,
+          "minimum": 0,
+          "title": "Z",
+          "type": "integer"
+        },
+        "block": {
+          "maxLength": 80,
+          "title": "Block",
+          "type": "string"
+        },
+        "states": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "maxProperties": 8,
+          "title": "States",
+          "type": "object"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z",
+        "block"
+      ],
+      "title": "Cell",
+      "type": "object"
+    },
+    "Size": {
+      "additionalProperties": false,
+      "properties": {
+        "width": {
+          "maximum": 128,
+          "minimum": 1,
+          "title": "Width",
+          "type": "integer"
+        },
+        "height": {
+          "maximum": 128,
+          "minimum": 1,
+          "title": "Height",
+          "type": "integer"
+        },
+        "depth": {
+          "maximum": 128,
+          "minimum": 1,
+          "title": "Depth",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "depth"
+      ],
+      "title": "Size",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "formatVersion": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Formatversion",
+      "type": "string"
+    },
+    "minecraftVersion": {
+      "const": "1.21.1",
+      "default": "1.21.1",
+      "title": "Minecraftversion",
+      "type": "string"
+    },
+    "id": {
+      "pattern": "^[A-Za-z0-9_-]{1,64}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "maxLength": 2000,
+      "title": "Description",
+      "type": "string"
+    },
+    "author": {
+      "default": "local",
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Author",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "title": "Createdat",
+      "type": "string"
+    },
+    "thumbnail": {
+      "anyOf": [
+        {
+          "maxLength": 256,
+          "pattern": "^/api/builds/[A-Za-z0-9_-]{1,64}/thumbnail$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Thumbnail"
+    },
+    "orientation": {
+      "const": "north",
+      "default": "north",
+      "title": "Orientation",
+      "type": "string"
+    },
+    "size": {
+      "$ref": "#/$defs/Size"
+    },
+    "blocks": {
+      "items": {
+        "$ref": "#/$defs/Cell"
+      },
+      "maxItems": 100000,
+      "minItems": 1,
+      "title": "Blocks",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "size",
+    "blocks"
+  ],
+  "title": "Structure",
+  "type": "object"
+}

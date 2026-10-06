@@ -1,0 +1,5 @@
+export interface Size { width:number; height:number; depth:number }
+export interface Structure {id:string; name:string; size:Size; blocks:{x:number;y:number;z:number;block:string;states:Record<string,string>}[]}
+export interface Build {id:string;name:string;description:string;createdAt:string;size:Size;blockCount:number;solidBlockCount:number;thumbnail:string|null;status:string;importCommand:string;sourceImages:{view:string;url:string}[];options:Record<string,unknown>;generationInfo?:{mode:string;provider?:string;model?:string;summary:string;assumptions:string[];quality?:string;warnings?:string[];stagesCompleted?:string[];partCount?:number;referenceStudy?:{subject:string;silhouette:string;landmarks:string[];material_notes:string}}}
+export interface Options {name:string;description:string;mode:'ai'|'procedural';quality:'quick'|'detailed';fidelity:number;type:string;size:string;style:string;interior:string;width:number;height:number;depth:number}
+export interface Capabilities {version?:string;release?:string;maxUploadBytes:number;maxBlocks:number;maxDimension:number;maxProjects:number;aiConfigured:boolean;aiProvider:string;aiModel:string}

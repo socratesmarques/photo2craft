@@ -1,0 +1,58 @@
+{
+  "minecraft:air": {},
+  "minecraft:stone_bricks": {},
+  "minecraft:cobblestone": {},
+  "minecraft:oak_planks": {},
+  "minecraft:spruce_planks": {},
+  "minecraft:glass": {},
+  "minecraft:white_concrete": {},
+  "minecraft:orange_concrete": {},
+  "minecraft:magenta_concrete": {},
+  "minecraft:light_blue_concrete": {},
+  "minecraft:yellow_concrete": {},
+  "minecraft:lime_concrete": {},
+  "minecraft:pink_concrete": {},
+  "minecraft:light_gray_concrete": {},
+  "minecraft:blue_concrete": {},
+  "minecraft:brown_concrete": {},
+  "minecraft:green_concrete": {},
+  "minecraft:red_concrete": {},
+  "minecraft:gray_concrete": {},
+  "minecraft:cyan_concrete": {},
+  "minecraft:black_concrete": {},
+  "minecraft:polished_andesite": {},
+  "minecraft:bricks": {},
+  "minecraft:quartz_block": {},
+  "minecraft:sea_lantern": {},
+  "minecraft:purple_concrete": {},
+  "minecraft:mossy_stone_bricks": {},
+  "minecraft:oak_log": {
+    "axis": [
+      "x",
+      "y",
+      "z"
+    ]
+  },
+  "minecraft:spruce_stairs": {
+    "facing": [
+      "north",
+      "east",
+      "south",
+      "west"
+    ],
+    "half": [
+      "bottom",
+      "top"
+    ],
+    "shape": [
+      "straight",
+      "inner_left",
+      "inner_right",
+      "outer_left",
+      "outer_right"
+    ],
+    "waterlogged": [
+      "false"
+    ]
+  }
+}
