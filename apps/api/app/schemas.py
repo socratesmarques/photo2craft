@@ -59,7 +59,12 @@ class GenerateOptions(StrictModel):
     name: str = Field(default="Minha construção", min_length=1, max_length=100)
     description: str = Field(default="", max_length=2000)
     mode: Literal["procedural", "ai"] = "procedural"
-    quality: Literal["quick", "detailed"] = "quick"
+    quality: Literal["quick", "detailed", "ultra"] = "quick"
+    subject_scope: Literal["object", "scene"] = "object"
+    max_refinements: int | None = Field(default=None, ge=0, le=3, strict=True)
+    depth_estimation: bool = True
+    allow_transparent: bool = True
+    preserve_symmetry: bool = True
     type: str = Field(default="automatic", min_length=1, max_length=120)
     fidelity: int = Field(default=80, ge=0, le=100, strict=True)
     size: Literal["small", "medium", "large", "custom"] = "small"

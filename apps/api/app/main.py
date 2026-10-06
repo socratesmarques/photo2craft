@@ -4,6 +4,8 @@ import json
 import logging
 import re
 import shutil
+import time
+import cv2
 from threading import BoundedSemaphore, Lock
 from uuid import uuid4
 from fastapi import FastAPI, File, Form, HTTPException, Query, Response, UploadFile
@@ -85,7 +87,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 "aiConfigured":ai_generator.configured,"aiProvider":settings.ai_provider,
                 "aiModel":settings.ollama_model,
                 "imageInterpretation":ai_generator.configured,"fullInterior":False,
-                "qualityModes":["quick","detailed"],"minimumModVersion":"0.2.0"}
+                "qualityModes":["quick","detailed","ultra"],"minimumModVersion":"0.3.0",
+                "visualRefinement":True,"multiViewUpload":False,"depthConfigured":bool(settings.depth_model_path)}
 
     @app.get("/api/builds")
     def list_builds(offset: int=Query(0,ge=0),limit: int=Query(30,ge=1,le=100)):
@@ -111,7 +114,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         if not record.has_image: raise HTTPException(404,"Projeto sem imagem.")
         path=settings.data_dir/"images"/record.id/filename
         if not path.is_file(): raise HTTPException(404,"Imagem indisponível.")
-        return FileResponse(path,media_type="image/jpeg",headers={"X-Content-Type-Options":"nosniff"})
+        return FileResponse(path,media_type="image/png" if filename.endswith(".png") else "image/jpeg",headers={"X-Content-Type-Options":"nosniff"})
 
     @app.get("/api/builds/{build_id}/image")
     def source_image(build_id: str): return image_response(build_id,"source.jpg")
@@ -119,21 +122,26 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.get("/api/builds/{build_id}/thumbnail")
     def thumbnail(build_id: str): return image_response(build_id,"thumbnail.jpg")
 
+    @app.get("/api/builds/{build_id}/render")
+    def reference_render(build_id: str): return image_response(build_id,"render.png")
+
     @app.delete("/api/builds/{build_id}",status_code=204)
     def delete_build(build_id: str):
         with mutation_lock:
             record=get_record(build_id)
             repository.delete(record.id)
+            shutil.rmtree(settings.data_dir/"debug"/record.id,ignore_errors=True)
             shutil.rmtree(settings.data_dir/"images"/record.id,ignore_errors=True)
 
     def generate(raw,options):
+        started = time.monotonic()
         image=decode_image(raw,settings.max_image_pixels) if raw else None
         build_id=uuid4().hex
         with mutation_lock:
             ensure_capacity()
         if options.mode=="ai":
             structure, info=ai_generator.generate(build_id,options,[image] if image else [])
-            engine="vision-detailed-v2" if options.quality=="detailed" else "vision-blueprint-v1"
+            engine="vision-refinement-v3" if image and options.quality in {"detailed","ultra"} else "vision-detailed-v2" if options.quality in {"detailed","ultra"} else "vision-blueprint-v1"
         else:
             if options.type not in {"automatic","house","castle","building","monument","other"}:
                 raise HTTPException(422,"Esse tipo livre precisa do modo IA. O modo demo usa apenas modelos prontos.")
@@ -151,6 +159,17 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             try:
                 if image:
                     save_images(image,directory)
+                    if info.get("camera"):
+                        from .voxel_render import render_structure
+                        from .scene_plan import Camera
+                        try:
+                            rendered, _ = render_structure(structure, Camera.model_validate(info["camera"]))
+                            rendered.save(directory/"render.png")
+                            info["renderAvailable"] = True
+                        except (ValueError, RuntimeError, OSError, cv2.error):
+                            info.setdefault("warnings", []).append("Render de comparação indisponível; use o preview 3D.")
+                if "timings" in info:
+                    info["timings"]["total"] = round(time.monotonic() - started, 3)
                 record=repository.save(BuildRecord(id=build_id,structure=structure.model_dump(mode="json"),
                                                    options={**options.model_dump(),"_generator":engine,"_generation":info},has_image=image is not None))
             except Exception:

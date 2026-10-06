@@ -90,8 +90,8 @@ def generate_detailed(generator, build_id, options, images, bounds):
         output = BytesIO()
         image.convert("RGB").save(output, "JPEG", quality=90)
         encoded.append(base64.b64encode(output.getvalue()).decode("ascii"))
-    # High reference priority overrides stylistic recoloring only with an image.
-    preserve = bool(images) and options.fidelity >= 75
+    # An image always overrides stylistic recoloring.
+    preserve = bool(images)
     context = {
         "request": options.description, "subject": options.type,
         "style": "preserve reference colors and shape" if preserve else options.style,
@@ -214,5 +214,5 @@ If the reference lacks detail, add only what is supported, do not invent decorat
         "mode": "ai", "provider": "ollama", "model": generator.settings.ollama_model,
         "quality": "detailed", "summary": batch.summary, "assumptions": study.assumptions,
         "warnings": warnings, "stagesCompleted": completed, "partCount": len(plan.parts),
-        "referenceStudy": study.model_dump(), "minimumModVersion": "0.2.0",
+        "referenceStudy": study.model_dump(), "minimumModVersion": "0.3.0",
     }

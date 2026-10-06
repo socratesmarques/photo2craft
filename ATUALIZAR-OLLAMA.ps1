@@ -6,7 +6,7 @@ Set-StrictMode -Version Latest
 $projectRoot = $PSScriptRoot
 $composeFile = Join-Path $projectRoot 'docker-compose.yml'
 $envFile = Join-Path $projectRoot '.env'
-$expectedRelease = 'ollama-local-0.4.0'
+$expectedRelease = 'ollama-local-0.5.0'
 $composeArgs = @('compose', '--project-directory', $projectRoot, '-p', $ProjectName, '-f', $composeFile, '--env-file', $envFile)
 
 function Invoke-PhotoDocker {
@@ -44,8 +44,9 @@ try {
     }
     foreach ($key in $localSettings.Keys) {
         $pattern = '(?m)^\s*' + [regex]::Escape($key) + '\s*=[^\r\n]*'
-        $envText = [regex]::Replace($envText, $pattern, '')
-        $envText = $envText.TrimEnd() + "`r`n$key=$($localSettings[$key])`r`n"
+        if (-not [regex]::IsMatch($envText, $pattern)) {
+            $envText = $envText.TrimEnd() + "`r`n$key=$($localSettings[$key])`r`n"
+        }
     }
     [System.IO.File]::WriteAllText($envFile, $envText, [System.Text.UTF8Encoding]::new($false))
     Write-Host "Projeto Docker: $ProjectName | Pasta: $projectRoot"
@@ -62,9 +63,9 @@ try {
     if ($capabilities.release -ne $expectedRelease -or $capabilities.aiProvider -ne 'ollama') {
         throw 'O endereco publicado respondeu com outra versao. Confira conflitos de porta ou proxy.'
     }
-    Write-Host "CONFIRMADO: Photo2Craft 0.4.0 / Ollama / gemma4:e2b"
+    Write-Host "CONFIRMADO: Photo2Craft 0.5.0 / Ollama (modelo preservado do .env)"
     Write-Host "Abra $siteUrl e pressione Ctrl+F5."
-    Write-Host 'IMPORTANTE: as novas cores exigem recompilar e instalar o mod 0.2.0. Veja ATUALIZAR-IA.md.'
+    Write-Host 'IMPORTANTE: as novas cores exigem recompilar e instalar o mod 0.3.0. Veja ATUALIZAR-IA.md.'
 } catch {
     Write-Host $_.Exception.Message -ForegroundColor Red
     exit 1

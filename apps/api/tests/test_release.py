@@ -17,8 +17,8 @@ def test_legacy_openai_env_does_not_select_old_provider(tmp_path, monkeypatch):
     with TestClient(create_app(config)) as client:
         response = client.get('/api/capabilities')
         result = response.json()
-        assert result['release'] == RELEASE == 'ollama-local-0.4.0'
-        assert result['version'] == VERSION == '0.4.0'
+        assert result['release'] == RELEASE == 'ollama-local-0.5.0'
+        assert result['version'] == VERSION == '0.5.0'
         assert result['aiProvider'] == 'ollama'
         assert result['aiModel'] == 'gemma4:e2b'
         assert result['aiConfigured'] is True

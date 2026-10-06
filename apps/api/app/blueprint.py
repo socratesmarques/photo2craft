@@ -63,7 +63,7 @@ def target_size(options: GenerateOptions, max_dimension: int) -> tuple[int, int,
     if options.size == "custom":
         size = (options.width, options.height, options.depth)
     else:
-        edge = min({"small": 16, "medium": 32, "large": 48}[options.size], max_dimension)
+        edge = min({"small": 32, "medium": 48, "large": 64}[options.size], max_dimension)
         size = (edge, edge, edge)
     if max(size) > max_dimension:
         raise ValueError("As dimensões excedem o limite configurado")

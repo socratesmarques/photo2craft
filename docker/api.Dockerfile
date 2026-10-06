@@ -1,8 +1,10 @@
 FROM python:3.12-slim
 ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
 WORKDIR /srv/photo2craft
-COPY apps/api/requirements.txt /tmp/requirements.txt
+COPY apps/api/requirements.txt apps/api/requirements-depth.txt /tmp/
+ARG INSTALL_DEPTH=false
 RUN pip install --no-cache-dir -r /tmp/requirements.txt && useradd -m -u 10001 app
+RUN if [ "$INSTALL_DEPTH" = "true" ]; then pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu && pip install --no-cache-dir -r /tmp/requirements-depth.txt; fi
 COPY shared/ shared/
 COPY apps/api/app/ apps/api/app/
 RUN mkdir data && chown -R app:app data

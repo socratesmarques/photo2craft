@@ -1,31 +1,28 @@
-# Photo2Craft
+# Photo2Craft 0.5.0 — Visual Refinement
 
-Transforme uma imagem ou descrição em uma estrutura em blocos e importe para Minecraft Java.
+Transforme imagem ou descrição em uma estrutura de blocos para Minecraft Java 1.21.1.
+React/Vite/Three.js, FastAPI/SQLite, IA local via Ollama e mod Fabric (Java 21).
 
-**MVP 0.4.0:** React + Vite + TypeScript, FastAPI + SQLite, planejador visual local Ollama/Gemma 4 e um mod Fabric para **Minecraft Java 1.21.1 / Java 21**. O mod passa a **0.2.0** para aceitar a paleta ampliada; o contrato JSON continua 1.0. Projetos anteriores continuam legíveis.
+O novo fluxo detalhado com imagem é **OpenCV → estudo → componentes → geometria → render → comparação → correções → melhor estrutura**.
+Correções que pioram a avaliação são descartadas. Imagem sempre prevalece sobre estilo/texto complementar.
+A interface inclui Rápido/Detalhado/Ultra, objeto principal/cena completa, comparação lado a lado/sobreposição,
+vistas da câmera, tempo, etapas concluídas e nota estimada. A paleta passou a 166 IDs com seleção perceptual e semântica.
 
-**Validação da entrega:** testes de API com Ollama simulado e build do site. O Gemma real não está instalado neste ambiente: não foi medida a melhora visual. O núcleo Java foi testado em revisão anterior; o teste novo da paleta e a compilação do mod 0.2.0 precisam ser executados com Java 21 no seu PC. Veja [docs/testing.md](docs/testing.md).
+- **Rápido:** uma análise e geração, sem refinamento visual.
+- **Detalhado:** até duas rodadas de correção/avaliação.
+- **Ultra:** até três rodadas e profundidade CPU opcional quando instalada; demora mais.
+- Sem imagem, preserva o planejamento textual anterior, sem nota de semelhança inventada.
+- Limites preservados: 64 por eixo / 50 mil células. Novos presets IA: 32, 48 e 64; proporções são preservadas dentro da caixa.
 
-Há dois modos explícitos: **IA local**, que envia imagem/descrição ao Gemma 4 executado pelo Ollama no próprio PC; e **Demo local**, que conserva os modelos prontos. A IA aceita tipo livre e pode trabalhar só com texto. O resultado continua aproximado, não uma reconstrução 3D perfeita.
+**O código foi testado com Ollama simulado; melhoria perceptual em fotos reais ainda precisa ser validada no seu PC.**
+A nota é uma heurística, não porcentagem científica. Uma única foto não mostra lados ocultos.
+Não há modelo adicional obrigatório: o depth model é opcional. O contexto detalhado permanece em 16k.
 
-### Planejamento detalhado (novo)
+**Atualização:** veja [ATUALIZAR-IA.md](ATUALIZAR-IA.md). Recompile e instale o mod **0.3.0** para a nova paleta.
+Contrato JSON 1.0 e projetos antigos preservados. Não é necessário apagar banco, projetos nem `.env`.
 
-- Analisa assunto, proporções tridimensionais estimadas, silhueta, cores e características importantes antes de construir.
-- Ajusta as dimensões preservando a razão estimada: um carro não deve virar um cubo só porque a caixa máxima é cúbica.
-- Gera a forma principal e depois um lote separado de detalhes, olhando a referência em ambas as etapas.
-- Calcula cópias espelhadas de peças no código, úteis para rodas, janelas, asas e membros.
-- Usa as 16 cores de concreto. O preview também reconhece essas cores.
-- Até 48 peças por lote e 192 formas após espelhamento; o limite total continua 50 mil células e 64 por eixo.
-- Na interface, o padrão é Detalhado + Grande (48 por eixo). Personalizado permite uma caixa máxima de até 64 por eixo. A forma usa proporções estimadas dentro dessa caixa, não preenche necessariamente todos os eixos.
-- A prioridade da referência não é uma porcentagem de semelhança. Com imagem e prioridade ≥75, o detalhado prioriza cores/forma da referência sobre o estilo escolhido.
-
-O detalhado faz três consultas sequenciais, ou quatro se a geometria precisar de uma correção, compartilhando o tempo de `AI_TIMEOUT_SECONDS`. Quando os detalhes falham ou alteram volume demais, conserva a forma principal e exibe um aviso. O rápido continua disponível. As verificações são geométricas, não uma avaliação visual; não há comparação automática de um render com a foto. Uma foto não revela os lados ocultos, que ainda são inferidos. Para avaliar fidelidade, gere novamente uma mesma referência e compare os resultados; projetos antigos não são modificados.
-
-**Já instalou a versão anterior? Siga [ATUALIZAR-IA.md](ATUALIZAR-IA.md).** Preserve seu `.env`, porta e volume de dados. **Nesta atualização, recompile e instale o mod 0.2.0 antes de importar as novas cores.**
-
-A versão 0.4.0 inclui `ATUALIZAR-OLLAMA.ps1`: verifica os arquivos, salva backup do `.env`, configura Ollama, recompila e confirma a versão real através do site. O marcador `ollama-local-0.4.0` aparece em `RELEASE.txt`, `/api/health` e `/api/capabilities`. O site identifica uma API antiga e informa como atualizar. A consulta ao Ollama confirma instalação/conexão, não qualidade das gerações. O lockfile do frontend também foi regenerado somente com pacotes realmente publicados no npm, permitindo que o `npm ci` do Docker seja reproduzido do zero.
-
-Para ativar a IA, instale o Ollama no Windows, baixe `gemma4:e2b` e siga [ATUALIZAR-IA.md](ATUALIZAR-IA.md). Não há chave nem cobrança por geração. O Ollama precisa permanecer aberto; não há fallback silencioso para casas.
+Documentação: [pipeline, arquivos, materiais e limitações](docs/visual-refinement.md),
+[arquitetura](docs/architecture.md), [validação e benchmarks](docs/testing.md).
 
 ## Começar com Docker
 
@@ -65,7 +62,7 @@ chmod +x gradlew
 ```
 
 3. Instale [Fabric Loader](https://fabricmc.net/use/installer/) para **Minecraft 1.21.1**, versão 0.16.14 ou posterior compatível.
-4. Com o jogo/servidor fechado, substitua o mod antigo por `minecraft/mod/build/libs/photo2craft-0.2.0.jar` na pasta `mods` da sua instalação. Preserve uma cópia do JAR antigo fora de `mods`. Mantenha [Fabric API](https://modrinth.com/mod/fabric-api) **0.116.6+1.21.1**. Não use o JAR `-sources` nem deixe as duas versões do Photo2Craft juntas.
+4. Com o jogo/servidor fechado, substitua o mod antigo por `minecraft/mod/build/libs/photo2craft-0.3.0.jar` na pasta `mods` da sua instalação. Preserve uma cópia do JAR antigo fora de `mods`. Mantenha [Fabric API](https://modrinth.com/mod/fabric-api) **0.116.6+1.21.1**. Não use o JAR `-sources` nem deixe as duas versões do Photo2Craft juntas.
 5. Inicie Minecraft no perfil Fabric. Use um mundo de teste criativo com comandos habilitados. Em servidor dedicado, instale o mod e Fabric API no servidor; os comandos exigem nível de operador 2. Não precisa instalar o mod no cliente para esta versão sem holograma.
 
 O mod cria `config/photo2craft.json` ao iniciar o mundo/servidor. Por padrão, consulta `http://127.0.0.1:8000` **a partir da máquina do servidor Minecraft**. Se servidor e API estão em máquinas diferentes, configure o endereço da API e reinicie o servidor/mundo.
@@ -105,13 +102,13 @@ Rotação: 0, 90, 180 ou 270 graus, em torno do eixo vertical. A caixa é reposi
 - Projetos persistentes, listagem paginada, detalhes, exclusão e download do JSON.
 - Geração por IA: imagem e/ou descrição → plano geométrico validado → blocos. Tipo livre, fidelidade orientativa e explicação das simplificações.
 - Demo: modelos procedurais de casa, castelo, prédio e monumento; clientes antigos que enviam automático/outro continuam usando casa somente nesse modo.
-- Cinco paletas de estilo e dimensões pequenas, médias, grandes ou personalizadas.
+- Cinco estilos e catálogo de materiais semânticos; dimensões pequenas, médias, grandes ou personalizadas.
 - Interior simples: bancada e iluminação nas casas/prédios; lajes com abertura técnica em prédios. Não inclui escadas internas completas. Castelo e monumento mantêm o modelo básico.
-- Prévia 3D no navegador com orbit e zoom. Cores aproximadas, sem texturas do jogo; blocos especiais, como escadas importadas por JSON, aparecem como cubos.
+- Prévia 3D no navegador com orbit, zoom, pan, reset e vistas frente/trás/laterais/topo/perspectiva. Cores aproximadas, sem texturas do jogo; blocos especiais, como escadas importadas por JSON, aparecem como cubos.
 - Mod com validação, download assíncrono limitado, orçamento global de blocos por tick, cancelamento, rotação e desfazer.
 - Docker, Swagger, contrato JSON compartilhado e testes.
 
-Ainda não implementado: reconstrução 3D precisa, interiores completos, holograma dentro do jogo, contas, permissões por projeto e múltiplas vistas na interface. A fidelidade é uma instrução ao modelo, não uma medida garantida de semelhança.
+Ainda não implementado: reconstrução 3D precisa, interiores completos, holograma dentro do jogo, contas, permissões por projeto e múltiplas vistas na interface. A nota de fidelidade visual é estimada, sem garantia científica de semelhança.
 
 ## Arquitetura
 
@@ -183,7 +180,7 @@ Abra http://localhost:5173. O Vite encaminha `/api`, `/docs` e `/openapi.json` �
 | `AI_MAX_OUTPUT_TOKENS` | 16000 | Limite de saída do modelo; o raciocínio interno é desativado |
 | `AI_CONTEXT_TOKENS` | 16384 | Contexto do modo detalhado; consome mais RAM/VRAM. O rápido usa o padrão do Ollama |
 
-Na demo, o volume inteiro da caixa conta em `MAX_BLOCKS`. No modo IA, apenas posições emitidas contam (incluindo ar explícito), permitindo estruturas esparsas. IA pequena/média/grande usa caixas máximas de 16³/32³/48³; a IA escolhe proporções dentro delas. Personalizado aceita 9–64 por eixo. A API e o mod têm limites independentes: se aumentar um, revise o outro.
+Na demo, o volume inteiro da caixa conta em `MAX_BLOCKS`. No modo IA, apenas posições emitidas contam (incluindo ar explícito), permitindo estruturas esparsas. IA pequena/média/grande usa caixas máximas de 32³/48³/64³; a IA escolhe proporções dentro delas. Personalizado aceita 9–64 por eixo. A API e o mod têm limites independentes: se aumentar um, revise o outro.
 
 Mod, arquivo `config/photo2craft.json`:
 
@@ -213,6 +210,7 @@ A área precisa estar carregada, dentro da borda e da altura do mundo. Por padr�
 | GET | `/api/builds/{id}` | Metadados |
 | GET | `/api/builds/{id}/structure` | Contrato para mod/visualizador |
 | GET | `/api/builds/{id}/image` | Referência normalizada em JPEG |
+| GET | `/api/builds/{id}/render` | Render final na câmera estimada, quando disponível |
 | GET | `/api/builds/{id}/thumbnail` | Miniatura da referência |
 | DELETE | `/api/builds/{id}` | Exclui banco e imagens; não altera o mundo Minecraft |
 
@@ -226,7 +224,7 @@ curl -F 'image=@casa.png' \
 
 O MVP gera de forma síncrona e permite uma geração local por vez para não sobrecarregar GPU/RAM; resposta de sucesso é `201` com status `ready`. Não há fila persistente ou status fictício. Erros são `4xx` com `detail`, incluindo `413` para tamanho, `422` para validação, `409` para quota e `429` para gerador ocupado.
 
-Clientes antigos que omitem `mode` continuam em `procedural`. Para IA, envie `"mode":"ai"` e uma imagem ou `description` não vazia. O novo `quality` aceita `quick` (padrão da API) ou `detailed`. `type` aceita texto livre de até 120 caracteres; `fidelity` vai de 0 a 100. Ollama indisponível retorna 503; plano inválido 502; timeout 504. Falhas na análise/base não criam projetos e não são convertidas em casas. Falha apenas nos detalhes devolve a base validada com aviso. O Nginx aguarda até 900 segundos.
+Clientes antigos que omitem `mode` continuam em `procedural`. Para IA, envie `"mode":"ai"` e uma imagem ou `description` não vazia. `quality` aceita `quick` (padrão da API), `detailed` ou `ultra`. `type` aceita texto livre de até 120 caracteres; `fidelity` vai de 0 a 100. Ollama indisponível retorna 503; plano inválido 502; timeout 504. Falhas na análise/base não criam projetos e não são convertidas em casas. Falha de comparação/refinamento preserva a melhor estrutura válida com aviso. O Nginx aguarda até 900 segundos.
 
 ## Testes
 
@@ -269,8 +267,10 @@ Evolução planejada:
 1. Validar a colocação no mundo com o checklist e diferentes terrenos.
 2. Adicionar sessão de posicionamento: mover, girar, confirmar e cancelar antes da fila.
 3. Implementar holograma cliente/servidor.
-4. Avaliar gerações reais, melhorar proporções e adicionar refinamento visual iterativo.
-5. Adicionar vistas frente/trás/laterais e proveniência da interpretação.
+4. Avaliar gerações reais e calibrar o novo refinamento visual iterativo.
+5. Adicionar upload/armazenamento multiview completo e calibração de câmera.
 6. Contas, autorização, migrações versionadas e PostgreSQL.
 
 Detalhes: [contrato](docs/structure-format.md), [arquitetura](docs/architecture.md).
+
+Novos parâmetros de geração/configuração e dependências de profundidade: [Visual Refinement](docs/visual-refinement.md).
