@@ -1,0 +1,2756 @@
+{
+  "minecraft:white_concrete": {
+    "rgb": [
+      207,
+      213,
+      214
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:white_terracotta": {
+    "rgb": [
+      210,
+      178,
+      161
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:white_wool": {
+    "rgb": [
+      222,
+      228,
+      229
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:white_stained_glass": {
+    "rgb": [
+      207,
+      213,
+      214
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:white_stained_glass_pane": {
+    "rgb": [
+      207,
+      213,
+      214
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:white_concrete_powder": {
+    "rgb": [
+      207,
+      213,
+      214
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:white_glazed_terracotta": {
+    "rgb": [
+      210,
+      178,
+      161
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:orange_concrete": {
+    "rgb": [
+      224,
+      97,
+      1
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:orange_terracotta": {
+    "rgb": [
+      162,
+      84,
+      38
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:orange_wool": {
+    "rgb": [
+      239,
+      112,
+      16
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:orange_stained_glass": {
+    "rgb": [
+      224,
+      97,
+      1
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:orange_stained_glass_pane": {
+    "rgb": [
+      224,
+      97,
+      1
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:orange_concrete_powder": {
+    "rgb": [
+      224,
+      97,
+      1
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:orange_glazed_terracotta": {
+    "rgb": [
+      162,
+      84,
+      38
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:magenta_concrete": {
+    "rgb": [
+      169,
+      48,
+      159
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:magenta_terracotta": {
+    "rgb": [
+      150,
+      88,
+      109
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:magenta_wool": {
+    "rgb": [
+      184,
+      63,
+      174
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:magenta_stained_glass": {
+    "rgb": [
+      169,
+      48,
+      159
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:magenta_stained_glass_pane": {
+    "rgb": [
+      169,
+      48,
+      159
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:magenta_concrete_powder": {
+    "rgb": [
+      169,
+      48,
+      159
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:magenta_glazed_terracotta": {
+    "rgb": [
+      150,
+      88,
+      109
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_blue_concrete": {
+    "rgb": [
+      36,
+      137,
+      199
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_blue_terracotta": {
+    "rgb": [
+      113,
+      108,
+      137
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_blue_wool": {
+    "rgb": [
+      51,
+      152,
+      214
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_blue_stained_glass": {
+    "rgb": [
+      36,
+      137,
+      199
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_blue_stained_glass_pane": {
+    "rgb": [
+      36,
+      137,
+      199
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:light_blue_concrete_powder": {
+    "rgb": [
+      36,
+      137,
+      199
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_blue_glazed_terracotta": {
+    "rgb": [
+      113,
+      108,
+      137
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:yellow_concrete": {
+    "rgb": [
+      241,
+      175,
+      21
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:yellow_terracotta": {
+    "rgb": [
+      186,
+      133,
+      35
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:yellow_wool": {
+    "rgb": [
+      255,
+      190,
+      36
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:yellow_stained_glass": {
+    "rgb": [
+      241,
+      175,
+      21
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:yellow_stained_glass_pane": {
+    "rgb": [
+      241,
+      175,
+      21
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:yellow_concrete_powder": {
+    "rgb": [
+      241,
+      175,
+      21
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:yellow_glazed_terracotta": {
+    "rgb": [
+      186,
+      133,
+      35
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:lime_concrete": {
+    "rgb": [
+      94,
+      168,
+      24
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:lime_terracotta": {
+    "rgb": [
+      103,
+      117,
+      52
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:lime_wool": {
+    "rgb": [
+      109,
+      183,
+      39
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:lime_stained_glass": {
+    "rgb": [
+      94,
+      168,
+      24
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:lime_stained_glass_pane": {
+    "rgb": [
+      94,
+      168,
+      24
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:lime_concrete_powder": {
+    "rgb": [
+      94,
+      168,
+      24
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:lime_glazed_terracotta": {
+    "rgb": [
+      103,
+      117,
+      52
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:pink_concrete": {
+    "rgb": [
+      214,
+      101,
+      142
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:pink_terracotta": {
+    "rgb": [
+      162,
+      78,
+      79
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:pink_wool": {
+    "rgb": [
+      229,
+      116,
+      157
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:pink_stained_glass": {
+    "rgb": [
+      214,
+      101,
+      142
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:pink_stained_glass_pane": {
+    "rgb": [
+      214,
+      101,
+      142
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:pink_concrete_powder": {
+    "rgb": [
+      214,
+      101,
+      142
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:pink_glazed_terracotta": {
+    "rgb": [
+      162,
+      78,
+      79
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:gray_concrete": {
+    "rgb": [
+      55,
+      58,
+      62
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:gray_terracotta": {
+    "rgb": [
+      58,
+      42,
+      36
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:gray_wool": {
+    "rgb": [
+      70,
+      73,
+      77
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:gray_stained_glass": {
+    "rgb": [
+      55,
+      58,
+      62
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:gray_stained_glass_pane": {
+    "rgb": [
+      55,
+      58,
+      62
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:gray_concrete_powder": {
+    "rgb": [
+      55,
+      58,
+      62
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:gray_glazed_terracotta": {
+    "rgb": [
+      58,
+      42,
+      36
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_gray_concrete": {
+    "rgb": [
+      125,
+      125,
+      115
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_gray_terracotta": {
+    "rgb": [
+      135,
+      106,
+      97
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_gray_wool": {
+    "rgb": [
+      140,
+      140,
+      130
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_gray_stained_glass": {
+    "rgb": [
+      125,
+      125,
+      115
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_gray_stained_glass_pane": {
+    "rgb": [
+      125,
+      125,
+      115
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:light_gray_concrete_powder": {
+    "rgb": [
+      125,
+      125,
+      115
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:light_gray_glazed_terracotta": {
+    "rgb": [
+      135,
+      106,
+      97
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:cyan_concrete": {
+    "rgb": [
+      21,
+      119,
+      136
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:cyan_terracotta": {
+    "rgb": [
+      87,
+      91,
+      91
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:cyan_wool": {
+    "rgb": [
+      36,
+      134,
+      151
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:cyan_stained_glass": {
+    "rgb": [
+      21,
+      119,
+      136
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:cyan_stained_glass_pane": {
+    "rgb": [
+      21,
+      119,
+      136
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:cyan_concrete_powder": {
+    "rgb": [
+      21,
+      119,
+      136
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:cyan_glazed_terracotta": {
+    "rgb": [
+      87,
+      91,
+      91
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:purple_concrete": {
+    "rgb": [
+      100,
+      32,
+      156
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:purple_terracotta": {
+    "rgb": [
+      118,
+      70,
+      86
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:purple_wool": {
+    "rgb": [
+      115,
+      47,
+      171
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:purple_stained_glass": {
+    "rgb": [
+      100,
+      32,
+      156
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:purple_stained_glass_pane": {
+    "rgb": [
+      100,
+      32,
+      156
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:purple_concrete_powder": {
+    "rgb": [
+      100,
+      32,
+      156
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:purple_glazed_terracotta": {
+    "rgb": [
+      118,
+      70,
+      86
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:blue_concrete": {
+    "rgb": [
+      44,
+      46,
+      143
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:blue_terracotta": {
+    "rgb": [
+      74,
+      60,
+      91
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:blue_wool": {
+    "rgb": [
+      59,
+      61,
+      158
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:blue_stained_glass": {
+    "rgb": [
+      44,
+      46,
+      143
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:blue_stained_glass_pane": {
+    "rgb": [
+      44,
+      46,
+      143
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:blue_concrete_powder": {
+    "rgb": [
+      44,
+      46,
+      143
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:blue_glazed_terracotta": {
+    "rgb": [
+      74,
+      60,
+      91
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:brown_concrete": {
+    "rgb": [
+      96,
+      59,
+      31
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:brown_terracotta": {
+    "rgb": [
+      77,
+      51,
+      36
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:brown_wool": {
+    "rgb": [
+      111,
+      74,
+      46
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:brown_stained_glass": {
+    "rgb": [
+      96,
+      59,
+      31
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:brown_stained_glass_pane": {
+    "rgb": [
+      96,
+      59,
+      31
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:brown_concrete_powder": {
+    "rgb": [
+      96,
+      59,
+      31
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:brown_glazed_terracotta": {
+    "rgb": [
+      77,
+      51,
+      36
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:green_concrete": {
+    "rgb": [
+      73,
+      91,
+      36
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:green_terracotta": {
+    "rgb": [
+      76,
+      83,
+      42
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:green_wool": {
+    "rgb": [
+      88,
+      106,
+      51
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:green_stained_glass": {
+    "rgb": [
+      73,
+      91,
+      36
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:green_stained_glass_pane": {
+    "rgb": [
+      73,
+      91,
+      36
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:green_concrete_powder": {
+    "rgb": [
+      73,
+      91,
+      36
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:green_glazed_terracotta": {
+    "rgb": [
+      76,
+      83,
+      42
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:red_concrete": {
+    "rgb": [
+      142,
+      32,
+      32
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:red_terracotta": {
+    "rgb": [
+      143,
+      61,
+      47
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:red_wool": {
+    "rgb": [
+      157,
+      47,
+      47
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:red_stained_glass": {
+    "rgb": [
+      142,
+      32,
+      32
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:red_stained_glass_pane": {
+    "rgb": [
+      142,
+      32,
+      32
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:red_concrete_powder": {
+    "rgb": [
+      142,
+      32,
+      32
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:red_glazed_terracotta": {
+    "rgb": [
+      143,
+      61,
+      47
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:black_concrete": {
+    "rgb": [
+      8,
+      10,
+      15
+    ],
+    "category": "paint",
+    "texture": 0.05,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:black_terracotta": {
+    "rgb": [
+      37,
+      23,
+      16
+    ],
+    "category": "paint",
+    "texture": 0.18,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:black_wool": {
+    "rgb": [
+      23,
+      25,
+      30
+    ],
+    "category": "fabric",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:black_stained_glass": {
+    "rgb": [
+      8,
+      10,
+      15
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:black_stained_glass_pane": {
+    "rgb": [
+      8,
+      10,
+      15
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:black_concrete_powder": {
+    "rgb": [
+      8,
+      10,
+      15
+    ],
+    "category": "paint",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": true,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:black_glazed_terracotta": {
+    "rgb": [
+      37,
+      23,
+      16
+    ],
+    "category": "ceramic",
+    "texture": 1,
+    "roles": [
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:oak_planks": {
+    "rgb": [
+      162,
+      130,
+      79
+    ],
+    "category": "wood",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:oak_log": {
+    "rgb": [
+      105,
+      84,
+      51
+    ],
+    "category": "wood",
+    "texture": 0.8,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:stripped_oak_log": {
+    "rgb": [
+      162,
+      130,
+      79
+    ],
+    "category": "wood",
+    "texture": 0.25,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:spruce_planks": {
+    "rgb": [
+      114,
+      84,
+      48
+    ],
+    "category": "wood",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:spruce_log": {
+    "rgb": [
+      74,
+      55,
+      31
+    ],
+    "category": "wood",
+    "texture": 0.8,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:stripped_spruce_log": {
+    "rgb": [
+      114,
+      84,
+      48
+    ],
+    "category": "wood",
+    "texture": 0.25,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:birch_planks": {
+    "rgb": [
+      192,
+      175,
+      121
+    ],
+    "category": "wood",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:birch_log": {
+    "rgb": [
+      125,
+      114,
+      79
+    ],
+    "category": "wood",
+    "texture": 0.8,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:stripped_birch_log": {
+    "rgb": [
+      192,
+      175,
+      121
+    ],
+    "category": "wood",
+    "texture": 0.25,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:jungle_planks": {
+    "rgb": [
+      160,
+      115,
+      80
+    ],
+    "category": "wood",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:jungle_log": {
+    "rgb": [
+      104,
+      75,
+      52
+    ],
+    "category": "wood",
+    "texture": 0.8,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:stripped_jungle_log": {
+    "rgb": [
+      160,
+      115,
+      80
+    ],
+    "category": "wood",
+    "texture": 0.25,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:acacia_planks": {
+    "rgb": [
+      168,
+      90,
+      50
+    ],
+    "category": "wood",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:acacia_log": {
+    "rgb": [
+      109,
+      58,
+      32
+    ],
+    "category": "wood",
+    "texture": 0.8,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:stripped_acacia_log": {
+    "rgb": [
+      168,
+      90,
+      50
+    ],
+    "category": "wood",
+    "texture": 0.25,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:dark_oak_planks": {
+    "rgb": [
+      67,
+      43,
+      20
+    ],
+    "category": "wood",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:dark_oak_log": {
+    "rgb": [
+      44,
+      28,
+      13
+    ],
+    "category": "wood",
+    "texture": 0.8,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:stripped_dark_oak_log": {
+    "rgb": [
+      67,
+      43,
+      20
+    ],
+    "category": "wood",
+    "texture": 0.25,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:mangrove_planks": {
+    "rgb": [
+      117,
+      54,
+      48
+    ],
+    "category": "wood",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:mangrove_log": {
+    "rgb": [
+      76,
+      35,
+      31
+    ],
+    "category": "wood",
+    "texture": 0.8,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:stripped_mangrove_log": {
+    "rgb": [
+      117,
+      54,
+      48
+    ],
+    "category": "wood",
+    "texture": 0.25,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:cherry_planks": {
+    "rgb": [
+      226,
+      178,
+      172
+    ],
+    "category": "wood",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:cherry_log": {
+    "rgb": [
+      147,
+      116,
+      112
+    ],
+    "category": "wood",
+    "texture": 0.8,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:stripped_cherry_log": {
+    "rgb": [
+      226,
+      178,
+      172
+    ],
+    "category": "wood",
+    "texture": 0.25,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:stone": {
+    "rgb": [
+      125,
+      125,
+      125
+    ],
+    "category": "stone",
+    "texture": 0.35,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:cobblestone": {
+    "rgb": [
+      127,
+      127,
+      127
+    ],
+    "category": "stone",
+    "texture": 0.9,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:stone_bricks": {
+    "rgb": [
+      122,
+      121,
+      122
+    ],
+    "category": "stone",
+    "texture": 0.55,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:mossy_stone_bricks": {
+    "rgb": [
+      115,
+      121,
+      105
+    ],
+    "category": "stone",
+    "texture": 0.85,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:deepslate": {
+    "rgb": [
+      80,
+      80,
+      82
+    ],
+    "category": "stone",
+    "texture": 0.7,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:deepslate_bricks": {
+    "rgb": [
+      70,
+      70,
+      71
+    ],
+    "category": "stone",
+    "texture": 0.6,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:bricks": {
+    "rgb": [
+      151,
+      97,
+      83
+    ],
+    "category": "stone",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:mud_bricks": {
+    "rgb": [
+      137,
+      103,
+      79
+    ],
+    "category": "stone",
+    "texture": 0.6,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:sandstone": {
+    "rgb": [
+      216,
+      203,
+      155
+    ],
+    "category": "stone",
+    "texture": 0.35,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:smooth_sandstone": {
+    "rgb": [
+      218,
+      207,
+      160
+    ],
+    "category": "stone",
+    "texture": 0.15,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:red_sandstone": {
+    "rgb": [
+      186,
+      99,
+      29
+    ],
+    "category": "stone",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:quartz_block": {
+    "rgb": [
+      235,
+      229,
+      222
+    ],
+    "category": "stone",
+    "texture": 0.1,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:calcite": {
+    "rgb": [
+      223,
+      224,
+      220
+    ],
+    "category": "stone",
+    "texture": 0.35,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:tuff": {
+    "rgb": [
+      108,
+      109,
+      102
+    ],
+    "category": "stone",
+    "texture": 0.7,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:polished_tuff": {
+    "rgb": [
+      110,
+      111,
+      104
+    ],
+    "category": "stone",
+    "texture": 0.25,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:prismarine": {
+    "rgb": [
+      99,
+      156,
+      151
+    ],
+    "category": "stone",
+    "texture": 0.65,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:dark_prismarine": {
+    "rgb": [
+      51,
+      91,
+      75
+    ],
+    "category": "stone",
+    "texture": 0.6,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:terracotta": {
+    "rgb": [
+      152,
+      94,
+      67
+    ],
+    "category": "paint",
+    "texture": 0.2,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:polished_andesite": {
+    "rgb": [
+      132,
+      135,
+      134
+    ],
+    "category": "stone",
+    "texture": 0.25,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:iron_block": {
+    "rgb": [
+      220,
+      220,
+      220
+    ],
+    "category": "metal",
+    "texture": 0.2,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:waxed_copper_block": {
+    "rgb": [
+      192,
+      107,
+      79
+    ],
+    "category": "metal",
+    "texture": 0.3,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:waxed_exposed_copper": {
+    "rgb": [
+      161,
+      126,
+      103
+    ],
+    "category": "metal",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:waxed_weathered_copper": {
+    "rgb": [
+      108,
+      153,
+      110
+    ],
+    "category": "metal",
+    "texture": 0.5,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:waxed_oxidized_copper": {
+    "rgb": [
+      82,
+      162,
+      132
+    ],
+    "category": "metal",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:glass": {
+    "rgb": [
+      190,
+      218,
+      222
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:glass_pane": {
+    "rgb": [
+      190,
+      218,
+      222
+    ],
+    "category": "glass",
+    "texture": 0.1,
+    "roles": [
+      "window",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": true,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:sea_lantern": {
+    "rgb": [
+      172,
+      199,
+      190
+    ],
+    "category": "light",
+    "texture": 0.2,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:spruce_stairs": {
+    "rgb": [
+      114,
+      84,
+      48
+    ],
+    "category": "wood",
+    "texture": 0.4,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures",
+    "automatic": false
+  },
+  "minecraft:air": {
+    "rgb": [
+      255,
+      255,
+      255
+    ],
+    "category": "air",
+    "texture": 0,
+    "roles": [],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB; not sampled game textures"
+  },
+  "minecraft:moss_block": {
+    "rgb": [
+      89,
+      109,
+      45
+    ],
+    "category": "foliage",
+    "texture": 0.75,
+    "roles": [
+      "wall",
+      "roof",
+      "detail"
+    ],
+    "gravity": false,
+    "transparent": false,
+    "source": "approximate curated sRGB"
+  }
+}

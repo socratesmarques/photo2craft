@@ -10,7 +10,7 @@ from pydantic import ValidationError
 from app.ai_generator import AIGenerator, GenerationError
 from app.config import Settings
 from app.detailed_generator import (ReferenceStudy, DetailPart, PartBatch, Assembly,
-                                    batch_schema, fit_proportions, expand_parts)
+                                    batch_schema, fit_proportions, expand_parts, generate_detailed)
 from app.main import create_app
 from app.schemas import GenerateOptions, Size, Structure, PALETTE
 
@@ -50,8 +50,9 @@ def run(tmp_path, replies, **kwargs):
             return httpx.Response(value)
         return httpx.Response(200, json=envelope(value))
     opts = GenerateOptions(mode="ai", quality="detailed", size="large", description="Carro azul", **kwargs)
-    result = AIGenerator(Settings(data_dir=tmp_path, _env_file=None), httpx.MockTransport(handler)).generate(
-        "car", opts, [Image.new("RGB", (100, 100), "blue")])
+    # Preserve regression coverage of the legacy planner retained for text-only generation.
+    result = generate_detailed(AIGenerator(Settings(data_dir=tmp_path, _env_file=None), httpx.MockTransport(handler)),
+        "car", opts, [Image.new("RGB", (100, 100), "blue")], (48,48,48))
     return result, seen
 
 
@@ -69,13 +70,13 @@ def test_three_stages_share_reference_preserve_proportions_and_add_details(tmp_p
     assert cells[2, 7, 12] == cells[21, 7, 12] == "minecraft:glass"
     assert info["stagesCompleted"] == ["analysis", "geometry", "details"]
     assert info["partCount"] == 3 and not info["warnings"]
-    assert info["minimumModVersion"] == "0.2.0"
+    assert info["minimumModVersion"] == "0.3.0"
     Structure.model_validate(result.model_dump())
 
 
-def test_low_priority_does_not_override_style(tmp_path):
+def test_image_priority_always_overrides_style(tmp_path):
     (_, _), calls = run(tmp_path, [study(), body(), details()], fidelity=30, style="medieval")
-    assert json.loads(calls[1]["messages"][1]["content"])["style"] == "medieval"
+    assert json.loads(calls[1]["messages"][1]["content"])["style"] == "preserve reference colors and shape"
 
 
 @pytest.mark.parametrize("axis,expected", [("x", (21, 7, 12)), ("z", (2, 7, 34))])
@@ -197,7 +198,7 @@ def test_detailed_api_persistence_and_old_projects(tmp_path, monkeypatch):
     monkeypatch.setattr(AIGenerator, "_request", lambda self, payload, timeout_seconds=None: envelope(next(replies)))
     with TestClient(create_app(Settings(data_dir=tmp_path, _env_file=None))) as client:
         cap = client.get("/api/capabilities").json()
-        assert cap["minimumModVersion"] == "0.2.0" and "detailed" in cap["qualityModes"]
+        assert cap["minimumModVersion"] == "0.3.0" and "detailed" in cap["qualityModes"]
         result = client.post("/api/generate", data={"options":json.dumps(dict(mode="ai", quality="detailed", size="large", description="Carro"))})
         assert result.status_code == 201, result.text
         data = result.json()

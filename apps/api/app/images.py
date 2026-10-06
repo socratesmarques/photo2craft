@@ -16,7 +16,12 @@ def decode_image(raw: bytes, max_pixels: int) -> Image.Image:
                 if original.width*original.height > max_pixels or getattr(original,"n_frames",1)>1:
                     raise HTTPException(413, "Imagem grande demais ou animada.")
                 original.load()
-                return ImageOps.exif_transpose(original).convert("RGB")
+                normalized = ImageOps.exif_transpose(original)
+                if normalized.mode in ("RGBA", "LA") or "transparency" in normalized.info:
+                    rgba = normalized.convert("RGBA")
+                    background = Image.new("RGBA", rgba.size, (255,255,255,255))
+                    normalized = Image.alpha_composite(background, rgba)
+                return normalized.convert("RGB")
     except HTTPException: raise
     except (UnidentifiedImageError, OSError, ValueError, Image.DecompressionBombError, Image.DecompressionBombWarning):
         raise HTTPException(422, "O arquivo não contém uma imagem válida.")

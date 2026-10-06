@@ -22,6 +22,10 @@ class Settings(BaseSettings):
     ai_max_output_tokens: int = Field(default=16000, ge=1000, le=24000)
     ai_context_tokens: int = Field(default=16384, ge=8192, le=32768)
 
+    visual_debug: bool = False
+    depth_model_path: str = ""
+    depth_timeout_seconds: int = Field(default=45, ge=1, le=120)
+
     @property
     def db_url(self) -> str:
         return self.database_url or f"sqlite:///{self.data_dir / 'photo2craft.db'}"

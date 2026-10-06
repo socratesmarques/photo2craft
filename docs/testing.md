@@ -1,39 +1,65 @@
-# Validação desta entrega
+# Validação — 0.5.0 Visual Refinement
 
-## Executado no ambiente de desenvolvimento
+## Executado nesta entrega
 
-- **API: 112 testes aprovados.** Incluem os casos anteriores e o fluxo detalhado: análise → proporções → base → detalhes, espelhamento, novas cores, prioridade da referência, correção limitada, prazo global, preservação da base e avisos de refinamento rejeitado. O Ollama é simulado. Não foi realizado benchmark de semelhança, nem demonstrada melhora visual com o Gemma real neste ambiente.
-- **Frontend:** `npm ci` executado do zero contra o registro oficial, seguido de TypeScript e `vite build`, todos aprovados. O lockfile usa apenas versões publicadas. Prévia Three.js separada em um chunk carregado sob demanda.
-- **Navegador: 3 testes Playwright incluídos, não concluídos nesta revisão.** O Chromium local está incompleto e encerrou antes de abrir as páginas; nenhuma asserção de interface foi executada nesta revisão. O fluxo demo usa a API real: upload → geração → prévia WebGL → JSON com 1.573 células → galeria → exclusão. O fluxo IA usa a API simulada e verifica pedido por texto, tipo livre, prévia e simplificações. O terceiro reproduz a resposta da API antiga enviada pelo usuário e verifica a mensagem de atualização. Desktop 1440 px e celular 390 px.
-- **Núcleo Java: 5 testes JUnit aprovados em revisão anterior**. Foi acrescentado um sexto teste para as novas cores; os 6 testes e o build do mod 0.2.0 ainda precisam ser executados com Java 21 no PC Windows. O runtime Java padrão deste ambiente é 17. A alteração do mod nesta entrega é a versão e a paleta empacotada; o código de colocação não mudou.
-- **Compose:** configuração revisada; contêineres não executados neste ambiente.
-- **Gradle Wrapper:** gerado com Gradle 8.12, scripts Unix/Windows e wrapper JAR incluídos.
+- **144 testes Python aprovados** (API, modo demo, gerador textual anterior, plano, geometria, limites,
+  paleta/semântica/Lab, correções transacionais, ciclos limitados, rollback da melhor estrutura,
+  JSON inválido, timeout, falha do Ollama, falha do worker depth, transparência, imagem grande,
+  segmentação incerta, render determinístico, score, persistência, projetos antigos e debug).
+- **Build TypeScript/Vite aprovado**. Aviso de tamanho do chunk Three.js permanece, sem erro de compilação.
+- ZIP de fontes validado pelo script de empacotamento, sem dados/configurações/modelos/dependências locais.
+- Benchmark de geometria/render CPU executado. Valores abaixo incluem overhead de `tracemalloc`:
 
-## Limitações de validação
+| Eixo máximo | Células | JSON bytes | Geometria | Render | Pico Python rastreado |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 32 | 5.768 | 386.069 | 0,186 s | 0,844 s | 6,21 MiB |
+| 48 | 13.256 | 889.685 | 0,359 s | 1,891 s | 13,27 MiB |
+| 64 | 23.816 | 1.600.661 | 0,665 s | 3,292 s | 23,44 MiB |
 
-A compilação completa pelo Fabric Loom não pôde ser concluída neste ambiente. Após resolver dependências localmente, Loom 1.9.2 falhou em `CurrentPlatform.isUnixDomainSocketsSupported` com `java.net.SocketException: Operation not permitted`. Isso acontece durante a configuração da ferramenta, antes da compilação do código do mod. O ambiente também não permitiu a conexão de rede direta do Gradle.
+Caso: casca de seis painéis, sem Ollama. Pico Python não inclui toda memória nativa/VRAM nem é medição de RSS.
+Esses tempos não estimam o tempo do Gemma em seu computador. Não foram habilitadas dimensões 96/128.
+O teste de score mostra que uma correção geométrica controlada melhora a silhueta de referência sintética;
+isso **não comprova** melhor fidelidade em fotografias arbitrárias.
 
-**Não há JAR final de mod compilado nesta entrega.** O código-fonte, dependências e wrapper estão incluídos para executar `./gradlew build` ou `.\gradlew.bat build` com Java 21 e internet em uma máquina local. O funcionamento dentro do mundo Minecraft ainda precisa de validação. Não foi iniciado servidor nem aceito EULA automaticamente.
+## Bloqueios de ambiente / pendências
 
-Docker e PowerShell não estão instalados no ambiente de geração; os Dockerfiles, Compose e script Windows foram revisados, mas o build dos contêineres e a execução do script precisam ser validados no PC Windows. Os testes Python verificam a lógica de diagnóstico usada dentro do contêiner com respostas simuladas.
+- **E2E Chromium:** tentativa feita; navegador foi bloqueado na inicialização de sockets (`Operation not permitted`).
+  Nenhum fluxo E2E desta entrega é declarado aprovado. Testes existentes foram adaptados e há novo teste
+  de comparação/sobreposição/câmeras. Execute no PC com navegador permitido.
+- **Mod Fabric:** tentou-se `gradlew test build`, inclusive com JDK 21 disponível; download do Gradle
+  foi bloqueado por conectividade do processo Java (`Network is unreachable`). JAR final não compilado aqui.
+  Novo teste Java percorre toda a allowlist e mantém fixture antiga. A colocação no jogo precisa de teste real.
+- **Docker:** CLI/daemon indisponíveis. Dockerfiles/Compose foram revisados, incluindo o caminho do catálogo
+  compartilhado e a instalação opcional de depth, mas não houve `docker compose build/up` real aqui.
+- **Ollama/Gemma e Depth Anything reais:** ausentes. Testes automáticos usam mocks; depth tem testes de fallback.
+  Não há alegação de score ou melhoria de fotografias produzidos pelo modelo real.
 
-## Checklist local obrigatório
+## Repetir testes
 
-1. Na raiz, executar `docker compose up -d --build`.
-2. Verificar `docker compose ps`, abrir site e Swagger; API deve ficar saudável.
-3. Criar uma construção e reiniciar os contêineres: projeto e imagem devem permanecer.
-4. Com Java 21, executar `./gradlew test build` na pasta `minecraft/mod`.
-5. Instalar o JAR e Fabric API para 1.21.1 em um perfil Fabric. Abrir mundo criativo novo, com comandos.
-6. Em terreno plano e área livre, testar `/build test`. O piso nasce na altura dos pés, deslocado +3 em X/Z.
-7. Gerar uma casa no site e executar `/build import ID`. Conferir nome, dimensões, materiais e progresso.
-8. Desfazer e testar importação com rotações 90/180/270. Conferir orientação de estados usando JSON com `oak_log` ou `spruce_stairs`.
-9. Executar `/build cancel` durante uma estrutura grande, depois `/build undo`. Confirmar interrupção e restauração.
-10. Alterar um bloco manualmente após construir e executar undo: alteração posterior deve ser preservada.
-11. Testar área ocupada, inventário/baú, chunk não carregado, borda e limite vertical. Deve rejeitar ou parar com mensagem sem forçar chunks.
-12. Desligar API e testar importação; testar ID inexistente, JSON inválido e versão incompatível. O servidor deve continuar respondendo.
-13. Em servidor de teste, jogador sem OP não deve poder executar comandos. Conferir orçamento global com dois operadores e `blocksPerTick=50`.
-14. Em mundo descartável, habilitar `replaceExisting` e conferir substituição/undo; nunca começar esse teste em um mundo importante.
+Na venv, da raiz:
 
-## Repetir os testes automatizados
+```bash
+pip install -r apps/api/requirements-dev.txt
+PYTHONPATH=apps/api pytest -q apps/api/tests
+python scripts/benchmark_geometry.py
+```
 
-Consulte os comandos do README. O teste de navegador inicia serviços nas portas 8000 e 5173 e precisa dessas portas livres. Os dados dele ficam separados em `apps/web/.e2e-data` e o projeto temporário é removido ao terminar. A imagem de teste é uma cor sólida: testa transporte/geração em modo demo. O Ollama é desativado no teste do fluxo real e simulado no teste da interface de IA; a validação final do modelo exige instalar o Gemma 4 localmente.
+Windows: `cd apps/api; python -m pytest -q` (o `pytest.ini` configura o caminho).
+Frontend: `cd apps/web; npm ci; npm run build`.
+E2E, com Python da venv no PATH: `npx playwright install chromium; npm run test:e2e`.
+Mod, com Java 21: `cd minecraft/mod; ./gradlew test build` (Windows: `gradlew.bat`).
+Docker: `docker compose up -d --build`, depois confira `/api/health` e `/api/capabilities`.
+
+## Aceitação visual obrigatória antes de considerar a melhoria confirmada
+
+1. Fixe seis referências: casa, igreja, carro, castelo, personagem e objeto. Use arquivos próprios/autorizados.
+2. Registre resultados da versão anterior e 0.5.0 com as mesmas imagens, modelo, tamanho e instrução.
+3. Na 0.5.0, compare também `--refinements 0` com Detalhado/Ultra. Guarde os HTMLs e hashes.
+4. Avalie manualmente silhueta, proporções, profundidade aparente, componentes, materiais e posições.
+5. Veja se a nota concorda com essa avaliação. Se não concordar, registre o caso, preserve a referência
+   e use `VISUAL_DEBUG=true` para identificar câmera/máscara/material/alteração responsável.
+6. Instale o mod 0.3.0 em mundo de teste; importe projeto novo e antigo, gire 90/180/270, cancele/desfaça.
+7. Confira os materiais realmente colocados, transparência, telhado e aberturas. O render cúbico é aproximado.
+8. Só aceite a atualização como melhoria de fidelidade se a comparação visual real for positiva.
+
+Comandos do benchmark e limitações: [Visual Refinement](visual-refinement.md).

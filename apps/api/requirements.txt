@@ -5,3 +5,5 @@ SQLAlchemy==2.0.40
 Pillow==11.2.1
 pydantic-settings==2.9.1
 httpx==0.28.1
+numpy==2.2.6
+opencv-python-headless==4.11.0.86

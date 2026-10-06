@@ -44,6 +44,19 @@ class StructureCodecTest {
             assertDoesNotThrow(()->new StructureCodec(new ModConfig()).parse(root.toString()));
         }
     }
+    @Test void acceptsEntireSharedPaletteAndRetainsOldFixture() throws Exception {
+        var root=JsonParser.parseString(fixture()).getAsJsonObject();
+        var first=root.getAsJsonArray("blocks").get(0).getAsJsonObject();
+        first.add("states",new JsonObject());
+        try(var stream=getClass().getResourceAsStream("/block-palette.json")) {
+            var palette=JsonParser.parseString(new String(stream.readAllBytes(),StandardCharsets.UTF_8)).getAsJsonObject();
+            assertTrue(palette.size()>150);
+            for(String block:palette.keySet()) {
+                first.addProperty("block",block);
+                assertDoesNotThrow(()->new StructureCodec(new ModConfig()).parse(root.toString()),block);
+            }
+        }
+    }
     @Test void rotatesRectangularFootprint() throws Exception {
         var s=new StructureCodec(new ModConfig()).parse(fixture());
         var cell=new Structure.Cell(0,2,0,"minecraft:stone_bricks",java.util.Map.of());

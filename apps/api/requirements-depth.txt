@@ -1,0 +1,4 @@
+# Optional CPU-only workflow; install torch from its CPU index as documented.
+transformers>=4.42,<5
+safetensors>=0.4,<1
+huggingface-hub>=0.23,<1

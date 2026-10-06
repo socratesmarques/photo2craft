@@ -14,7 +14,7 @@ def main():
     excluded = {
         "node_modules", "dist", "data", ".gradle", "build", "run",
         "__pycache__", ".pytest_cache", ".e2e-data", "test-results",
-        "playwright-report", ".git", ".venv",
+        "playwright-report", ".git", ".venv", "models", "benchmark-results",
     }
     output.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as archive:
@@ -33,7 +33,7 @@ def main():
         assert "photo2craft/ATUALIZAR-OLLAMA.ps1" in archive.namelist()
         assert "photo2craft/.env" not in archive.namelist()
         for name in ['apps/api/app/release.py', 'apps/web/src/App.tsx', 'RELEASE.txt']:
-            assert 'ollama-local-0.4.0' in archive.read('photo2craft/' + name).decode('utf-8'), name
+            assert 'ollama-local-0.5.0' in archive.read('photo2craft/' + name).decode('utf-8'), name
         backend = archive.read('photo2craft/apps/api/app/ai_generator.py').decode('utf-8')
         assert '/api/chat' in backend and 'api.openai.com' not in backend
         assert 'photo2craft/apps/api/app/detailed_generator.py' in archive.namelist()
@@ -41,7 +41,7 @@ def main():
         lock = json.loads(archive.read('photo2craft/apps/web/package-lock.json'))
         assert lock['version'] == lock['packages']['']['version'] == package['version']
         assert lock['packages']['node_modules/@jridgewell/gen-mapping']['version'] == '0.3.13'
-        assert 'mod_version=0.2.0' in archive.read('photo2craft/minecraft/mod/gradle.properties').decode()
+        assert 'mod_version=0.3.0' in archive.read('photo2craft/minecraft/mod/gradle.properties').decode()
         palette = json.loads(archive.read('photo2craft/shared/block-palette.json'))
         assert 'minecraft:blue_concrete' in palette and 'minecraft:red_concrete' in palette
     print(f"{output}: {count} files, {output.stat().st_size} bytes; ZIP verified")
