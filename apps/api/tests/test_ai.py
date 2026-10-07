@@ -116,7 +116,7 @@ def test_ollama_wire_contract_includes_image_prompt_and_schema(settings):
     payload = json.loads(request.content)
     assert request.url == "http://ollama.test:11434/api/chat"
     assert "authorization" not in request.headers
-    assert payload["stream"] is False and payload["think"] is False
+    assert payload["stream"] is True and payload["think"] is False
     assert payload["options"]["temperature"] == 0
     assert payload["format"]["additionalProperties"] is False
     user = payload["messages"][1]

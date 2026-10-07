@@ -1,4 +1,5 @@
 from contextlib import asynccontextmanager
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import json
 import logging
@@ -21,6 +22,8 @@ from .limits import RequestSizeLimit
 from .schemas import Structure, GenerateOptions
 from .ai_generator import AIGenerator, GenerationError
 from .release import VERSION, RELEASE
+from .jobs import JobRepository
+from .progress import progress_callback, report_progress
 
 logger=logging.getLogger("photo2craft")
 if not logger.handlers:
@@ -37,12 +40,18 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     ai_generator=AIGenerator(settings)
     generation_slots=BoundedSemaphore(1)
     mutation_lock=Lock()
+    jobs=JobRepository(repository)
+    worker=ThreadPoolExecutor(max_workers=1, thread_name_prefix="photo2craft-generation")
 
     @asynccontextmanager
     async def lifespan(app):
         repository.initialize()
-        yield
-        repository.engine.dispose()
+        jobs.recover()
+        try:
+            yield
+        finally:
+            await run_in_threadpool(worker.shutdown, wait=True)
+            repository.engine.dispose()
 
     app=FastAPI(title="Photo2Craft",version=VERSION,lifespan=lifespan)
     app.state.repository=repository
@@ -93,7 +102,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 "aiModel":settings.ollama_model,
                 "imageInterpretation":ai_generator.configured,"fullInterior":False,
                 "qualityModes":["quick","detailed","ultra"],"minimumModVersion":"0.3.0",
-                "visualRefinement":True,"multiViewUpload":False,"depthConfigured":bool(settings.depth_model_path)}
+                "visualRefinement":True,"multiViewUpload":False,"depthConfigured":bool(settings.depth_model_path),
+                "generationJobs":True,"aiTimeoutSeconds":settings.ai_timeout_seconds}
 
     @app.get("/api/builds")
     def list_builds(offset: int=Query(0,ge=0),limit: int=Query(30,ge=1,le=100)):
@@ -141,10 +151,11 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             shutil.rmtree(settings.data_dir/"debug"/record.id,ignore_errors=True)
             shutil.rmtree(settings.data_dir/"images"/record.id,ignore_errors=True)
 
-    def generate(raw,options):
+    def generate(raw,options,build_id=None):
         started = time.monotonic()
+        report_progress("preprocessing")
         image=decode_image(raw,settings.max_image_pixels) if raw else None
-        build_id=uuid4().hex
+        build_id=build_id or uuid4().hex
         with mutation_lock:
             ensure_capacity()
         if options.mode=="ai":
@@ -161,6 +172,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             engine="procedural-v1"
         structure.thumbnail=f"/api/builds/{build_id}/thumbnail" if image else None
         enforce_limits(structure)
+        report_progress("saving")
         directory=settings.data_dir/"images"/build_id
         with mutation_lock:
             ensure_capacity()
@@ -185,6 +197,64 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 raise
         return metadata(record)
 
+    async def read_generation(image, options):
+        try: parsed=GenerateOptions.model_validate_json(options)
+        except ValidationError: raise HTTPException(422,"Configurações inválidas. Confira tipo, tamanho e dimensões.")
+        raw=await image.read(settings.max_upload_bytes+1) if image else b""
+        if image and not raw: raise HTTPException(422,"O arquivo está vazio.")
+        if not raw and (parsed.mode=="procedural" or not parsed.description.strip()):
+            raise HTTPException(422,"Envie uma imagem ou, no modo IA, descreva a estrutura desejada.")
+        if len(raw)>settings.max_upload_bytes: raise HTTPException(413,"Imagem excede o limite de upload.")
+        return raw,parsed
+
+    def run_job(job_id, raw, options):
+        token=progress_callback.set(lambda stage: jobs.update(job_id, stage=stage))
+        try:
+            jobs.update(job_id,status="running",stage="preprocessing")
+            generate(raw,options,job_id)
+            jobs.update(job_id,status="succeeded",stage="final")
+        except (GenerationError,HTTPException) as exc:
+            detail=exc.detail if isinstance(exc,HTTPException) else str(exc)
+            logger.warning("build_id=%s generation failed: %s",job_id,detail)
+            jobs.update(job_id,status="failed",error=str(detail)[:1000],error_code=exc.status_code)
+        except Exception:
+            logger.exception("build_id=%s generation failed",job_id)
+            jobs.update(job_id,status="failed",error="Falha interna na geração. Consulte os logs da API com este ID: "+job_id,error_code=500)
+        finally:
+            progress_callback.reset(token)
+            generation_slots.release()
+
+    @app.post("/api/generation-jobs",status_code=202)
+    async def start_generation(image: UploadFile | None=File(None),options: str=Form("{}")):
+        acquired=False
+        submitted=False
+        try:
+            acquired=generation_slots.acquire(blocking=False)
+            if not acquired: raise HTTPException(429,"Gerador ocupado. Tente novamente em instantes.")
+            raw,parsed=await read_generation(image,options)
+            with mutation_lock:
+                ensure_capacity()
+            job_id=uuid4().hex
+            job=jobs.create(job_id)
+            try:
+                worker.submit(run_job,job_id,raw,parsed)
+            except RuntimeError as exc:
+                jobs.update(job_id,status="failed",error="A API está encerrando. Tente novamente.",error_code=503)
+                raise HTTPException(503,"A API está encerrando. Tente novamente.") from exc
+            submitted=True
+            return job
+        finally:
+            if acquired and not submitted: generation_slots.release()
+            if image: await image.close()
+
+    @app.get("/api/generation-jobs/{job_id}")
+    def generation_status(job_id: str,response: Response):
+        response.headers["Cache-Control"]="no-store"
+        if not re.fullmatch(r"[A-Za-z0-9_-]{1,64}",job_id): raise HTTPException(422,"ID inválido.")
+        job=jobs.get(job_id)
+        if job is None: raise HTTPException(404,"Geração não encontrada ou histórico expirado. Confira Minhas construções.")
+        return job
+
     @app.post("/api/generate",status_code=201)
     async def generate_build(image: UploadFile | None=File(None),options: str=Form("{}")):
         if not generation_slots.acquire(blocking=False):
@@ -192,13 +262,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 await image.close()
             raise HTTPException(429,"Gerador ocupado. Tente novamente em instantes.")
         try:
-            try: parsed=GenerateOptions.model_validate_json(options)
-            except ValidationError: raise HTTPException(422,"Configurações inválidas. Confira tipo, tamanho e dimensões.")
-            raw=await image.read(settings.max_upload_bytes+1) if image else b""
-            if image and not raw: raise HTTPException(422,"O arquivo está vazio.")
-            if not raw and (parsed.mode=="procedural" or not parsed.description.strip()):
-                raise HTTPException(422,"Envie uma imagem ou, no modo IA, descreva a estrutura desejada.")
-            if len(raw)>settings.max_upload_bytes: raise HTTPException(413,"Imagem excede o limite de upload.")
+            raw,parsed=await read_generation(image,options)
             return await run_in_threadpool(generate,raw,parsed)
         except HTTPException: raise
         except GenerationError as exc:
@@ -207,9 +271,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             logger.exception("Falha na geração")
             raise HTTPException(500,"Não foi possível gerar a construção.")
         finally:
+            generation_slots.release()
             if image:
                 await image.close()
-            generation_slots.release()
 
     return app
 

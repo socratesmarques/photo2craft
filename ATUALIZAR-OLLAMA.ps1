@@ -61,7 +61,7 @@ try {
     if ($published -notmatch ':(\d+)\s*$') { throw 'Nao foi possivel identificar a porta do site.' }
     $siteUrl = 'http://localhost:' + $Matches[1]
     $capabilities = Invoke-RestMethod -Uri ($siteUrl + '/api/capabilities') -TimeoutSec 10
-    if ($capabilities.release -ne $expectedRelease -or $capabilities.aiProvider -ne 'ollama') {
+    if ($capabilities.release -ne $expectedRelease -or $capabilities.aiProvider -ne 'ollama' -or !$capabilities.generationJobs) {
         throw 'O endereco publicado respondeu com outra versao. Confira conflitos de porta ou proxy.'
     }
     Write-Host "CONFIRMADO: Photo2Craft 0.5.0 / Ollama (modelo preservado do .env)"

@@ -10,6 +10,12 @@ A interface envia `multipart/form-data` com opções e imagem opcional no modo I
 
 O limite de gerações e o lock de quota são por processo. Use **um processo Uvicorn** neste MVP. Não escale múltiplos workers antes de mover quota e jobs para coordenação no banco/fila. Listagem ainda lê JSON dos registros; em grande escala, mova os metadados para colunas próprias.
 
+`POST /api/generation-jobs` aceita a entrada e retorna 202. Um executor com uma thread executa a geração fora da conexão do navegador, compartilhando o semáforo com `/api/generate` legado. A tabela aditiva `generation_jobs` guarda estado/etapa/erro; imagens de entrada permanecem apenas no worker até salvar o projeto. Não há repetição automática de inferência após crash. Na inicialização, jobs interrompidos viram falhas explícitas, ou sucesso quando o mesmo ID já existe em `builds`. Os últimos 200 estados são mantidos; a limpeza não exclui construções. O encerramento normal aguarda o executor antes de fechar o banco.
+
+O frontend guarda o ID em localStorage, consulta a cada 1,5 s e tenta novamente até cinco vezes quando a conexão falha, sem reenviar a geração. Após isso oferece retomar o acompanhamento. Se a resposta ao POST inicial se perder antes de o ID chegar ao navegador, consulte a galeria; o servidor pode já estar trabalhando e recusará uma nova geração com 429 enquanto ocupado.
+
+Ollama responde por NDJSON (`stream=true`). O adaptador reúne os fragmentos antes de validar qualquer plano, conserva métricas do evento final e informa a primeira chegada de conteúdo. Nenhum JSON parcial é compilado. Há limites de bytes, orçamento de saída por etapa e prazo compartilhado. Ao reduzir tokens disponíveis, limites de componentes/partes também diminuem antes da chamada.
+
 ## Mod
 
 - `StructureCodec`: contrato, limites, coordenadas, paleta e estados.

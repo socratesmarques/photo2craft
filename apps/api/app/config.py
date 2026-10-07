@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     ai_provider: str = "ollama"
     ollama_url: str = "http://127.0.0.1:11434"
     ollama_model: str = "qwen3-vl:8b"
-    ai_timeout_seconds: int = Field(default=600, ge=10, le=900)
+    ai_timeout_seconds: int = Field(default=900, ge=10, le=7200)
     ai_max_output_tokens: int = Field(default=16000, ge=1000, le=24000)
     ai_context_tokens: int = Field(default=16384, ge=8192, le=32768)
 

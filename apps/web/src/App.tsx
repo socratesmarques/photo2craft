@@ -1,10 +1,19 @@
 import {lazy,Suspense,useEffect,useRef,useState} from 'react';
 import {Box,Plus,Images,Upload,Image as ImageIcon,Check,Copy,Download,Trash2,LoaderCircle,ChevronLeft,X,Layers,Maximize2,ExternalLink} from 'lucide-react';
 import Comparison from './Comparison';
-import {api} from './api';
+import {api,ApiError} from './api';
 import type {Build,Options,Structure,Capabilities} from './types';
 const Preview=lazy(()=>import('./Preview'));
 const RELEASE='ollama-local-0.5.0';
+const JOB_KEY='photo2craft.activeGeneration';
+function savedJob(){try{return localStorage.getItem(JOB_KEY);}catch{return null;}}
+function saveJob(id:string|null){try{if(id)localStorage.setItem(JOB_KEY,id);else localStorage.removeItem(JOB_KEY);}catch{/* Storage may be disabled; current-tab polling still works. */}}
+function stageLabel(stage:string){
+  if(stage==='reconnecting')return 'Conexão instável; tentando acompanhar novamente…';
+  const base=stage.replace(/\.(compact|receiving)$/g,'').replace(/\.compact$/,'');
+  const label=base==='queued'?'Geração recebida':base==='preprocessing'?'Preparando referência':base==='depth'?'Estimando profundidade':base==='saving'?'Salvando construção':base==='render'?'Renderizando construção':base==='geometry'?'Montando geometria':base.includes('analysis')?'Analisando referência':base.includes('repair')?'Corrigindo plano':base.includes('geometry')?'Criando plano da estrutura':base.includes('assessment')||base==='comparison'?'Comparando com a referência':base.includes('refinement')?'Refinando a estrutura':base.includes('details')?'Acrescentando detalhes':'Processando construção';
+  return label+(stage.includes('.compact')?' · nova tentativa compacta':'')+(stage.endsWith('.receiving')?' · recebendo resposta da IA':'');
+}
 
 const defaults:Options={name:'',description:'',mode:'ai',quality:'detailed',subject_scope:'object',max_refinements:null,depth_estimation:true,allow_transparent:true,preserve_symmetry:true,fidelity:95,type:'automatic',size:'large',style:'minecraft',interior:'none',width:64,height:48,depth:64};
 const kinds=[['automatic','Automático'],['house','Casa'],['castle','Castelo'],['building','Prédio'],['monument','Monumento'],['other','Outro']];
@@ -22,6 +31,8 @@ export default function App(){
   const [structure,setStructure]=useState<Structure|null>(null);
   const [busy,setBusy]=useState(false);
   const [elapsed,setElapsed]=useState(0);
+  const [pendingJob,setPendingJob]=useState<string|null>(savedJob);
+  const [jobStage,setJobStage]=useState('queued');
   const [loading,setLoading]=useState(false);
   const [error,setError]=useState('');
   const [toast,setToast]=useState('');
@@ -31,18 +42,19 @@ export default function App(){
   const fileInput=useRef<HTMLInputElement>(null);
   const modal=useRef<HTMLDialogElement>(null);
   const requestId=useRef(0);
+  const polling=useRef<AbortController|null>(null);
   async function refresh(){const r=await api.list();setBuilds(r.items);setTotal(r.total);}
   useEffect(()=>{Promise.all([refresh(),api.capabilities().then(value=>{
     setCap(value);
-    if(value.release!==RELEASE)setError('API desatualizada: este site exige Photo2Craft 0.5.0 com Ollama. Execute ATUALIZAR-OLLAMA.ps1 na pasta do projeto.');
+    if(value.release!==RELEASE||!value.generationJobs)setError('API desatualizada: atualize o backend e o site juntos. Execute docker compose up -d --build ou ATUALIZAR-OLLAMA.ps1 na pasta do projeto.');
   })]).catch(()=>setError('Não foi possível conectar à API. Confira se o backend está em execução.'));},[]);
   useEffect(()=>{if(!file){setImageUrl('');return;}const url=URL.createObjectURL(file);setImageUrl(url);return()=>URL.revokeObjectURL(url);},[file]);
   useEffect(()=>{if(!toast)return;const timer=setTimeout(()=>setToast(''),3500);return()=>clearTimeout(timer);},[toast]);
   useEffect(()=>{if(deleteTarget)modal.current?.showModal();else modal.current?.close();},[deleteTarget]);
-  useEffect(()=>{if(!busy){setElapsed(0);return;}const start=Date.now();const timer=setInterval(()=>setElapsed(Math.floor((Date.now()-start)/1000)),1000);return()=>clearInterval(timer);},[busy]);
+  useEffect(()=>{const id=savedJob();if(id)void followJob(id);return()=>polling.current?.abort();},[]);
   const set=(key:keyof Options,value:string|number|boolean|null)=>setOptions(o=>({...o,[key]:value}));
   const isAI=options.mode==='ai';
-  const canGenerate=!!cap&&cap.release===RELEASE&&!busy&&(isAI?cap.aiConfigured&&(!!file||!!options.description.trim()):!!file);
+  const canGenerate=!!cap&&cap.release===RELEASE&&cap.generationJobs&&!busy&&!pendingJob&&(isAI?cap.aiConfigured&&(!!file||!!options.description.trim()):!!file);
   function changeMode(value:'ai'|'procedural'){
     setOptions(o=>({...o,mode:value,type:value==='ai'?'automatic':'house',size:value==='ai'?'large':'small'}));
   }
@@ -61,13 +73,48 @@ export default function App(){
   }
   async function generate(e:React.FormEvent){
     e.preventDefault();if(!canGenerate){setError(isAI?'Configure a IA e envie uma imagem ou descreva a estrutura.':'Escolha uma imagem para testar o modelo pronto.');return;}
-    setBusy(true);setError('');
+    setBusy(true);setError('');setElapsed(0);setJobStage('queued');
     try{
-      const b=await api.generate(file,{...options,name:options.name.trim()||'Minha construção'});
-      await open(b);
-      await refresh();setToast('Construção pronta para importar!');
+      const job=await api.generate(file,{...options,name:options.name.trim()||'Minha construção'});
+      saveJob(job.id);setPendingJob(job.id);
+      await followJob(job.id);
     }catch(e){setError((e as Error).message);}
     finally{setBusy(false);}
+  }
+  async function followJob(id:string){
+    polling.current?.abort();
+    const controller=new AbortController();polling.current=controller;
+    setBusy(true);setError('');
+    let failures=0;
+    try{
+      while(!controller.signal.aborted){
+        let job;
+        try{job=await api.job(id,controller.signal);failures=0;}
+        catch(e){
+          if(controller.signal.aborted)return;
+          if(e instanceof ApiError&&e.status===404){saveJob(null);setPendingJob(null);throw e;}
+          if(++failures>=5)throw e;
+          setJobStage('reconnecting');
+          await new Promise(resolve=>setTimeout(resolve,2000));continue;
+        }
+        if(controller.signal.aborted)return;
+        setJobStage(job.stage);setElapsed(job.elapsedSeconds);
+        if(job.status==='failed'){
+          saveJob(null);setPendingJob(null);
+          throw new Error(job.error||'A geração falhou. Confira os logs da API.');
+        }
+        if(job.status==='succeeded'&&job.buildId){
+          let build:Build;
+          try{build=await api.build(job.buildId);}
+          catch(e){if(e instanceof ApiError&&e.status===404){saveJob(null);setPendingJob(null);}throw e;}
+          if(controller.signal.aborted)return;
+          saveJob(null);setPendingJob(null);
+          await open(build);await refresh();setToast('Construção pronta para importar!');return;
+        }
+        await new Promise(resolve=>setTimeout(resolve,1500));
+      }
+    }catch(e){if(!controller.signal.aborted)setError((e as Error).message);}
+    finally{if(!controller.signal.aborted)setBusy(false);}
   }
   async function copy(value:string){
     try{await navigator.clipboard.writeText(value);setToast('Comando copiado.');}
@@ -96,6 +143,7 @@ export default function App(){
     <main><header className="topbar"><span>Estúdio <span className="crumb">/</span> {page==='create'?'Criar construção':'Minhas construções'}</span><span className="local-label">Espaço local</span></header>
       <div className="main-content"><div className="page-title"><div className="eyebrow">IMAGINE. GERE. CONSTRUA.</div><h1>{page==='create'?'Transforme imagens em construções do Minecraft.':'Minhas construções'}</h1><p>{page==='create'?'Uma referência, algumas escolhas e um novo lugar para explorar.':`${number(total)} ${total===1?'projeto pronto':'projetos prontos'} para fazer parte do seu mundo.`}</p></div>
       {error&&<div role="alert" className="alert"><span>{error}</span><button aria-label="Fechar aviso" onClick={()=>setError('')}><X size={17}/></button></div>}
+      {pendingJob&&<p role="status" className="field-note">{stageLabel(jobStage)} · {Math.floor(elapsed/60)}min {elapsed%60}s. Você pode recarregar a página; o acompanhamento será retomado.{!busy&&<button className="secondary" onClick={()=>void followJob(pendingJob)}>Retomar acompanhamento</button>}</p>}
       {page==='create'?<div className="studio-grid"><form onSubmit={generate} className="creation-form"><fieldset disabled={busy}>
         <label>Modo de geração<select value={options.mode} onChange={e=>changeMode(e.target.value as 'ai'|'procedural')}><option value="ai">IA · Imagem ou texto · Estrutura livre</option><option value="procedural">Demo local · Modelos prontos</option></select></label>
         {isAI&&!cap?.aiConfigured&&<div className="ai-setup" role="status"><strong>Ative a IA local</strong><p>Configure o Ollama e um modelo com visão no backend. Enquanto isso, o modo demo continua disponível.</p></div>}
@@ -118,7 +166,7 @@ export default function App(){
         </details>
         <div className="mvp-note"><Box size={17}/><p>{isAI?`IA local com ${cap?.aiModel||'modelo com visão'} via Ollama: sem chave e sem cobrança por geração. A construção será uma aproximação em blocos; partes invisíveis serão inferidas.`:'Demo gratuita de modelos prontos. Para gerar outros tipos de estrutura e interpretar referências, selecione o modo IA.'}</p></div>
         <button type="submit" className="primary generate" disabled={!canGenerate}>{busy?<LoaderCircle size={19} className="spin"/>:<Box size={19}/>} {busy?(isAI?'IA planejando a estrutura…':'Gerando construção…'):'Gerar construção'}</button>
-        {busy&&<p role="status" className="field-note">Aguardando o gerador · {Math.floor(elapsed/60)}min {elapsed%60}s. {isAI&&options.quality!=='quick'?'Análise, render e correções são processados em sequência.':''} Este contador mostra o tempo decorrido, não o progresso. Não clique novamente.</p>}
+        {busy&&!pendingJob&&<p role="status" className="field-note">Enviando referência ao gerador…</p>}
       </fieldset></form>{detail}</div>:selected?<><button className="back secondary" onClick={()=>{requestId.current++;setSelected(null);setStructure(null);setLoading(false);}}><ChevronLeft size={17}/> Voltar às construções</button><div className="detail-layout">{detail}<div className="detail-info"><h2>{selected.name}</h2>{selected.thumbnail&&<img src={selected.thumbnail} alt="Referência original"/>}<p>{selected.description||'Sem descrição.'}</p><p className="muted">{new Date(selected.createdAt).toLocaleString('pt-BR')}</p><label>ID do projeto<code className="project-id">{selected.id}</code></label></div></div></>:builds.length?<><div className="project-grid">{builds.map(b=><article className="project-card" key={b.id}><button className="card-image" onClick={()=>open(b)} aria-label={`Visualizar ${b.name}`}>{b.thumbnail?<img src={b.thumbnail} alt={`Referência de ${b.name}`}/>:<Box size={50}/>}<span className="card-badge"><Check size={12}/> Pronta</span></button><div className="card-body"><h2>{b.name}</h2><p>{number(b.solidBlockCount)} blocos · {b.size.width} × {b.size.height} × {b.size.depth}</p><small>{new Date(b.createdAt).toLocaleDateString('pt-BR')}</small><code className="card-command">{b.importCommand}</code><div className="card-actions"><button className="secondary" onClick={()=>open(b)}>Visualizar</button><button className="icon-button" aria-label={`Copiar comando de ${b.name}`} onClick={()=>copy(b.importCommand)}><Copy size={17}/></button><button className="icon-button danger" aria-label={`Excluir ${b.name}`} onClick={()=>setDeleteTarget(b)}><Trash2 size={17}/></button></div></div></article>)}</div>{builds.length<total&&<button className="secondary load-more" disabled={loading} onClick={async()=>{setLoading(true);try{const r=await api.list(builds.length);setBuilds(b=>[...b,...r.items]);}catch(e){setError((e as Error).message);}finally{setLoading(false);}}}>{loading?'Carregando…':'Carregar mais'}</button>}</>:<div className="collection-empty"><Images size={44}/><h2>Seu mundo começa com uma ideia.</h2><p>Suas construções ficarão guardadas aqui.</p><button className="primary" onClick={fresh}><Plus size={18}/> Criar primeira construção</button></div>}
       </div><footer className="main-footer"><span>Photo2Craft 0.5.0 · Ollama</span><span>Uma ideia de cada vez. Um bloco de cada vez.</span></footer>
     </main>

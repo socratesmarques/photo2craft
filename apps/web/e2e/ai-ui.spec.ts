@@ -14,16 +14,18 @@ test('modo IA aceita texto sem imagem e mostra a origem do resultado (API simula
     blocks.push({x,y:4,z,block:'minecraft:stone_bricks',states:{}});
     if(x<2||x>6)for(let y=0;y<4;y++)blocks.push({x,y,z,block:'minecraft:stone_bricks',states:{}});
   }
-  await page.route('**/api/capabilities',route=>route.fulfill({json:{version:'0.5.0',release:'ollama-local-0.5.0',maxUploadBytes:5242880,maxBlocks:50000,maxDimension:64,maxProjects:200,aiConfigured:true,aiProvider:'ollama',aiModel:'test-model'}}));
-  await page.route('**/api/generate',async route=>{
+  await page.route('**/api/capabilities',route=>route.fulfill({json:{version:'0.5.0',release:'ollama-local-0.5.0',generationJobs:true,maxUploadBytes:5242880,maxBlocks:50000,maxDimension:64,maxProjects:200,aiConfigured:true,aiProvider:'ollama',aiModel:'test-model'}}));
+  await page.route('**/api/generation-jobs',async route=>{
     const body=route.request().postData()||'';
     expect(body).toContain('"mode":"ai"');
     expect(body).toContain('"quality":"detailed"');
     expect(body).toContain('"size":"large"');
     expect(body).toContain('Uma ponte de pedra com dois pilares.');
     expect(body).not.toContain('name="image"');
-    await route.fulfill({status:201,json:build});
+    await route.fulfill({status:202,json:{id:'test-job',status:'queued',stage:'queued',elapsedSeconds:0}});
   });
+  await page.route('**/api/generation-jobs/test-job',route=>route.fulfill({json:{id:'test-job',status:'succeeded',stage:'final',elapsedSeconds:2,buildId:id}}));
+  await page.route(`**/api/builds/${id}`,route=>route.fulfill({json:build}));
   await page.route(`**/api/builds/${id}/structure`,route=>route.fulfill({json:{id,name:build.name,size:build.size,blocks}}));
   await page.goto('/');
   await expect(page.getByLabel('Qualidade')).toHaveValue('detailed');

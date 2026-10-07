@@ -1,6 +1,7 @@
 """Create, validate, fetch and delete a temporary project via the running API."""
 import argparse
 import json
+import time
 from pathlib import Path
 import httpx
 
@@ -21,12 +22,32 @@ def main():
                    size=args.size, description=args.description,
                    type='automatic' if args.mode == 'ai' else 'house')
     files = {'image': (args.image.name, args.image.read_bytes())} if args.image else None
-    with httpx.Client(base_url=args.url, timeout=args.timeout) as client:
-        response = client.post('/api/generate', files=files, data={'options': json.dumps(options)})
+    with httpx.Client(base_url=args.url, timeout=30) as client:
+        deadline = time.monotonic() + args.timeout
+        response = client.post('/api/generation-jobs', files=files, data={'options': json.dumps(options)})
         response.raise_for_status()
-        project = response.json()
-        build_id = project['id']
+        job_id = response.json()['id']
+        print(f'Geração recebida: {job_id}', flush=True)
+        previous_stage = None
+        while True:
+            response = client.get(f'/api/generation-jobs/{job_id}')
+            response.raise_for_status()
+            job = response.json()
+            if job['stage'] != previous_stage:
+                print(f"{job['elapsedSeconds']}s: {job['stage']}", flush=True)
+                previous_stage = job['stage']
+            if job['status'] == 'failed':
+                raise RuntimeError(f"Geração falhou (HTTP {job['errorCode']}): {job['error']}")
+            if job['status'] == 'succeeded':
+                build_id = job['buildId']
+                break
+            if time.monotonic() >= deadline:
+                raise TimeoutError(f'Acompanhamento expirou; o job {job_id} pode continuar. Consulte /api/generation-jobs/{job_id}.')
+            time.sleep(1)
         try:
+            response = client.get(f'/api/builds/{build_id}')
+            response.raise_for_status()
+            project = response.json()
             response = client.get(f'/api/builds/{build_id}/structure')
             response.raise_for_status()
             structure = response.json()

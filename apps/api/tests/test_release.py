@@ -33,7 +33,7 @@ def test_installed_version_and_model_check_without_generation(scenario):
     def handler(request):
         calls.append((request.method, str(request.url)))
         if request.url.path == '/api/capabilities':
-            return httpx.Response(200, json={'release': RELEASE if scenario != 'old_api' else 'old', 'aiProvider': 'ollama'})
+            return httpx.Response(200, json={'release': RELEASE if scenario != 'old_api' else 'old', 'aiProvider': 'ollama', 'generationJobs': True})
         if scenario == 'offline':
             raise httpx.ConnectError('offline')
         assert request.url.path == '/api/tags'

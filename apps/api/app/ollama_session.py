@@ -7,6 +7,7 @@ import logging
 import math
 import time
 from PIL import Image
+from .progress import report_progress
 
 logger = logging.getLogger("photo2craft.ollama")
 
@@ -74,6 +75,13 @@ class GenerationSession:
             if available < 512:
                 raise GenerationError("O contexto não comporta esta etapa. Reduza os componentes ou use AI_CONTEXT_TOKENS=32768.")
             predict = min(budget, settings.ai_max_output_tokens, available)
+            # A large schema limit is not a realistic target when context or .env
+            # leaves only a small output budget. Reduce before spending inference.
+            schema = deepcopy(schema)
+            for key, cost in (("components", 240), ("parts", 180), ("corrections", 280)):
+                value = schema.get("properties", {}).get(key)
+                if value and "maxItems" in value:
+                    value["maxItems"] = min(value["maxItems"], max(value.get("minItems", 0), 1, (predict - 400) // cost))
             limits = {key: value["maxItems"] for key, value in schema.get("properties", {}).items()
                       if "maxItems" in value}
             payload = {
@@ -83,10 +91,11 @@ class GenerationSession:
                      "\nReturn compact JSON only, no Markdown or commentary. Array limits: " + json.dumps(limits)},
                     {"role": "user", "content": user, "images": images},
                 ],
-                "format": schema, "stream": False, "think": False, "keep_alive": "10m",
+                "format": schema, "stream": True, "think": False, "keep_alive": "10m",
                 "options": {"temperature": 0, "num_ctx": settings.ai_context_tokens, "num_predict": predict},
             }
             name = stage + (".compact" if attempt else "")
+            report_progress(name)
             started = time.monotonic()
             response = self.generator._request(payload, timeout_seconds=remaining,
                                                stage=name, build_id=self.build_id)
@@ -99,7 +108,7 @@ class GenerationSession:
                 raise GenerationError("Tempo total de geração esgotado.", 504)
             if response.get("done_reason") == "length":
                 if attempt:
-                    raise GenerationError("A etapa atingiu o limite de saída mesmo após compactação; nenhum JSON parcial foi aplicado.")
+                    raise GenerationError(f"A etapa {stage} atingiu o limite de saída ({predict} tokens) mesmo após compactação; nenhum JSON parcial foi aplicado. Tente Rápido ou reduza a complexidade.")
                 schema = deepcopy(schema)
                 for key, value in schema.get("properties", {}).items():
                     if "maxItems" in value:
