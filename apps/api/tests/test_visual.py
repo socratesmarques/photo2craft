@@ -191,7 +191,7 @@ def test_depth_failure_fallback(tmp_path,monkeypatch,failure):
 
 def test_visual_api_persists_and_old_fixture_imports(tmp_path,monkeypatch):
     replies=iter([study(),plan(),assessment(96)])
-    monkeypatch.setattr(AIGenerator,'_request',lambda self,payload,timeout_seconds=None:{'done':True,'message':{'content':json.dumps(next(replies))}})
+    monkeypatch.setattr(AIGenerator,'_request',lambda self,payload,timeout_seconds=None, **kwargs:{'done':True,'message':{'content':json.dumps(next(replies))}})
     image=BytesIO();Image.new('RGB',(64,64),'gray').save(image,'PNG')
     with TestClient(create_app(Settings(data_dir=tmp_path,_env_file=None))) as client:
         result=client.post('/api/generate',data={'options':json.dumps(dict(mode='ai',quality='detailed',size='small'))},files={'image':('ref.png',image.getvalue(),'image/png')})
@@ -211,7 +211,7 @@ def test_visual_api_persists_and_old_fixture_imports(tmp_path,monkeypatch):
 def test_visual_shared_deadline_keeps_initial_geometry(tmp_path,monkeypatch):
     clock=[0.0];replies=iter([study(),plan(),assessment()]);timeouts=[]
     monkeypatch.setattr('app.visual_generator.time.monotonic',lambda:clock[0])
-    def fake(self,payload,timeout_seconds=None):
+    def fake(self,payload,timeout_seconds=None, **kwargs):
         timeouts.append(timeout_seconds);clock[0]+=4
         return {'done':True,'message':{'content':json.dumps(next(replies))}}
     monkeypatch.setattr(AIGenerator,'_request',fake)

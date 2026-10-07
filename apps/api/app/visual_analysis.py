@@ -21,7 +21,7 @@ def preprocess(original, scope='object'):
     edges = cv2.Canny(gray, 70, 150)
     border = np.concatenate((array[0], array[-1], array[:, 0], array[:, -1]))
     background = np.median(border, axis=0)
-    distance = np.linalg.norm(array.astype(float) - background, axis=2)
+    distance = np.linalg.norm(array.astype(np.float32) - background, axis=2)
     mask = (distance > 35).astype(np.uint8)
     method = 'border_color'
     if scope == 'scene':
@@ -61,9 +61,13 @@ def preprocess(original, scope='object'):
     cropped = mask[y0:y1,x0:x1]
     pixels = array[mask.astype(bool)]
     # Quantized histogram has deterministic order and bounded memory, no random clustering.
-    bins = (pixels//32)*32+16
-    unique,counts=np.unique(bins,axis=0,return_counts=True)
-    order=np.argsort(-counts,kind='stable')[:6]
+    quantized = (pixels // 32).astype(np.int32)
+    codes = quantized[:, 0] * 64 + quantized[:, 1] * 8 + quantized[:, 2]
+    counts = np.bincount(codes, minlength=512)
+    indices = np.arange(512)
+    unique = np.stack((indices // 64, (indices // 8) % 8, indices % 8), axis=1) * 32 + 16
+    order = np.argsort(-counts, kind='stable')[:6]
+    order = order[counts[order] > 0]
     lines = cv2.HoughLinesP(edges,1,np.pi/180,threshold=40,minLineLength=max(10,min(w,h)//5),maxLineGap=8)
     line_data=[] if lines is None else [[int(n) for n in line[0]] for line in lines[:12]]
     return VisualEvidence(image,mask,edges,{

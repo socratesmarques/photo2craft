@@ -1,6 +1,10 @@
 # Validação — 0.5.0 Visual Refinement
 
-## Executado nesta entrega
+## Revisão atual de fidelidade/Ollama
+
+Resultados atuais, diferenças de desempenho e limitações estão em [ollama-fidelity-review.md](ollama-fidelity-review.md#validação-executada).
+
+## Histórico da entrega inicial 0.5.0
 
 - **144 testes Python aprovados** (API, modo demo, gerador textual anterior, plano, geometria, limites,
   paleta/semântica/Lab, correções transacionais, ciclos limitados, rollback da melhor estrutura,

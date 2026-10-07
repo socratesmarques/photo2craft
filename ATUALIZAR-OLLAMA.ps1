@@ -38,9 +38,10 @@ try {
     $localSettings = [ordered]@{
         AI_PROVIDER = 'ollama'
         OLLAMA_URL = 'http://host.docker.internal:11434'
-        OLLAMA_MODEL = 'gemma4:e2b'
-        AI_TIMEOUT_SECONDS = '600'
-        AI_MAX_OUTPUT_TOKENS = '16000'
+        OLLAMA_MODEL = 'qwen3-vl:8b'
+        AI_TIMEOUT_SECONDS = '900'
+        AI_MAX_OUTPUT_TOKENS = '24000'
+        AI_CONTEXT_TOKENS = '32768'
     }
     foreach ($key in $localSettings.Keys) {
         $pattern = '(?m)^\s*' + [regex]::Escape($key) + '\s*=[^\r\n]*'
@@ -51,7 +52,7 @@ try {
     [System.IO.File]::WriteAllText($envFile, $envText, [System.Text.UTF8Encoding]::new($false))
     Write-Host "Projeto Docker: $ProjectName | Pasta: $projectRoot"
     Write-Host 'Portas e dados existentes preservados. Recriando API e site...'
-    Invoke-PhotoDocker -DockerArguments @('build', '--no-cache', 'api', 'web')
+    Invoke-PhotoDocker -DockerArguments @('build', 'api', 'web')
     Invoke-PhotoDocker -DockerArguments @('up', '-d', '--force-recreate', '--wait', '--wait-timeout', '120', 'api', 'web')
     Invoke-PhotoDocker -DockerArguments @('exec', '-T', 'api', 'python', '-m', 'app.verify_installation')
 

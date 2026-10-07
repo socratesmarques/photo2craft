@@ -20,7 +20,7 @@ def test_legacy_openai_env_does_not_select_old_provider(tmp_path, monkeypatch):
         assert result['release'] == RELEASE == 'ollama-local-0.5.0'
         assert result['version'] == VERSION == '0.5.0'
         assert result['aiProvider'] == 'ollama'
-        assert result['aiModel'] == 'gemma4:e2b'
+        assert result['aiModel'] == 'qwen3-vl:8b'
         assert result['aiConfigured'] is True
         assert response.headers['cache-control'] == 'no-store'
         assert 'obsolete-test-key' not in response.text
@@ -37,7 +37,7 @@ def test_installed_version_and_model_check_without_generation(scenario):
         if scenario == 'offline':
             raise httpx.ConnectError('offline')
         assert request.url.path == '/api/tags'
-        return httpx.Response(200, json={'models': [] if scenario == 'missing_model' else [{'name':'gemma4:e2b'}]})
+        return httpx.Response(200, json={'models': [] if scenario == 'missing_model' else [{'name':'qwen3-vl:8b'}]})
     with httpx.Client(transport=httpx.MockTransport(handler)) as client:
         if scenario == 'ready':
             verify(client, Settings(_env_file=None))

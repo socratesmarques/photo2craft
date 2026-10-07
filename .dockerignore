@@ -13,3 +13,8 @@ minecraft
 **/test-results
 **/playwright-report
 **/*.tsbuildinfo
+
+.env.*
+!.env.example
+models
+benchmark-results

@@ -19,3 +19,6 @@ playwright-report/
 
 models/
 benchmark-results/
+
+.env.*
+!.env.example

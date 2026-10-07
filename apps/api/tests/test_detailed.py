@@ -181,7 +181,7 @@ def test_context_budget_and_total_deadline(tmp_path, monkeypatch):
     clock = [0.0]
     monkeypatch.setattr("app.detailed_generator.time.monotonic", lambda: clock[0])
     calls = []
-    def fake(self, payload, timeout_seconds=None):
+    def fake(self, payload, timeout_seconds=None, **kwargs):
         calls.append(timeout_seconds)
         clock[0] += 4
         return envelope([study(), body(), details()][len(calls)-1])
@@ -195,7 +195,7 @@ def test_context_budget_and_total_deadline(tmp_path, monkeypatch):
 
 def test_detailed_api_persistence_and_old_projects(tmp_path, monkeypatch):
     replies = iter([study(), body(), details()])
-    monkeypatch.setattr(AIGenerator, "_request", lambda self, payload, timeout_seconds=None: envelope(next(replies)))
+    monkeypatch.setattr(AIGenerator, "_request", lambda self, payload, timeout_seconds=None, **kwargs: envelope(next(replies)))
     with TestClient(create_app(Settings(data_dir=tmp_path, _env_file=None))) as client:
         cap = client.get("/api/capabilities").json()
         assert cap["minimumModVersion"] == "0.3.0" and "detailed" in cap["qualityModes"]

@@ -19,13 +19,15 @@ services:
       DATABASE_URL: ${DATABASE_URL:-}
       AI_PROVIDER: ${AI_PROVIDER:-ollama}
       OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
-      OLLAMA_MODEL: ${OLLAMA_MODEL:-gemma4:e2b}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen3-vl:8b}
       AI_TIMEOUT_SECONDS: ${AI_TIMEOUT_SECONDS:-600}
       AI_MAX_OUTPUT_TOKENS: ${AI_MAX_OUTPUT_TOKENS:-16000}
       VISUAL_DEBUG: ${VISUAL_DEBUG:-false}
       DEPTH_MODEL_PATH: ${DEPTH_MODEL_PATH:-}
       DEPTH_TIMEOUT_SECONDS: ${DEPTH_TIMEOUT_SECONDS:-45}
       AI_CONTEXT_TOKENS: ${AI_CONTEXT_TOKENS:-16384}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - photo2craft-data:/srv/photo2craft/data
       - ./models:/srv/photo2craft/models:ro

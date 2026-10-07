@@ -176,7 +176,7 @@ def test_api_ai_requires_configuration_and_no_silent_fallback(tmp_path):
 
 
 def test_api_text_to_ai_structure_and_persistence(settings, monkeypatch):
-    monkeypatch.setattr(AIGenerator, "_request", lambda self, payload: response())
+    monkeypatch.setattr(AIGenerator, "_request", lambda self, payload, **kwargs: response())
     with TestClient(create_app(settings)) as client:
         cap = client.get("/api/capabilities").json()
         assert cap["aiConfigured"] is True and cap["aiProvider"] == "ollama"
@@ -196,7 +196,7 @@ def test_api_text_to_ai_structure_and_persistence(settings, monkeypatch):
 def test_full_quota_prevents_paid_request(settings, monkeypatch):
     settings.max_projects = 1
     calls = []
-    def fake_request(self, payload):
+    def fake_request(self, payload, **kwargs):
         calls.append(payload)
         return response()
     monkeypatch.setattr(AIGenerator, "_request", fake_request)
