@@ -11,7 +11,10 @@ def verify(client, settings):
     cap = response.json()
     if cap.get("release") != RELEASE or cap.get("aiProvider") != "ollama":
         raise ValueError("A API em execucao nao corresponde a esta versao Ollama.")
+    if not cap.get("generationJobs"):
+        raise ValueError("A API ainda nao suporta geracao em segundo plano. Reconstrua api e web juntos.")
     print(f"API confirmada: {RELEASE}")
+    print(f"Contexto: {settings.ai_context_tokens}; teto de saida: {settings.ai_max_output_tokens}; prazo: {settings.ai_timeout_seconds}s")
     response = client.get(settings.ollama_url.rstrip("/") + "/api/tags")
     response.raise_for_status()
     models = response.json().get("models", [])

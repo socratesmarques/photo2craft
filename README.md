@@ -207,6 +207,8 @@ A área precisa estar carregada, dentro da borda e da altura do mundo. Por padr�
 | GET | `/api/health` | Saúde com acesso ao banco |
 | GET | `/api/capabilities` | Limites e capacidades reais |
 | POST | `/api/generate` | Multipart: `options` JSON + `image` opcional no modo IA; retorna projeto pronto |
+| POST | `/api/generation-jobs` | Mesmo multipart; retorna 202 com ID para acompanhamento em segundo plano |
+| GET | `/api/generation-jobs/{id}` | Estado, etapa, tempo, erro ou `buildId` da geração concluída |
 | POST | `/api/builds` | Importa um JSON de construção validado; cria ID/data novos |
 | GET | `/api/builds?offset=0&limit=30` | Lista metadados, até 100 por página |
 | GET | `/api/builds/{id}` | Metadados |
@@ -226,7 +228,11 @@ curl -F 'image=@casa.png' \
 
 O MVP gera de forma síncrona e permite uma geração local por vez para não sobrecarregar GPU/RAM; resposta de sucesso é `201` com status `ready`. Não há fila persistente ou status fictício. Erros são `4xx` com `detail`, incluindo `413` para tamanho, `422` para validação, `409` para quota e `429` para gerador ocupado.
 
-Clientes antigos que omitem `mode` continuam em `procedural`. Para IA, envie `"mode":"ai"` e uma imagem ou `description` não vazia. `quality` aceita `quick` (padrão da API), `detailed` ou `ultra`. `type` aceita texto livre de até 120 caracteres; `fidelity` vai de 0 a 100. Ollama indisponível retorna 503; plano inválido 502; timeout 504. Falhas na análise/base não criam projetos e não são convertidas em casas. Falha de comparação/refinamento preserva a melhor estrutura válida com aviso. O Nginx aguarda até 960 segundos; a IA tem prazo total de até 900 segundos.
+Clientes antigos que omitem `mode` continuam em `procedural`. Para IA, envie `"mode":"ai"` e uma imagem ou `description` não vazia. `quality` aceita `quick` (padrão da API), `detailed` ou `ultra`. `type` aceita texto livre de até 120 caracteres; `fidelity` vai de 0 a 100. Ollama indisponível corresponde a 503; plano inválido a 502; timeout a 504. Falhas na análise/base não criam projetos e não são convertidas em casas. Falha de comparação/refinamento preserva a melhor estrutura válida com aviso.
+
+O site usa `/api/generation-jobs`: acompanha por requisições curtas e retoma o ID salvo no navegador após recarregar. Consulte `status` (`queued`, `running`, `succeeded`, `failed`); erros de execução aparecem em `error`/`errorCode`, e sucesso fornece `buildId`. Em seguida, busque `/api/builds/{buildId}` e `/structure`. Desconectar o navegador não cancela a geração. Reiniciar a API interrompe a inferência e registra a falha, preservando projetos já gravados. O histórico mantém até 200 jobs. Use apenas um processo Uvicorn.
+
+`AI_TIMEOUT_SECONDS` tem padrão 900 e aceita 10–7200 segundos. Aumentar o prazo não acelera a IA. O endpoint síncrono legado `/api/generate` continua sujeito ao timeout de 960 segundos do proxy; prefira jobs para gerações longas. Procedimento de atualização e validação: [revisão ponta a ponta](docs/generation-end-to-end.md).
 
 ## Testes
 

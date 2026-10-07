@@ -60,7 +60,7 @@ def test_three_stages_share_reference_preserve_proportions_and_add_details(tmp_p
     (result, info), calls = run(tmp_path, [study(), body(), details()], fidelity=95, style="medieval")
     assert len(calls) == 3
     assert result.size == Size(width=24, height=10, depth=48)
-    assert all(call["think"] is False and call["stream"] is False for call in calls)
+    assert all(call["think"] is False and call["stream"] is True for call in calls)
     assert all(call["options"]["num_ctx"] == 16384 for call in calls)
     assert all(len(call["messages"][1]["images"]) == 1 for call in calls)
     assert json.loads(calls[1]["messages"][1]["content"])["style"] == "preserve reference colors and shape"

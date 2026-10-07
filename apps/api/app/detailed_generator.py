@@ -195,6 +195,8 @@ If the reference lacks detail, add only what is supported, do not invent decorat
     except (GenerationError, ValidationError, ValueError) as exc:
         logger.warning("build_id=%s detail pass stopped: %s", build_id, exc)
         warnings.append("A etapa de detalhes não pôde ser aplicada; foi preservada a forma principal validada. Simplifique os detalhes pedidos ou revise a descrição antes de tentar novamente.")
+        if isinstance(exc, GenerationError):
+            warnings.append(str(exc))
     if max(bounds) < 32:
         warnings.append("Poucos blocos por eixo: detalhes pequenos serão perdidos. Use Grande para mais definição.")
     return structure, {

@@ -11,6 +11,7 @@ from .schemas import GenerateOptions, PALETTE
 
 from .ollama_session import GenerationError, GenerationSession, parse_json
 from .images import encode_reference
+from .progress import report_progress
 
 logger = logging.getLogger("photo2craft.ollama")
 
@@ -92,12 +93,18 @@ class AIGenerator:
         schema['$defs']['Part']['properties']['block']['enum'] = [
             block for block in PALETTE if options.allow_transparent or not VISUALS[block]['transparent']]
         schema['properties']['parts']['maxItems'] = 32
-        text = session.ask(schema, INSTRUCTIONS, user_request, encoded_images, 8000, "quick.geometry")
-        try:
-            plan = parse_json(Blueprint, text)
-            structure = compile_blueprint(plan, build_id, options, self.settings.max_blocks, bounds)
-        except (ValidationError, ValueError) as exc:
-            raise GenerationError("A IA retornou um plano fora dos limites. Simplifique a estrutura e tente novamente.") from exc
+        for attempt in range(2):
+            text = session.ask(schema, INSTRUCTIONS, user_request, encoded_images, 8000,
+                               "quick.geometry_repair" if attempt else "quick.geometry")
+            try:
+                plan = parse_json(Blueprint, text)
+                structure = compile_blueprint(plan, build_id, options, self.settings.max_blocks, bounds)
+                break
+            except (ValidationError, ValueError) as exc:
+                if attempt:
+                    raise GenerationError("A IA retornou um plano fora dos limites após uma correção. Simplifique a estrutura e tente novamente.") from exc
+                user_request = {**user_request, "validation_error": str(exc)[:700],
+                                "repair": "Return a complete corrected plan. Respect bounds, palette and cell budget."}
         return structure, {"mode": "ai", "provider": "ollama", "model": self.settings.ollama_model,
                            "summary": plan.summary, "assumptions": plan.assumptions,
                            "quality": "quick", "calls": session.calls, "warnings": session.warnings}
@@ -120,18 +127,61 @@ class AIGenerator:
                     if response.status_code == 404:
                         raise GenerationError(f"O modelo {self.settings.ollama_model} não está instalado. Execute: ollama pull {self.settings.ollama_model}", 503)
                     if response.status_code != 200:
-                        raise GenerationError("O Ollama recusou a geração. Confira se ele está aberto e se o modelo foi baixado.", 503)
+                        hints = {400: "Confira se o modelo suporta imagens e saída estruturada.",
+                                 429: "O servidor está ocupado. Aguarde a geração atual terminar.",
+                                 500: "Confira os logs do Ollama e a memória disponível; tente reduzir AI_CONTEXT_TOKENS."}
+                        raise GenerationError(f"O Ollama recusou a etapa {stage} (HTTP {status}). " +
+                                              hints.get(status, "Confira a configuração e os logs do Ollama."), 503)
                     body = bytearray()
+                    streaming = "ndjson" in response.headers.get("content-type", "")
+                    content, thinking = [], []
+                    total_bytes = 0
+                    text_bytes = 0
+                    received = False
+
+                    def consume(line):
+                        nonlocal result, received, text_bytes
+                        if not line.strip(): return
+                        item = json.loads(line)
+                        if not isinstance(item, dict): raise ValueError("Evento inválido")
+                        if item.get("error"):
+                            raise GenerationError(f"O Ollama interrompeu a etapa {stage}. Confira os logs do Ollama e a memória disponível.", 503)
+                        if result.get("done") is True:
+                            raise ValueError("Eventos após conclusão")
+                        message = item.get("message", {})
+                        if not isinstance(message, dict): raise ValueError("Mensagem inválida")
+                        for key, destination in (("content", content), ("thinking", thinking)):
+                            value = message.get(key, "")
+                            if not isinstance(value, str): raise ValueError("Texto inválido")
+                            text_bytes += len(value.encode("utf-8"))
+                            if text_bytes > 2 * 1024 * 1024:
+                                raise GenerationError("A resposta da IA excedeu o limite permitido.")
+                            destination.append(value)
+                        if message.get("content") and not received:
+                            received = True
+                            report_progress(stage + ".receiving")
+                        result = item
+
                     for chunk in response.iter_bytes():
                         if time.monotonic() > deadline:
                             raise GenerationError("A geração por IA excedeu o tempo limite. Tente um pedido mais simples.", 504)
-                        if len(body) + len(chunk) > 2 * 1024 * 1024:
+                        total_bytes += len(chunk)
+                        if total_bytes > (16 if streaming else 2) * 1024 * 1024:
                             raise GenerationError("A resposta da IA excedeu o limite permitido.")
                         body.extend(chunk)
-            decoded = json.loads(body)
-            if not isinstance(decoded, dict):
-                raise ValueError("Resposta não é um objeto")
-            result = decoded
+                        if streaming:
+                            while b"\n" in body:
+                                line, _, rest = body.partition(b"\n")
+                                body = bytearray(rest)
+                                consume(line)
+                    if streaming:
+                        consume(body)
+                        result = {**result, "message": {"content": "".join(content), "thinking": "".join(thinking)}}
+                    else:
+                        decoded = json.loads(body)
+                        if not isinstance(decoded, dict):
+                            raise ValueError("Resposta não é um objeto")
+                        result = decoded
             return result
         except GenerationError as exc:
             error = type(exc).__name__

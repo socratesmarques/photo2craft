@@ -18,6 +18,7 @@ from .depth import estimate_depth
 from .schemas import PALETTE
 from .images import encode_reference
 from .ollama_session import GenerationSession, parse_json
+from .progress import report_progress
 
 logger=logging.getLogger('photo2craft.visual')
 REFERENCE_RULES='''When images exist, priority is IMAGE > observed geometry > observed details > complementary text > style.
@@ -43,6 +44,7 @@ def generate_visual(generator,build_id,options,images,bounds):
             logger.warning('Debug artifact write failed for %s',build_id)
     @contextmanager
     def stage(name):
+        report_progress(name)
         start=time.monotonic()
         try: yield
         finally:
@@ -167,7 +169,8 @@ Never regenerate all components or invent hidden decorations. If no supported im
                 accepted+=1
     except (GenerationError,ValidationError,ValueError,RuntimeError,cv2.error) as exc:
         logger.warning('build_id=%s refinement stopped: %s; preserved valid structure',build_id,exc)
-        warnings.append('Comparação ou correção não concluída; última melhor estrutura válida preservada.')
+        reason = str(exc) if isinstance(exc, GenerationError) else 'O resultado da etapa não passou na validação.'
+        warnings.append('Comparação ou correção não concluída; última melhor estrutura válida preservada. '+reason)
     stages.append('final')
     debug('final-plan',best_plan.model_dump());debug('final-structure',best_structure.model_dump(mode='json'));debug('scores',history)
     timings['total']=round(time.monotonic()-started,3)
