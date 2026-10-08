@@ -1,53 +1,66 @@
-# Photo2Craft 0.5.0 — Visual Refinement
+# Photo2Craft 2.0 — reconstrução arquitetônica
 
-Revisão de fidelidade/Ollama: [mudanças, limites por etapa, benchmarks e validação](docs/ollama-fidelity-review.md).
+Referência(s) → análise multimodal → projeto arquitetônico validado → geometria
+Minecraft → prévia → refinamentos limitados → aprovação → importação.
 
-Transforme imagem ou descrição em uma estrutura de blocos para Minecraft Java 1.21.1.
-React/Vite/Three.js, FastAPI/SQLite, IA local via Ollama e mod Fabric (Java 21).
+**Gemini API é o provedor principal; Ollama/GPU local não são necessários.**
+Modo demo, pipeline Ollama legado, projetos existentes e mod Fabric permanecem.
+O JSON final continua no formato 1.0 para Minecraft 1.21.1/Java21/Fabric0.3.0.
 
-O novo fluxo detalhado com imagem é **OpenCV → estudo → componentes → geometria → render → comparação → correções → melhor estrutura**.
-Correções que pioram a avaliação são descartadas. Imagem sempre prevalece sobre estilo/texto complementar.
-A interface inclui Rápido/Detalhado/Ultra, objeto principal/cena completa, comparação lado a lado/sobreposição,
-vistas da câmera, tempo, etapas concluídas e nota estimada. A paleta passou a 166 IDs com seleção perceptual e semântica.
+Implementados: múltiplas referências, estudo com incerteza por elemento, materiais
+reais, colisões explícitas, aberturas/escadas/arcos, conectividade, jobs persistidos,
+progresso por etapas, cache, revisão de materiais, aprovação/rejeição e cotas duráveis.
+Render/cores são aproximados; uma foto não revela laterais/interior/traseira.
 
-- **Rápido:** uma análise e geração, sem refinamento visual.
-- **Detalhado:** até duas rodadas de correção/avaliação.
-- **Ultra:** até três rodadas e profundidade CPU opcional quando instalada; demora mais.
-- Sem imagem, preserva o planejamento textual anterior, sem nota de semelhança inventada.
-- Limites preservados: 64 por eixo / 50 mil células. Novos presets IA: 32, 48 e 64; proporções são preservadas dentro da caixa.
+**Estado de aceitação:** testes locais/mocks e frontend verificados; inferência real
+Gemini, comparação em fotos reais, Docker e colocação no Minecraft ainda precisam
+ser validados no ambiente do usuário. A migração não está certificada ponta a ponta.
+[Resultados e pendências](docs/photo2craft-2-validation.md).
 
-**O código foi testado com Ollama simulado; melhoria perceptual em fotos reais ainda precisa ser validada no seu PC.**
-A nota é uma heurística, não porcentagem científica. Uma única foto não mostra lados ocultos.
-Não há modelo adicional obrigatório: o depth model é opcional. Todos os modos respeitam o contexto configurado; o exemplo para Qwen usa 32k.
+## Iniciar com Docker e custo zero
 
-**Atualização:** veja [ATUALIZAR-IA.md](ATUALIZAR-IA.md). Recompile e instale o mod **0.3.0** para a nova paleta.
-Contrato JSON 1.0 e projetos antigos preservados. Não é necessário apagar banco, projetos nem `.env`.
+Na instalação existente, preserve `.env`, volume, mundos e nome do projeto Compose.
+Para uma instalação nova:
 
-Documentação: [pipeline, arquivos, materiais e limitações](docs/visual-refinement.md),
-[arquitetura](docs/architecture.md), [validação e benchmarks](docs/testing.md).
+```bash
+cp .env.example .env
+```
 
-## Começar com Docker
+No Windows PowerShell: `Copy-Item .env.example .env`.
+Obtenha a chave em https://aistudio.google.com/apikey em um projeto **Free Tier sem
+faturamento/cartão**. Não ative Cloud Billing. Edite `.env` somente no backend:
 
-Instale Docker com Compose v2 (no Windows, Docker Desktop com contêineres Linux). Na pasta que contém este README:
+```dotenv
+AI_PROVIDER=gemini
+GEMINI_API_KEY=sua_chave_aqui
+GEMINI_MODEL=gemini-3.8-flash
+GEMINI_FREE_TIER_CONFIRMED=true
+FALLBACK_PROVIDER=none
+GENERATION_MODE=architectural
+ENABLE_VISUAL_REFINEMENT=true
+MAX_REFINEMENT_PASSES=2
+```
+
+A confirmação deve ser feita somente após verificar o nível gratuito do projeto.
+O aplicativo não consegue detectar uma chave paga e não torna uma chave paga gratuita.
+Nunca coloque a chave em `VITE_*`, frontend, Git ou mensagens.
+Sem chave/confirmação, API e demo iniciam normalmente; geração Gemini fica indisponível.
 
 ```bash
 docker compose up -d --build
-```
-
-Depois da primeira compilação, `docker compose up -d` é suficiente.
-
-- Site: http://localhost:8080
-- API e saúde: http://localhost:8000/api/health
-- Swagger: http://localhost:8000/docs (também http://localhost:8080/docs)
-
-Os dados ficam no volume `photo2craft-data`. `docker compose down` preserva os projetos. **`docker compose down -v` apaga os dados.**
-
-Para configurar limites e portas, copie `.env.example` para `.env` antes de iniciar. Sem `.env`, os padrões funcionam. Para atualizar código: `docker compose up -d --build`.
-
-```bash
 docker compose ps
-docker compose logs --tail=100 api web
+docker compose exec -T api python -m app.verify_installation
+docker compose logs --tail=100 api
 ```
+
+Site: http://localhost:8081 · Saúde: http://localhost:8000/api/health.
+Swagger: http://localhost:8081/docs. Portas existentes do `.env` prevalecem.
+Dados em `photo2craft-data`; `docker compose down` preserva, **down -v apaga**.
+Quota esgotada pausa chamadas, inclusive após reiniciar. Não há acesso ilimitado nem
+fallback pago. [Modelos, evidências oficiais e limites](docs/gemini-free-tier.md).
+
+Documentação: [migração](ATUALIZAR-IA.md), [arquitetura 2.0](docs/photo2craft-2-architecture.md),
+[auditoria](docs/photo2craft-2-audit.md), [testes](docs/photo2craft-2-validation.md).
 
 ## Instalar o mod
 
@@ -83,7 +96,7 @@ Uma casa local de exemplo é validada e construída a 3 blocos no sentido +X e +
 2. Escolha o modo IA e envie JPG, PNG ou WEBP (até 5 MiB por padrão), ou escreva um pedido sem imagem.
 3. Informe o tipo livre, tamanho, estilo e detalhes na descrição.
 4. Clique em **Gerar construção**.
-5. Confira os blocos na prévia 3D e copie o comando exibido.
+5. Confira a prévia 3D e as referências. Clique **Aprovar para Minecraft**; só então copie o comando. Rejeitados/pendentes retornam HTTP 409 no mod.
 6. No Minecraft, digite `/build import ID`, substituindo `ID` pelo código real.
 7. Aguarde validação e construção. O progresso aparece na barra de ação.
 
@@ -110,7 +123,7 @@ Rotação: 0, 90, 180 ou 270 graus, em torno do eixo vertical. A caixa é reposi
 - Mod com validação, download assíncrono limitado, orçamento global de blocos por tick, cancelamento, rotação e desfazer.
 - Docker, Swagger, contrato JSON compartilhado e testes.
 
-Ainda não implementado: reconstrução 3D precisa, interiores completos, holograma dentro do jogo, contas, permissões por projeto e múltiplas vistas na interface. A nota de fidelidade visual é estimada, sem garantia científica de semelhança.
+Ainda não implementado: reconstrução 3D precisa, interiores completos, holograma dentro do jogo, contas e permissões por projeto. A nota de fidelidade visual é estimada, sem garantia científica de semelhança.
 
 ## Arquitetura
 
@@ -165,7 +178,7 @@ Abra http://localhost:5173. O Vite encaminha `/api`, `/docs` e `/openapi.json` �
 | Variável | Padrão | Efeito |
 | --- | --- | --- |
 | `BIND_ADDRESS` | `127.0.0.1` | Interface publicada pelo Docker |
-| `WEB_PORT` / `API_PORT` | `8080` / `8000` | Portas externas |
+| `WEB_PORT` / `API_PORT` | `8081` / `8000` | Portas externas |
 | `DATA_DIR` | `photo2craft/data` | Dados fora do Docker; Compose usa caminho interno fixo |
 | `DATABASE_URL` | vazio | SQLite automático; veja guia de PostgreSQL |
 | `CORS_ORIGINS` | localhost 5173/8080 | Origens separadas por vírgula |
@@ -175,12 +188,19 @@ Abra http://localhost:5173. O Vite encaminha `/api`, `/docs` e `/openapi.json` �
 | `MAX_BLOCKS` | 50000 | Células, incluindo ar |
 | `MAX_DIMENSION` | 64 | Limite de cada eixo |
 | `MAX_PROJECTS` | 200 | Quota de projetos locais |
-| `AI_PROVIDER` | ollama | Provedor local de IA |
+| `AI_PROVIDER` | gemini | gemini, ollama ou disabled |
+| `GEMINI_MODEL` | gemini-3.8-flash | Modelo da allowlist gratuita revisada |
+| `GEMINI_API_KEY` | vazio | Segredo somente no backend |
+| `GEMINI_FREE_TIER_CONFIRMED` | false | Confirmação de projeto sem billing |
+| `FALLBACK_PROVIDER` | none | Alternativa local ollama, explicitamente habilitada |
+| `GENERATION_MODE` | architectural | legacy preserva o pipeline Ollama anterior |
+| `MAX_REFINEMENT_PASSES` | 2 | Máximo global; opção da qualidade só reduz |
+| `AI_DAILY_CALL_LIMIT` | 20 | Limite local de chamadas, não cota prometida pelo Google |
 | `OLLAMA_URL` | localhost fora do Docker | Compose usa `http://host.docker.internal:11434` |
 | `OLLAMA_MODEL` | qwen3-vl:8b | Modelo local com visão e saída estruturada |
-| `AI_TIMEOUT_SECONDS` | 600 | Tempo limite da geração local |
-| `AI_MAX_OUTPUT_TOKENS` | 16000 | Teto de saída; cada etapa usa orçamento próprio e solicita think=false |
-| `AI_CONTEXT_TOKENS` | 16384 | Contexto de todos os modos; exemplo .env usa 32768. Mais contexto consome RAM/VRAM |
+| `AI_TIMEOUT_SECONDS` | 600 | Prazo total de inferência |
+| `AI_MAX_OUTPUT_TOKENS` | 16000 | Teto de saída; cada etapa usa orçamento próprio; think=false somente no Ollama |
+| `AI_CONTEXT_TOKENS` | 16384 | Contexto somente do Ollama; exemplo .env usa 32768. Mais contexto local consome RAM/VRAM |
 
 Na demo, o volume inteiro da caixa conta em `MAX_BLOCKS`. No modo IA, apenas posições emitidas contam (incluindo ar explícito), permitindo estruturas esparsas. IA pequena/média/grande usa caixas máximas de 32³/48³/64³; a IA escolhe proporções dentro delas. Personalizado aceita 9–64 por eixo. A API e o mod têm limites independentes: se aumentar um, revise o outro.
 
@@ -206,7 +226,14 @@ A área precisa estar carregada, dentro da borda e da altura do mundo. Por padr�
 | --- | --- | --- |
 | GET | `/api/health` | Saúde com acesso ao banco |
 | GET | `/api/capabilities` | Limites e capacidades reais |
-| POST | `/api/generate` | Multipart: `options` JSON + `image` opcional no modo IA; retorna projeto pronto |
+| POST | `/api/generations` | Multipart image + references[] + options; retorna job 202 |
+| GET | `/api/generations/{id}` | Progresso/status persistidos, sem porcentagem inventada |
+| POST | `/api/generate` | Endpoint síncrono legado; projeto novo exige revisão |
+| GET | `/api/builds/{id}/preview` | Blocos exatos para revisão antes da aprovação |
+| GET | `/api/builds/{id}/architecture` | Plano arquitetônico versionado |
+| POST | `/api/builds/{id}/approval` | Aprovar/rejeitar vinculando content_hash |
+| POST | `/api/builds/{id}/materials` | Alterar material e invalidar aprovação/score |
+| POST | `/api/builds/{id}/refine` | Novo job/versão, sem apagar a anterior |
 | POST | `/api/builds` | Importa um JSON de construção validado; cria ID/data novos |
 | GET | `/api/builds?offset=0&limit=30` | Lista metadados, até 100 por página |
 | GET | `/api/builds/{id}` | Metadados |
@@ -224,7 +251,7 @@ curl -F 'image=@casa.png' \
   http://localhost:8000/api/generate
 ```
 
-O MVP gera de forma síncrona e permite uma geração local por vez para não sobrecarregar GPU/RAM; resposta de sucesso é `201` com status `ready`. Não há fila persistente ou status fictício. Erros são `4xx` com `detail`, incluindo `413` para tamanho, `422` para validação, `409` para quota e `429` para gerador ocupado.
+A interface usa `/api/generations`: resposta `202`, fila limitada e progresso persistido consultado pelo ID. O endpoint síncrono acima permanece compatível e retorna `201`; projetos arquitetônicos novos ficam pendentes de aprovação. Erros incluem `413` para tamanho, `422` para validação, `409` para conflito de aprovação/limite de projetos e `429` para fila/cota de inferência esgotada. Falhas de jobs aparecem no status consultado, com código e mensagem.
 
 Clientes antigos que omitem `mode` continuam em `procedural`. Para IA, envie `"mode":"ai"` e uma imagem ou `description` não vazia. `quality` aceita `quick` (padrão da API), `detailed` ou `ultra`. `type` aceita texto livre de até 120 caracteres; `fidelity` vai de 0 a 100. Ollama indisponível retorna 503; plano inválido 502; timeout 504. Falhas na análise/base não criam projetos e não são convertidas em casas. Falha de comparação/refinamento preserva a melhor estrutura válida com aviso. O Nginx aguarda até 960 segundos; a IA tem prazo total de até 900 segundos.
 
@@ -258,7 +285,7 @@ Com API em execução:
 python scripts/smoke_api.py --url http://localhost:8000 --image sua-imagem.png
 ```
 
-O teste cria, consulta e exclui um projeto temporário. O checklist completo e a evidência desta entrega estão em [docs/testing.md](docs/testing.md).
+O teste cria, consulta, aprova quando necessário e exclui seu próprio projeto temporário. Essa aprovação automatizada testa o contrato, não a fidelidade. O checklist completo e a evidência desta entrega estão em [docs/photo2craft-2-validation.md](docs/photo2craft-2-validation.md).
 
 ## Uso local e próximos passos
 
@@ -270,7 +297,7 @@ Evolução planejada:
 2. Adicionar sessão de posicionamento: mover, girar, confirmar e cancelar antes da fila.
 3. Implementar holograma cliente/servidor.
 4. Avaliar gerações reais e calibrar o novo refinamento visual iterativo.
-5. Adicionar upload/armazenamento multiview completo e calibração de câmera.
+5. Calibrar câmeras entre múltiplas referências e validar reconstrução multiview real.
 6. Contas, autorização, migrações versionadas e PostgreSQL.
 
 Detalhes: [contrato](docs/structure-format.md), [arquitetura](docs/architecture.md).

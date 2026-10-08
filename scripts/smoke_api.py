@@ -27,6 +27,11 @@ def main():
         project = response.json()
         build_id = project['id']
         try:
+            if project.get('status') == 'pending':
+                assert client.get(f'/api/builds/{build_id}/structure').status_code == 409
+                approval = client.post(f'/api/builds/{build_id}/approval', json={
+                    'approved': True, 'content_hash': project['contentHash']})
+                approval.raise_for_status()
             response = client.get(f'/api/builds/{build_id}/structure')
             response.raise_for_status()
             structure = response.json()

@@ -1,3 +1,5 @@
+> Documento histórico 0.5. Para a versão atual, veja [arquitetura 2.0](photo2craft-2-architecture.md) e [validação 2.0](photo2craft-2-validation.md).
+
 # Decisões de arquitetura
 
 ## Limites de responsabilidade

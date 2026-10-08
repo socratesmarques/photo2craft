@@ -6,7 +6,7 @@ Set-StrictMode -Version Latest
 $projectRoot = $PSScriptRoot
 $composeFile = Join-Path $projectRoot 'docker-compose.yml'
 $envFile = Join-Path $projectRoot '.env'
-$expectedRelease = 'ollama-local-0.5.0'
+$expectedRelease = 'architectural-2.0'
 $composeArgs = @('compose', '--project-directory', $projectRoot, '-p', $ProjectName, '-f', $composeFile, '--env-file', $envFile)
 
 function Invoke-PhotoDocker {
@@ -36,7 +36,11 @@ try {
     }
     $envText = [System.IO.File]::ReadAllText($envFile)
     $localSettings = [ordered]@{
-        AI_PROVIDER = 'ollama'
+        AI_PROVIDER = 'gemini'
+        GEMINI_MODEL = 'gemini-3.8-flash'
+        GEMINI_FREE_TIER_CONFIRMED = 'false'
+        GENERATION_MODE = 'architectural'
+        FALLBACK_PROVIDER = 'none'
         OLLAMA_URL = 'http://host.docker.internal:11434'
         OLLAMA_MODEL = 'qwen3-vl:8b'
         AI_TIMEOUT_SECONDS = '900'
@@ -61,12 +65,12 @@ try {
     if ($published -notmatch ':(\d+)\s*$') { throw 'Nao foi possivel identificar a porta do site.' }
     $siteUrl = 'http://localhost:' + $Matches[1]
     $capabilities = Invoke-RestMethod -Uri ($siteUrl + '/api/capabilities') -TimeoutSec 10
-    if ($capabilities.release -ne $expectedRelease -or $capabilities.aiProvider -ne 'ollama') {
+    if ($capabilities.release -ne $expectedRelease) {
         throw 'O endereco publicado respondeu com outra versao. Confira conflitos de porta ou proxy.'
     }
-    Write-Host "CONFIRMADO: Photo2Craft 0.5.0 / Ollama (modelo preservado do .env)"
+    Write-Host "CONFIRMADO: Photo2Craft 2.0 (provedor preservado do .env)"
     Write-Host "Abra $siteUrl e pressione Ctrl+F5."
-    Write-Host 'IMPORTANTE: as novas cores exigem recompilar e instalar o mod 0.3.0. Veja ATUALIZAR-IA.md.'
+    Write-Host 'IMPORTANTE: mantenha o mod 0.3.0 para Minecraft 1.21.1; se ja instalado, nao precisa troca-lo. Veja ATUALIZAR-IA.md.'
 } catch {
     Write-Host $_.Exception.Message -ForegroundColor Red
     exit 1

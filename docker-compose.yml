@@ -17,7 +17,18 @@ services:
       MAX_DIMENSION: ${MAX_DIMENSION:-64}
       MAX_PROJECTS: ${MAX_PROJECTS:-200}
       DATABASE_URL: ${DATABASE_URL:-}
-      AI_PROVIDER: ${AI_PROVIDER:-ollama}
+      AI_PROVIDER: ${AI_PROVIDER:-gemini}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.8-flash}
+      GEMINI_FREE_TIER_CONFIRMED: ${GEMINI_FREE_TIER_CONFIRMED:-false}
+      FALLBACK_PROVIDER: ${FALLBACK_PROVIDER:-none}
+      GENERATION_MODE: ${GENERATION_MODE:-architectural}
+      ENABLE_VISUAL_REFINEMENT: ${ENABLE_VISUAL_REFINEMENT:-true}
+      MAX_REFINEMENT_PASSES: ${MAX_REFINEMENT_PASSES:-2}
+      ENABLE_GENERATION_CACHE: ${ENABLE_GENERATION_CACHE:-true}
+      MAX_REFERENCE_IMAGES: ${MAX_REFERENCE_IMAGES:-4}
+      AI_DAILY_CALL_LIMIT: ${AI_DAILY_CALL_LIMIT:-20}
+      AI_MAX_ATTEMPTS: ${AI_MAX_ATTEMPTS:-3}
       OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
       OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen3-vl:8b}
       AI_TIMEOUT_SECONDS: ${AI_TIMEOUT_SECONDS:-600}
@@ -43,7 +54,7 @@ services:
       context: .
       dockerfile: docker/web.Dockerfile
     ports:
-      - "${BIND_ADDRESS:-127.0.0.1}:${WEB_PORT:-8080}:80"
+      - "${BIND_ADDRESS:-127.0.0.1}:${WEB_PORT:-8081}:80"
     depends_on:
       api:
         condition: service_healthy

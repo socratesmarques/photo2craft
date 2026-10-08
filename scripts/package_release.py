@@ -33,7 +33,7 @@ def main():
         assert "photo2craft/ATUALIZAR-OLLAMA.ps1" in archive.namelist()
         assert "photo2craft/.env" not in archive.namelist()
         for name in ['apps/api/app/release.py', 'apps/web/src/App.tsx', 'RELEASE.txt']:
-            assert 'ollama-local-0.5.0' in archive.read('photo2craft/' + name).decode('utf-8'), name
+            assert 'architectural-2.0' in archive.read('photo2craft/' + name).decode('utf-8'), name
         backend = archive.read('photo2craft/apps/api/app/ai_generator.py').decode('utf-8')
         assert '/api/chat' in backend and 'api.openai.com' not in backend
         assert 'photo2craft/apps/api/app/detailed_generator.py' in archive.namelist()
