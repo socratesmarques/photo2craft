@@ -14,7 +14,7 @@ test('modo IA aceita texto sem imagem e mostra a origem do resultado (API simula
     blocks.push({x,y:4,z,block:'minecraft:stone_bricks',states:{}});
     if(x<2||x>6)for(let y=0;y<4;y++)blocks.push({x,y,z,block:'minecraft:stone_bricks',states:{}});
   }
-  await page.route('**/api/capabilities',route=>route.fulfill({json:{version:'0.5.0',release:'ollama-local-0.5.0',maxUploadBytes:5242880,maxBlocks:50000,maxDimension:64,maxProjects:200,aiConfigured:true,aiProvider:'ollama',aiModel:'test-model'}}));
+  await page.route('**/api/capabilities',route=>route.fulfill({json:{version:'0.5.0',release:'architectural-2.0',maxUploadBytes:5242880,maxBlocks:50000,maxDimension:64,maxProjects:200,aiConfigured:true,aiProvider:'ollama',aiModel:'test-model'}}));
   await page.route('**/api/generate',async route=>{
     const body=route.request().postData()||'';
     expect(body).toContain('"mode":"ai"');
@@ -24,7 +24,7 @@ test('modo IA aceita texto sem imagem e mostra a origem do resultado (API simula
     expect(body).not.toContain('name="image"');
     await route.fulfill({status:201,json:build});
   });
-  await page.route(`**/api/builds/${id}/structure`,route=>route.fulfill({json:{id,name:build.name,size:build.size,blocks}}));
+  await page.route(`**/api/builds/${id}/preview`,route=>route.fulfill({json:{id,name:build.name,size:build.size,blocks}}));
   await page.goto('/');
   await expect(page.getByLabel('Qualidade')).toHaveValue('detailed');
   await page.getByText('Configurações avançadas',{exact:true}).click();
@@ -49,8 +49,8 @@ test('identifica a API antiga que ainda pede chave OpenAI', async ({page}) => {
     imageInterpretation:false,fullInterior:false
   }}));
   await page.goto('/');
-  await expect(page.getByRole('alert')).toContainText('API desatualizada');
-  await expect(page.getByRole('alert')).toContainText('ATUALIZAR-OLLAMA.ps1');
+  await expect(page.getByRole('alert')).toContainText('API incompatível');
+  await expect(page.getByRole('alert')).toContainText('docker compose up -d --build');
   await page.getByLabel('Instrução complementar (opcional com imagem)').fill('Uma ponte');
   await expect(page.getByRole('button',{name:'Gerar construção',exact:true})).toBeDisabled();
 });
