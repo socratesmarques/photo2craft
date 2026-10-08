@@ -226,6 +226,7 @@ def test_full_job_multiview_approval_materials_export_and_persistence(tmp_path,m
         changed=c.post(f'/api/builds/{bid}/materials',json={'material_id':'roof','block':'minecraft:blue_concrete'}).json()
         assert changed['status']=='pending' and changed['generationInfo']['score'] is None
         assert changed['contentHash']!=build['contentHash']
+        assert c.get(f'/api/builds/{bid}/render').status_code==200
         assert c.post(f'/api/builds/{bid}/approval',json={'approved':False,'content_hash':changed['contentHash']}).json()['status']=='rejected'
         assert c.get(f'/api/builds/{bid}/structure').status_code==409
         assert len(seen)==3 and len(seen[0]['contents'][0]['parts'])==3
@@ -233,6 +234,24 @@ def test_full_job_multiview_approval_materials_export_and_persistence(tmp_path,m
     with TestClient(create_app(config)) as c:
         assert c.get('/api/generations/'+job['id']).json()['status']=='ready'
         assert c.get(f'/api/builds/{bid}').json()['status']=='rejected'
+
+
+def test_material_commit_failure_keeps_previous_structure_and_render(tmp_path,monkeypatch):
+    install_mock(monkeypatch,[study(),plan(),score()],[])
+    app=create_app(settings(tmp_path))
+    with TestClient(app,raise_server_exceptions=False) as c:
+        response=c.post('/api/generations',data={'options':options().model_dump_json()},
+                        files={'image':('front.png',image())})
+        bid=wait_job(c,response.json()['id'])['buildId']
+        before=c.get(f'/api/builds/{bid}/preview').json()
+        render=c.get(f'/api/builds/{bid}/render').content
+        def fail_save(record):
+            raise RuntimeError('simulated database failure')
+        monkeypatch.setattr(app.state.repository,'save',fail_save)
+        assert c.post(f'/api/builds/{bid}/materials',json={
+            'material_id':'roof','block':'minecraft:blue_concrete'}).status_code==500
+        assert c.get(f'/api/builds/{bid}/preview').json()==before
+        assert c.get(f'/api/builds/{bid}/render').content==render
 
 
 def test_job_errors_and_restart_recovery(tmp_path,monkeypatch):

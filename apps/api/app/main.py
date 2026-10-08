@@ -169,9 +169,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             return metadata(record)
 
 
-    def image_response(build_id,filename):
-        record=get_record(build_id)
-        if not record.has_image and filename!="render.png": raise HTTPException(404,"Projeto sem imagem.")
+    def image_response(build_id,filename,record=None):
+        record=record or get_record(build_id)
+        if not record.has_image and filename not in {"render.png",record.options.get('_render_file')}: raise HTTPException(404,"Projeto sem imagem.")
         path=settings.data_dir/"images"/record.id/filename
         if not path.is_file(): raise HTTPException(404,"Imagem indisponível.")
         return FileResponse(path,media_type="image/png" if filename.endswith(".png") else "image/jpeg",headers={"X-Content-Type-Options":"nosniff","Cache-Control":"no-store"})
@@ -193,7 +193,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     def thumbnail(build_id: str): return image_response(build_id,"thumbnail.jpg")
 
     @app.get("/api/builds/{build_id}/render")
-    def reference_render(build_id: str): return image_response(build_id,"render.png")
+    def reference_render(build_id: str):
+        record=get_record(build_id)
+        return image_response(build_id,record.options.get('_render_file','render.png'),record)
 
     @app.delete("/api/builds/{build_id}",status_code=204)
     def delete_build(build_id: str):
@@ -365,12 +367,15 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             info.update(architecturalPlan=plan.model_dump(),score=None,scoreHistory=[],cacheHit=False)
             info.setdefault('warnings',[]).append('Materiais alterados manualmente; avaliação visual anterior invalidada.')
             record.structure=structure.model_dump(mode='json')
-            record.options={**record.options,'_generation':info,'_approval':'pending'}
+            render_file=f'render-{content_hash(record.structure)}.png'
+            record.options={**record.options,'_generation':info,'_approval':'pending','_render_file':render_file}
             directory=settings.data_dir/'images'/record.id
             directory.mkdir(parents=True,exist_ok=True)
             rendered.save(directory/'render.tmp.png')
+            (directory/'render.tmp.png').replace(directory/render_file)
+            # Publish structure and immutable render pointer in the same DB commit.
+            # Failed commits leave an unreferenced file, never a stale preview.
             repository.save(record)
-            (directory/'render.tmp.png').replace(directory/'render.png')
             return metadata(record)
 
     return app
