@@ -10,7 +10,7 @@ from app.schemas import GenerateOptions, Structure
 from app.generator import ProceduralGenerator
 
 @pytest.fixture
-def config(tmp_path): return Settings(data_dir=tmp_path)
+def config(tmp_path): return Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path)
 
 @pytest.fixture
 def client(config):

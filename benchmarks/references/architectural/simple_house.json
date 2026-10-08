@@ -1,0 +1,85 @@
+{
+  "schema_version": "2.0",
+  "coordinate_system": "x-east_y-up_z-south_blocks",
+  "orientation": "north",
+  "structure_type": "simple_house",
+  "summary": "Referência sintética de geometria conhecida",
+  "size": {
+    "width": 16,
+    "height": 16,
+    "depth": 16
+  },
+  "palette": [
+    {
+      "id": "wall",
+      "block": "minecraft:white_concrete",
+      "states": {}
+    },
+    {
+      "id": "roof",
+      "block": "minecraft:red_concrete",
+      "states": {}
+    }
+  ],
+  "elements": [
+    {
+      "id": "body",
+      "kind": "volume",
+      "shape": "box",
+      "start": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "end": {
+        "x": 15,
+        "y": 7,
+        "z": 15
+      },
+      "axis": "y",
+      "hollow": true,
+      "thickness": 1,
+      "operation": "add",
+      "material": "wall",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    },
+    {
+      "id": "roof",
+      "kind": "roof",
+      "shape": "gable",
+      "start": {
+        "x": 0,
+        "y": 8,
+        "z": 0
+      },
+      "end": {
+        "x": 15,
+        "y": 12,
+        "z": 15
+      },
+      "axis": "z",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "roof",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    }
+  ],
+  "relations": []
+}

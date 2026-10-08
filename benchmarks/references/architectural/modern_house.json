@@ -1,0 +1,143 @@
+{
+  "schema_version": "2.0",
+  "coordinate_system": "x-east_y-up_z-south_blocks",
+  "orientation": "north",
+  "structure_type": "modern_house",
+  "summary": "Referência sintética de geometria conhecida",
+  "size": {
+    "width": 16,
+    "height": 16,
+    "depth": 16
+  },
+  "palette": [
+    {
+      "id": "wall",
+      "block": "minecraft:white_concrete",
+      "states": {}
+    },
+    {
+      "id": "roof",
+      "block": "minecraft:red_concrete",
+      "states": {}
+    }
+  ],
+  "elements": [
+    {
+      "id": "base",
+      "kind": "foundation",
+      "shape": "box",
+      "start": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "end": {
+        "x": 15,
+        "y": 0,
+        "z": 15
+      },
+      "axis": "y",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "wall",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    },
+    {
+      "id": "left",
+      "kind": "volume",
+      "shape": "box",
+      "start": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "end": {
+        "x": 5,
+        "y": 10,
+        "z": 15
+      },
+      "axis": "y",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "wall",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    },
+    {
+      "id": "right",
+      "kind": "volume",
+      "shape": "box",
+      "start": {
+        "x": 6,
+        "y": 1,
+        "z": 7
+      },
+      "end": {
+        "x": 15,
+        "y": 5,
+        "z": 15
+      },
+      "axis": "y",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "wall",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    },
+    {
+      "id": "canopy",
+      "kind": "volume",
+      "shape": "box",
+      "start": {
+        "x": 6,
+        "y": 6,
+        "z": 7
+      },
+      "end": {
+        "x": 15,
+        "y": 6,
+        "z": 15
+      },
+      "axis": "y",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "roof",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    }
+  ],
+  "relations": []
+}

@@ -9,9 +9,17 @@ def verify(client, settings):
     response = client.get("http://127.0.0.1:8000/api/capabilities")
     response.raise_for_status()
     cap = response.json()
-    if cap.get("release") != RELEASE or cap.get("aiProvider") != "ollama":
-        raise ValueError("A API em execucao nao corresponde a esta versao Ollama.")
+    if cap.get("release") != RELEASE:
+        raise ValueError("A API em execucao nao corresponde a esta versao Photo2Craft.")
     print(f"API confirmada: {RELEASE}")
+    if settings.ai_provider == 'gemini':
+        if not cap.get('aiConfigured'):
+            raise ValueError('Configure GEMINI_API_KEY e confirme o projeto Free Tier sem faturamento.')
+        print('Gemini configurado. Chave/cota/fidelidade reais ainda exigem uma geração de teste.')
+        return
+    if settings.ai_provider == 'disabled':
+        print('Modo demo; inferência desativada.')
+        return
     response = client.get(settings.ollama_url.rstrip("/") + "/api/tags")
     response.raise_for_status()
     models = response.json().get("models", [])
@@ -26,7 +34,7 @@ def main():
             verify(client, Settings())
     except (httpx.HTTPError, ValueError, TypeError, AttributeError) as exc:
         if isinstance(exc, httpx.HTTPError):
-            print("Falha ao acessar API/Ollama. Abra o Ollama, confira OLLAMA_HOST=0.0.0.0:11434 e reinicie o Ollama.", file=sys.stderr)
+            print("Falha ao acessar API/provedor configurado. Confira endereço, rede e os logs do container.", file=sys.stderr)
         else:
             print(str(exc), file=sys.stderr)
         return 1

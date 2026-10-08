@@ -43,7 +43,7 @@ def generate(tmp_path,replies,**kwargs):
         result=replies[len(calls)-1]
         if isinstance(result,Exception): raise result
         return httpx.Response(200,json={'done':True,'message':{'content':result if isinstance(result,str) else json.dumps(result)}})
-    generator=AIGenerator(Settings(data_dir=tmp_path,_env_file=None),httpx.MockTransport(handler))
+    generator=AIGenerator(Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path,_env_file=None),httpx.MockTransport(handler))
     options=GenerateOptions(mode='ai',quality=kwargs.pop('quality','detailed'),size='small',**kwargs)
     # Uniform source deliberately triggers uncertain segmentation and model-only scores.
     output=generator.generate('visualtest',options,[Image.new('RGB',(64,64),'gray')])
@@ -185,7 +185,7 @@ def test_limits_reject_candidate():
 def test_depth_failure_fallback(tmp_path,monkeypatch,failure):
     def fail(*args,**kwargs): raise failure
     monkeypatch.setattr('app.depth.subprocess.run',fail)
-    depth,warning=estimate_depth(Image.new('RGB',(32,32)),Settings(depth_model_path=str(tmp_path),_env_file=None),1)
+    depth,warning=estimate_depth(Image.new('RGB',(32,32)),Settings(generation_mode="legacy", ai_provider="ollama", depth_model_path=str(tmp_path),_env_file=None),1)
     assert depth is None and 'preservado' in warning
 
 
@@ -193,7 +193,7 @@ def test_visual_api_persists_and_old_fixture_imports(tmp_path,monkeypatch):
     replies=iter([study(),plan(),assessment(96)])
     monkeypatch.setattr(AIGenerator,'_request',lambda self,payload,timeout_seconds=None, **kwargs:{'done':True,'message':{'content':json.dumps(next(replies))}})
     image=BytesIO();Image.new('RGB',(64,64),'gray').save(image,'PNG')
-    with TestClient(create_app(Settings(data_dir=tmp_path,_env_file=None))) as client:
+    with TestClient(create_app(Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path,_env_file=None))) as client:
         result=client.post('/api/generate',data={'options':json.dumps(dict(mode='ai',quality='detailed',size='small'))},files={'image':('ref.png',image.getvalue(),'image/png')})
         assert result.status_code==201,result.text
         build=result.json();assert build['generator']=='vision-refinement-v3'
@@ -215,7 +215,7 @@ def test_visual_shared_deadline_keeps_initial_geometry(tmp_path,monkeypatch):
         timeouts.append(timeout_seconds);clock[0]+=4
         return {'done':True,'message':{'content':json.dumps(next(replies))}}
     monkeypatch.setattr(AIGenerator,'_request',fake)
-    structure,info=AIGenerator(Settings(data_dir=tmp_path,ai_timeout_seconds=10,_env_file=None)).generate(
+    structure,info=AIGenerator(Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path,ai_timeout_seconds=10,_env_file=None)).generate(
         'deadline',GenerateOptions(mode='ai',quality='detailed',size='small'),[Image.new('RGB',(32,32),'gray')])
     assert timeouts==[10,6,2]
     assert structure.blocks and info['score'] is None and info['warnings']
@@ -226,7 +226,7 @@ def test_bad_ollama_message_preserves_base(tmp_path,monkeypatch):
                   {'done':True,'message':{'content':json.dumps(plan())}},
                   {'done':True,'message':None}])
     monkeypatch.setattr(AIGenerator,'_request',lambda *args,**kwargs:next(replies))
-    structure,info=AIGenerator(Settings(data_dir=tmp_path,_env_file=None)).generate(
+    structure,info=AIGenerator(Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path,_env_file=None)).generate(
         'nullmessage',GenerateOptions(mode='ai',quality='detailed',size='small'),[Image.new('RGB',(32,32),'gray')])
     assert structure.blocks and info['score'] is None
 
@@ -234,7 +234,7 @@ def test_bad_ollama_message_preserves_base(tmp_path,monkeypatch):
 def test_debug_saves_evidence_only_when_enabled(tmp_path,monkeypatch):
     replies=iter([study(),plan(),assessment(96)])
     monkeypatch.setattr(AIGenerator,'_request',lambda *args,**kwargs:{'done':True,'message':{'content':json.dumps(next(replies))}})
-    _,info=AIGenerator(Settings(data_dir=tmp_path,visual_debug=True,_env_file=None)).generate(
+    _,info=AIGenerator(Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path,visual_debug=True,_env_file=None)).generate(
         'debug',GenerateOptions(mode='ai',quality='detailed',size='small'),[Image.new('RGB',(32,32),'gray')])
     assert (tmp_path/'debug/debug/initial-plan.json').is_file()
     assert (tmp_path/'debug/debug/render-0.png').is_file()

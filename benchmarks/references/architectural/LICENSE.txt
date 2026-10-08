@@ -1,0 +1,5 @@
+CC0 1.0 Universal — synthetic fixtures generated for Photo2Craft.
+To the extent possible under law, the authors waive copyright and related rights
+in the PNG references and JSON plans in this directory. No third-party photos,
+Minecraft textures, logos or user images are included.
+https://creativecommons.org/publicdomain/zero/1.0/

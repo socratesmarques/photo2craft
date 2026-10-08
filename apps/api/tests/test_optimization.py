@@ -31,7 +31,7 @@ def generator(tmp_path, replies, **settings):
         calls.append(json.loads(request.content))
         assert len(calls) <= len(replies), "Inference must remain bounded"
         return httpx.Response(200, json=replies[len(calls)-1])
-    config = Settings(data_dir=tmp_path, ollama_model="qwen3-vl:8b",
+    config = Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path, ollama_model="qwen3-vl:8b",
                       ai_context_tokens=32768, ai_max_output_tokens=24000,
                       _env_file=None, **settings)
     return AIGenerator(config, httpx.MockTransport(respond)), calls
@@ -107,7 +107,7 @@ def test_prompt_reservation_scales_with_input_and_keeps_output_bounded(tmp_path)
 
 
 def test_http_failure_logs_metrics_without_response_or_prompt(tmp_path, caplog):
-    settings = Settings(data_dir=tmp_path, _env_file=None)
+    settings = Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path, _env_file=None)
     gen = AIGenerator(settings, httpx.MockTransport(lambda _: httpx.Response(500, text="private data")))
     with caplog.at_level(logging.WARNING, logger='photo2craft.ollama'), pytest.raises(GenerationError):
         gen.generate('http-error', GenerateOptions(mode='ai', description='private prompt'), [])
@@ -132,7 +132,7 @@ def test_api_persists_lossless_reference_and_reads_legacy_jpeg(tmp_path):
     exif = Image.Exif()
     exif[270] = 'private image metadata'
     image.save(data, 'PNG', exif=exif)
-    with TestClient(create_app(Settings(data_dir=tmp_path, _env_file=None))) as client:
+    with TestClient(create_app(Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path, _env_file=None))) as client:
         response = client.post('/api/generate', files={'image': ('ref.png', data.getvalue(), 'image/png')})
         assert response.status_code == 201
         build_id = response.json()['id']

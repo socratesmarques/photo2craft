@@ -27,7 +27,7 @@ class BuildRepository:
     def count(self):
         with self.sessions() as db: return db.scalar(select(func.count()).select_from(BuildRecord))
     def save(self, record):
-        with self.sessions() as db: db.add(record); db.commit()
+        with self.sessions() as db: db.merge(record); db.commit()
         return record
     def get(self, build_id):
         with self.sessions() as db: return db.get(BuildRecord, build_id)
@@ -39,3 +39,8 @@ class BuildRepository:
             row=db.get(BuildRecord,build_id)
             if row: db.delete(row); db.commit()
             return row is not None
+
+class JobRecord(Base):
+    __tablename__ = 'generation_jobs'
+    id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    data: Mapped[dict] = mapped_column(JSON)

@@ -1,0 +1,201 @@
+{
+  "schema_version": "2.0",
+  "coordinate_system": "x-east_y-up_z-south_blocks",
+  "orientation": "north",
+  "structure_type": "castle",
+  "summary": "Referência sintética de geometria conhecida",
+  "size": {
+    "width": 16,
+    "height": 16,
+    "depth": 16
+  },
+  "palette": [
+    {
+      "id": "wall",
+      "block": "minecraft:white_concrete",
+      "states": {}
+    },
+    {
+      "id": "roof",
+      "block": "minecraft:red_concrete",
+      "states": {}
+    }
+  ],
+  "elements": [
+    {
+      "id": "base",
+      "kind": "foundation",
+      "shape": "box",
+      "start": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "end": {
+        "x": 15,
+        "y": 0,
+        "z": 15
+      },
+      "axis": "y",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "wall",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    },
+    {
+      "id": "wall_front",
+      "kind": "volume",
+      "shape": "box",
+      "start": {
+        "x": 4,
+        "y": 1,
+        "z": 2
+      },
+      "end": {
+        "x": 10,
+        "y": 6,
+        "z": 3
+      },
+      "axis": "y",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "wall",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    },
+    {
+      "id": "tower_left",
+      "kind": "tower",
+      "shape": "cylinder",
+      "start": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "end": {
+        "x": 4,
+        "y": 11,
+        "z": 5
+      },
+      "axis": "y",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "wall",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    },
+    {
+      "id": "tower_right",
+      "kind": "tower",
+      "shape": "cylinder",
+      "start": {
+        "x": 11,
+        "y": 1,
+        "z": 0
+      },
+      "end": {
+        "x": 15,
+        "y": 11,
+        "z": 5
+      },
+      "axis": "y",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "wall",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    },
+    {
+      "id": "spire_left",
+      "kind": "volume",
+      "shape": "pyramid",
+      "start": {
+        "x": 0,
+        "y": 12,
+        "z": 0
+      },
+      "end": {
+        "x": 4,
+        "y": 15,
+        "z": 5
+      },
+      "axis": "y",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "roof",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    },
+    {
+      "id": "spire_right",
+      "kind": "volume",
+      "shape": "pyramid",
+      "start": {
+        "x": 11,
+        "y": 12,
+        "z": 0
+      },
+      "end": {
+        "x": 15,
+        "y": 15,
+        "z": 5
+      },
+      "axis": "y",
+      "hollow": false,
+      "thickness": 1,
+      "operation": "add",
+      "material": "roof",
+      "overlaps": [],
+      "evidence": {
+        "kind": "visible",
+        "confidence": 1.0,
+        "references": [
+          0
+        ],
+        "note": "Referência sintética conhecida, não inferência."
+      }
+    }
+  ],
+  "relations": []
+}
