@@ -35,7 +35,7 @@ def response(plan=None):
 
 @pytest.fixture
 def settings(tmp_path):
-    return Settings(data_dir=tmp_path, ai_provider="ollama", ollama_url="http://ollama.test:11434",
+    return Settings(data_dir=tmp_path, ai_provider="ollama", generation_mode="legacy", ollama_url="http://ollama.test:11434",
                     ollama_model="test-model", _env_file=None)
 
 

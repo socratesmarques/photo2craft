@@ -1,0 +1,526 @@
+{
+  "$defs": {
+    "Element": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z][a-z0-9_]{0,47}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "volume",
+            "foundation",
+            "wall",
+            "floor",
+            "roof",
+            "tower",
+            "column",
+            "arch",
+            "balcony",
+            "stairs",
+            "door",
+            "window",
+            "fence",
+            "detail"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "shape": {
+          "enum": [
+            "box",
+            "ellipsoid",
+            "cylinder",
+            "pyramid",
+            "gable",
+            "line",
+            "stairs",
+            "arch"
+          ],
+          "title": "Shape",
+          "type": "string"
+        },
+        "start": {
+          "$ref": "#/$defs/Point"
+        },
+        "end": {
+          "$ref": "#/$defs/Point"
+        },
+        "axis": {
+          "enum": [
+            "x",
+            "y",
+            "z"
+          ],
+          "title": "Axis",
+          "type": "string"
+        },
+        "hollow": {
+          "title": "Hollow",
+          "type": "boolean"
+        },
+        "thickness": {
+          "maximum": 4,
+          "minimum": 1,
+          "title": "Thickness",
+          "type": "integer"
+        },
+        "operation": {
+          "enum": [
+            "add",
+            "cut",
+            "paint"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "material": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z][a-z0-9_]{0,47}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Material"
+        },
+        "overlaps": {
+          "items": {
+            "pattern": "^[a-z][a-z0-9_]{0,47}$",
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Overlaps",
+          "type": "array"
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "shape",
+        "start",
+        "end",
+        "axis",
+        "hollow",
+        "thickness",
+        "operation",
+        "material",
+        "overlaps",
+        "evidence"
+      ],
+      "title": "Element",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "visible",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "references": {
+          "items": {
+            "maximum": 3,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "maxItems": 4,
+          "title": "References",
+          "type": "array"
+        },
+        "note": {
+          "maxLength": 240,
+          "minLength": 1,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "confidence",
+        "references",
+        "note"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Material": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z][a-z0-9_]{0,47}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "block": {
+          "maxLength": 80,
+          "title": "Block",
+          "type": "string",
+          "enum": [
+            "minecraft:stone_bricks",
+            "minecraft:cobblestone",
+            "minecraft:oak_planks",
+            "minecraft:spruce_planks",
+            "minecraft:glass",
+            "minecraft:white_concrete",
+            "minecraft:orange_concrete",
+            "minecraft:magenta_concrete",
+            "minecraft:light_blue_concrete",
+            "minecraft:yellow_concrete",
+            "minecraft:lime_concrete",
+            "minecraft:pink_concrete",
+            "minecraft:light_gray_concrete",
+            "minecraft:blue_concrete",
+            "minecraft:brown_concrete",
+            "minecraft:green_concrete",
+            "minecraft:red_concrete",
+            "minecraft:gray_concrete",
+            "minecraft:cyan_concrete",
+            "minecraft:black_concrete",
+            "minecraft:polished_andesite",
+            "minecraft:bricks",
+            "minecraft:quartz_block",
+            "minecraft:sea_lantern",
+            "minecraft:purple_concrete",
+            "minecraft:mossy_stone_bricks",
+            "minecraft:oak_log",
+            "minecraft:spruce_stairs",
+            "minecraft:white_terracotta",
+            "minecraft:white_wool",
+            "minecraft:white_stained_glass",
+            "minecraft:white_stained_glass_pane",
+            "minecraft:white_concrete_powder",
+            "minecraft:white_glazed_terracotta",
+            "minecraft:orange_terracotta",
+            "minecraft:orange_wool",
+            "minecraft:orange_stained_glass",
+            "minecraft:orange_stained_glass_pane",
+            "minecraft:orange_concrete_powder",
+            "minecraft:orange_glazed_terracotta",
+            "minecraft:magenta_terracotta",
+            "minecraft:magenta_wool",
+            "minecraft:magenta_stained_glass",
+            "minecraft:magenta_stained_glass_pane",
+            "minecraft:magenta_concrete_powder",
+            "minecraft:magenta_glazed_terracotta",
+            "minecraft:light_blue_terracotta",
+            "minecraft:light_blue_wool",
+            "minecraft:light_blue_stained_glass",
+            "minecraft:light_blue_stained_glass_pane",
+            "minecraft:light_blue_concrete_powder",
+            "minecraft:light_blue_glazed_terracotta",
+            "minecraft:yellow_terracotta",
+            "minecraft:yellow_wool",
+            "minecraft:yellow_stained_glass",
+            "minecraft:yellow_stained_glass_pane",
+            "minecraft:yellow_concrete_powder",
+            "minecraft:yellow_glazed_terracotta",
+            "minecraft:lime_terracotta",
+            "minecraft:lime_wool",
+            "minecraft:lime_stained_glass",
+            "minecraft:lime_stained_glass_pane",
+            "minecraft:lime_concrete_powder",
+            "minecraft:lime_glazed_terracotta",
+            "minecraft:pink_terracotta",
+            "minecraft:pink_wool",
+            "minecraft:pink_stained_glass",
+            "minecraft:pink_stained_glass_pane",
+            "minecraft:pink_concrete_powder",
+            "minecraft:pink_glazed_terracotta",
+            "minecraft:gray_terracotta",
+            "minecraft:gray_wool",
+            "minecraft:gray_stained_glass",
+            "minecraft:gray_stained_glass_pane",
+            "minecraft:gray_concrete_powder",
+            "minecraft:gray_glazed_terracotta",
+            "minecraft:light_gray_terracotta",
+            "minecraft:light_gray_wool",
+            "minecraft:light_gray_stained_glass",
+            "minecraft:light_gray_stained_glass_pane",
+            "minecraft:light_gray_concrete_powder",
+            "minecraft:light_gray_glazed_terracotta",
+            "minecraft:cyan_terracotta",
+            "minecraft:cyan_wool",
+            "minecraft:cyan_stained_glass",
+            "minecraft:cyan_stained_glass_pane",
+            "minecraft:cyan_concrete_powder",
+            "minecraft:cyan_glazed_terracotta",
+            "minecraft:purple_terracotta",
+            "minecraft:purple_wool",
+            "minecraft:purple_stained_glass",
+            "minecraft:purple_stained_glass_pane",
+            "minecraft:purple_concrete_powder",
+            "minecraft:purple_glazed_terracotta",
+            "minecraft:blue_terracotta",
+            "minecraft:blue_wool",
+            "minecraft:blue_stained_glass",
+            "minecraft:blue_stained_glass_pane",
+            "minecraft:blue_concrete_powder",
+            "minecraft:blue_glazed_terracotta",
+            "minecraft:brown_terracotta",
+            "minecraft:brown_wool",
+            "minecraft:brown_stained_glass",
+            "minecraft:brown_stained_glass_pane",
+            "minecraft:brown_concrete_powder",
+            "minecraft:brown_glazed_terracotta",
+            "minecraft:green_terracotta",
+            "minecraft:green_wool",
+            "minecraft:green_stained_glass",
+            "minecraft:green_stained_glass_pane",
+            "minecraft:green_concrete_powder",
+            "minecraft:green_glazed_terracotta",
+            "minecraft:red_terracotta",
+            "minecraft:red_wool",
+            "minecraft:red_stained_glass",
+            "minecraft:red_stained_glass_pane",
+            "minecraft:red_concrete_powder",
+            "minecraft:red_glazed_terracotta",
+            "minecraft:black_terracotta",
+            "minecraft:black_wool",
+            "minecraft:black_stained_glass",
+            "minecraft:black_stained_glass_pane",
+            "minecraft:black_concrete_powder",
+            "minecraft:black_glazed_terracotta",
+            "minecraft:stripped_oak_log",
+            "minecraft:spruce_log",
+            "minecraft:stripped_spruce_log",
+            "minecraft:birch_planks",
+            "minecraft:birch_log",
+            "minecraft:stripped_birch_log",
+            "minecraft:jungle_planks",
+            "minecraft:jungle_log",
+            "minecraft:stripped_jungle_log",
+            "minecraft:acacia_planks",
+            "minecraft:acacia_log",
+            "minecraft:stripped_acacia_log",
+            "minecraft:dark_oak_planks",
+            "minecraft:dark_oak_log",
+            "minecraft:stripped_dark_oak_log",
+            "minecraft:mangrove_planks",
+            "minecraft:mangrove_log",
+            "minecraft:stripped_mangrove_log",
+            "minecraft:cherry_planks",
+            "minecraft:cherry_log",
+            "minecraft:stripped_cherry_log",
+            "minecraft:stone",
+            "minecraft:deepslate",
+            "minecraft:deepslate_bricks",
+            "minecraft:mud_bricks",
+            "minecraft:sandstone",
+            "minecraft:smooth_sandstone",
+            "minecraft:red_sandstone",
+            "minecraft:calcite",
+            "minecraft:tuff",
+            "minecraft:polished_tuff",
+            "minecraft:prismarine",
+            "minecraft:dark_prismarine",
+            "minecraft:terracotta",
+            "minecraft:iron_block",
+            "minecraft:waxed_copper_block",
+            "minecraft:waxed_exposed_copper",
+            "minecraft:waxed_weathered_copper",
+            "minecraft:waxed_oxidized_copper",
+            "minecraft:glass_pane",
+            "minecraft:moss_block"
+          ]
+        },
+        "states": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "maxProperties": 8,
+          "title": "States",
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "block"
+      ],
+      "title": "Material",
+      "type": "object"
+    },
+    "Point": {
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "maximum": 127,
+          "minimum": 0,
+          "title": "X",
+          "type": "integer"
+        },
+        "y": {
+          "maximum": 127,
+          "minimum": 0,
+          "title": "Y",
+          "type": "integer"
+        },
+        "z": {
+          "maximum": 127,
+          "minimum": 0,
+          "title": "Z",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "title": "Point",
+      "type": "object"
+    },
+    "Relation": {
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "pattern": "^[a-z][a-z0-9_]{0,47}$",
+          "title": "Source",
+          "type": "string"
+        },
+        "target": {
+          "pattern": "^[a-z][a-z0-9_]{0,47}$",
+          "title": "Target",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "above",
+            "left_of",
+            "in_front_of",
+            "touching"
+          ],
+          "title": "Relation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source",
+        "target",
+        "relation"
+      ],
+      "title": "Relation",
+      "type": "object"
+    },
+    "Size": {
+      "additionalProperties": false,
+      "properties": {
+        "width": {
+          "maximum": 128,
+          "minimum": 1,
+          "title": "Width",
+          "type": "integer"
+        },
+        "height": {
+          "maximum": 128,
+          "minimum": 1,
+          "title": "Height",
+          "type": "integer"
+        },
+        "depth": {
+          "maximum": 128,
+          "minimum": 1,
+          "title": "Depth",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "depth"
+      ],
+      "title": "Size",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "2.0",
+      "default": "2.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "coordinate_system": {
+      "const": "x-east_y-up_z-south_blocks",
+      "default": "x-east_y-up_z-south_blocks",
+      "title": "Coordinate System",
+      "type": "string"
+    },
+    "orientation": {
+      "const": "north",
+      "default": "north",
+      "title": "Orientation",
+      "type": "string"
+    },
+    "structure_type": {
+      "maxLength": 240,
+      "minLength": 1,
+      "title": "Structure Type",
+      "type": "string"
+    },
+    "summary": {
+      "maxLength": 240,
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "size": {
+      "$ref": "#/$defs/Size"
+    },
+    "palette": {
+      "items": {
+        "$ref": "#/$defs/Material"
+      },
+      "maxItems": 24,
+      "minItems": 1,
+      "title": "Palette",
+      "type": "array"
+    },
+    "elements": {
+      "items": {
+        "$ref": "#/$defs/Element"
+      },
+      "maxItems": 96,
+      "minItems": 1,
+      "title": "Elements",
+      "type": "array"
+    },
+    "relations": {
+      "items": {
+        "$ref": "#/$defs/Relation"
+      },
+      "maxItems": 48,
+      "title": "Relations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "structure_type",
+    "summary",
+    "size",
+    "palette",
+    "elements",
+    "relations"
+  ],
+  "title": "ArchitecturalPlan",
+  "type": "object"
+}

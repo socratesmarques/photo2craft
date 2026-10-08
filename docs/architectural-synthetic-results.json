@@ -1,0 +1,66 @@
+[
+  {
+    "reference": "simple_house",
+    "source": "hand-authored plan; no AI",
+    "blocksBefore": 4096,
+    "blocksAfter": 2816,
+    "silhouetteIoU_genericTemplate": 72.18,
+    "silhouetteIoU_knownPlan": 100,
+    "geometryAndRenderSeconds": 0.2503,
+    "pythonPeakMiB": 4.131,
+    "tokens": null,
+    "minecraftResult": "not tested",
+    "camera": {
+      "yaw": 25.0,
+      "pitch": 15.0
+    }
+  },
+  {
+    "reference": "modern_house",
+    "source": "hand-authored plan; no AI",
+    "blocksBefore": 4096,
+    "blocksAfter": 1756,
+    "silhouetteIoU_genericTemplate": 65.36,
+    "silhouetteIoU_knownPlan": 100,
+    "geometryAndRenderSeconds": 0.1291,
+    "pythonPeakMiB": 2.757,
+    "tokens": null,
+    "minecraftResult": "not tested",
+    "camera": {
+      "yaw": 25.0,
+      "pitch": 15.0
+    }
+  },
+  {
+    "reference": "castle",
+    "source": "hand-authored plan; no AI",
+    "blocksBefore": 4096,
+    "blocksAfter": 1012,
+    "silhouetteIoU_genericTemplate": 58.9,
+    "silhouetteIoU_knownPlan": 100,
+    "geometryAndRenderSeconds": 0.0851,
+    "pythonPeakMiB": 1.805,
+    "tokens": null,
+    "minecraftResult": "not tested",
+    "camera": {
+      "yaw": 25.0,
+      "pitch": 15.0
+    }
+  },
+  {
+    "reference": "asymmetric",
+    "source": "hand-authored plan; no AI",
+    "blocksBefore": 4096,
+    "blocksAfter": 1304,
+    "silhouetteIoU_genericTemplate": 58.05,
+    "silhouetteIoU_knownPlan": 100,
+    "geometryAndRenderSeconds": 0.0952,
+    "pythonPeakMiB": 2.216,
+    "tokens": null,
+    "minecraftResult": "not tested",
+    "camera": {
+      "yaw": 25.0,
+      "pitch": 15.0
+    }
+  }
+]

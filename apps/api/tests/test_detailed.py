@@ -51,7 +51,7 @@ def run(tmp_path, replies, **kwargs):
         return httpx.Response(200, json=envelope(value))
     opts = GenerateOptions(mode="ai", quality="detailed", size="large", description="Carro azul", **kwargs)
     # Preserve regression coverage of the legacy planner retained for text-only generation.
-    result = generate_detailed(AIGenerator(Settings(data_dir=tmp_path, _env_file=None), httpx.MockTransport(handler)),
+    result = generate_detailed(AIGenerator(Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path, _env_file=None), httpx.MockTransport(handler)),
         "car", opts, [Image.new("RGB", (100, 100), "blue")], (48,48,48))
     return result, seen
 
@@ -186,7 +186,7 @@ def test_context_budget_and_total_deadline(tmp_path, monkeypatch):
         clock[0] += 4
         return envelope([study(), body(), details()][len(calls)-1])
     monkeypatch.setattr(AIGenerator, "_request", fake)
-    settings = Settings(data_dir=tmp_path, ai_timeout_seconds=10, _env_file=None)
+    settings = Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path, ai_timeout_seconds=10, _env_file=None)
     _, info = AIGenerator(settings).generate("car", GenerateOptions(mode="ai", quality="detailed", size="large"), [])
     assert calls == [10,6,2]
     assert info["stagesCompleted"] == ["analysis", "geometry"]
@@ -196,7 +196,7 @@ def test_context_budget_and_total_deadline(tmp_path, monkeypatch):
 def test_detailed_api_persistence_and_old_projects(tmp_path, monkeypatch):
     replies = iter([study(), body(), details()])
     monkeypatch.setattr(AIGenerator, "_request", lambda self, payload, timeout_seconds=None, **kwargs: envelope(next(replies)))
-    with TestClient(create_app(Settings(data_dir=tmp_path, _env_file=None))) as client:
+    with TestClient(create_app(Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path, _env_file=None))) as client:
         cap = client.get("/api/capabilities").json()
         assert cap["minimumModVersion"] == "0.3.0" and "detailed" in cap["qualityModes"]
         result = client.post("/api/generate", data={"options":json.dumps(dict(mode="ai", quality="detailed", size="large", description="Carro"))})

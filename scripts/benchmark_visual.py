@@ -34,7 +34,10 @@ def main():
                 response=client.post('/api/generate',data={'options':json.dumps(options)},files={'image':(path.name,raw,mimetypes.guess_type(path.name)[0] or 'application/octet-stream')})
                 response.raise_for_status();build=response.json();project_id=build['id']
                 entry.update(dimensions=build['size'],blocks=build['blockCount'],generation=build['generationInfo'])
-                response=client.get('/api/builds/'+project_id+'/structure');response.raise_for_status();(folder/'structure.json').write_text(json.dumps(response.json()))
+                response=client.get('/api/builds/'+project_id+'/preview')
+                if response.status_code == 404:  # Original backend predates approval/preview.
+                    response=client.get('/api/builds/'+project_id+'/structure')
+                response.raise_for_status();(folder/'structure.json').write_text(json.dumps(response.json()))
                 if build['generationInfo'].get('renderAvailable'):
                     response=client.get('/api/builds/'+project_id+'/render');response.raise_for_status();(folder/'render.png').write_bytes(response.content)
                 cards.append(f'<article><h2>{html.escape(path.name)}</h2><img src="{i}/{html.escape(reference,quote=True)}"><img src="{i}/render.png"><pre>{html.escape(json.dumps(entry,ensure_ascii=False,indent=2))}</pre></article>')

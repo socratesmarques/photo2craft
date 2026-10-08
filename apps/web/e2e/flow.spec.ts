@@ -5,10 +5,10 @@ test('imagem → geração → JSON → galeria → exclusão, desktop e celular
   let id='';
   try {
     await page.goto('/');
-    await expect(page.getByText('Ative a IA local', {exact:true})).toBeVisible();
+    await expect(page.getByText('Configure a IA gratuita', {exact:true})).toBeVisible();
     await expect(page.getByRole('button',{name:'Gerar construção',exact:true})).toBeDisabled();
     await page.getByLabel('Modo de geração').selectOption('procedural');
-    await page.locator('input[type=file]').setInputFiles(path.resolve('e2e/reference.png'));
+    await page.locator('#image-upload').setInputFiles(path.resolve('e2e/reference.png'));
     await page.getByPlaceholder('Ex.: Refúgio da montanha').fill('Casa de teste E2E');
     await page.getByRole('button',{name:'Gerar construção',exact:true}).click();
     await expect(page.getByRole('button',{name:'Baixar JSON',exact:true})).toBeEnabled();

@@ -1,2 +1,2 @@
-VERSION = "0.5.0"
-RELEASE = "ollama-local-0.5.0"
+VERSION = "2.0.0"
+RELEASE = "architectural-2.0"

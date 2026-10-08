@@ -1,3 +1,5 @@
+> Documento histórico 0.5. Para a versão atual, veja [arquitetura 2.0](photo2craft-2-architecture.md) e [validação 2.0](photo2craft-2-validation.md).
+
 # Validação — 0.5.0 Visual Refinement
 
 ## Revisão atual de fidelidade/Ollama

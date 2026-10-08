@@ -13,12 +13,12 @@ from app.verify_installation import verify
 def test_legacy_openai_env_does_not_select_old_provider(tmp_path, monkeypatch):
     monkeypatch.setenv('OPENAI_API_KEY', 'obsolete-test-key')
     monkeypatch.setenv('OPENAI_MODEL', 'gpt-4.1-mini')
-    config = Settings(data_dir=tmp_path, ai_provider='ollama', _env_file=None)
+    config = Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path, _env_file=None)
     with TestClient(create_app(config)) as client:
         response = client.get('/api/capabilities')
         result = response.json()
-        assert result['release'] == RELEASE == 'ollama-local-0.5.0'
-        assert result['version'] == VERSION == '0.5.0'
+        assert result['release'] == RELEASE == 'architectural-2.0'
+        assert result['version'] == VERSION == '2.0.0'
         assert result['aiProvider'] == 'ollama'
         assert result['aiModel'] == 'qwen3-vl:8b'
         assert result['aiConfigured'] is True
@@ -40,17 +40,17 @@ def test_installed_version_and_model_check_without_generation(scenario):
         return httpx.Response(200, json={'models': [] if scenario == 'missing_model' else [{'name':'qwen3-vl:8b'}]})
     with httpx.Client(transport=httpx.MockTransport(handler)) as client:
         if scenario == 'ready':
-            verify(client, Settings(_env_file=None))
+            verify(client, Settings(generation_mode="legacy", ai_provider="ollama", _env_file=None))
         else:
             with pytest.raises((ValueError, httpx.ConnectError)):
-                verify(client, Settings(_env_file=None))
+                verify(client, Settings(generation_mode="legacy", ai_provider="ollama", _env_file=None))
     assert all(method == 'GET' for method, _ in calls)
     assert len(calls) == (1 if scenario == 'old_api' else 2)
 
 
 def test_truncated_ollama_generation_never_saved(tmp_path):
     result = {'done': True, 'done_reason':'length','message':{'content':json.dumps({'summary':'partial'})}}
-    gen = AIGenerator(Settings(data_dir=tmp_path, _env_file=None), httpx.MockTransport(lambda _:httpx.Response(200,json=result)))
+    gen = AIGenerator(Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path, _env_file=None), httpx.MockTransport(lambda _:httpx.Response(200,json=result)))
     with pytest.raises(GenerationError, match='limite de saída'):
         gen.generate('test', GenerateOptions(mode='ai',description='Uma ponte'), [])
 
@@ -58,7 +58,7 @@ def test_truncated_ollama_generation_never_saved(tmp_path):
 def test_connection_failure_explains_ollama(tmp_path):
     def handler(_):
         raise httpx.ConnectError('offline')
-    gen = AIGenerator(Settings(data_dir=tmp_path, _env_file=None), httpx.MockTransport(handler))
+    gen = AIGenerator(Settings(generation_mode="legacy", ai_provider="ollama", data_dir=tmp_path, _env_file=None), httpx.MockTransport(handler))
     with pytest.raises(GenerationError, match='Abra o Ollama') as error:
         gen.generate('test', GenerateOptions(mode='ai',description='Uma ponte'), [])
     assert error.value.status_code == 503

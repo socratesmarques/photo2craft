@@ -54,17 +54,22 @@ class AIGenerator:
 
     @property
     def configured(self):
+        if self.settings.ai_provider == "gemini":
+            return bool(self.settings.gemini_api_key.get_secret_value().strip()) and self.settings.gemini_free_tier_confirmed
         return (self.settings.ai_provider.strip().lower() == "ollama"
                 and bool(self.settings.ollama_url.strip())
                 and bool(self.settings.ollama_model.strip()))
 
     def generate(self, build_id: str, options: GenerateOptions, images: list[Image.Image]):
         if not self.configured:
-            raise GenerationError("Configure AI_PROVIDER=ollama, OLLAMA_URL e OLLAMA_MODEL no .env.", 503)
+            raise GenerationError("Configure AI_PROVIDER=gemini, GEMINI_API_KEY e GEMINI_FREE_TIER_CONFIRMED no .env; ou selecione Ollama opcional.", 503)
         try:
             bounds = target_size(options, self.settings.max_dimension)
         except ValueError as exc:
             raise GenerationError(str(exc), 422) from exc
+        if self.settings.generation_mode == "architectural":
+            from .architectural_generator import generate_architectural
+            return generate_architectural(self, build_id, options, images, bounds)
         if images and options.quality in {"detailed", "ultra"}:
             from .visual_generator import generate_visual
             return generate_visual(self, build_id, options, images, bounds)

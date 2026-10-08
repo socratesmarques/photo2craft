@@ -1,3 +1,5 @@
+> Documento histórico 0.5. Para a versão atual, veja [arquitetura 2.0](photo2craft-2-architecture.md) e [validação 2.0](photo2craft-2-validation.md).
+
 # Photo2Craft 0.5.0 — Visual Refinement
 
 Implementação incremental sobre 0.4.0. O contrato exportado permanece **1.0**;
